@@ -3,5 +3,12 @@
   "tagline": "محصولات اورجینال کره‌ای مراقبت پوست",
   "instagram": "K_beauty.afg",
   "whatsapp": "",
-  "currency": "افغانی"
+  "currency": "افغانی",
+  "banners": [
+    {
+      "image": "/banners/banner-1.jpg",
+      "alt": "بنر ویژه",
+      "href": ""
+    }
+  ]
 }
