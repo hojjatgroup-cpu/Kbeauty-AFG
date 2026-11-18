@@ -3,7 +3,6 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
-import HeroSlider from "@/components/HeroSlider";
 import HeroVideo from "@/components/HeroVideo";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
@@ -12,7 +11,6 @@ import site from "@/data/site.json";
 export default function HomeClient() {
   const { t, types } = useLang();
   const bestsellers = getBestsellers();
-  const banners = site.banners || [];
 
   return (
     <>
@@ -45,18 +43,11 @@ export default function HomeClient() {
         <span className="scroll-hint rise" style={{ "--d": "2.3s" }} aria-hidden="true" />
       </section>
 
-      {banners.length > 0 && (
-        <section className="slider-section">
-          <div className="container">
-            <HeroSlider banners={banners} seconds={site.bannerSeconds || 4.5} />
-          </div>
-        </section>
-      )}
 
       <section className="section">
         <div className="container">
           <div className="trust">
-            {[1, 2, 3].map((n) => (
+            {[1, 2, 3, 4].map((n) => (
               <div key={n} className="trust-item">
                 <strong>{t(`trust.${n}`)}</strong>
                 <span>{t(`trust.${n}t`)}</span>
