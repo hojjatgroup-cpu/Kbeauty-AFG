@@ -6,8 +6,38 @@
   "currency": "افغانی",
   "banners": [
     {
+      "image": "/banners/banner-2.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/banners/banner-3.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/banners/banner-4.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/banners/banner-5.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/banners/banner-6.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/banners/banner-7.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
       "image": "/banners/banner-1.jpg",
-      "alt": "بنر ویژه",
+      "alt": "",
       "href": ""
     }
   ],
@@ -42,5 +72,6 @@
       "alt": "",
       "href": ""
     }
-  ]
+  ],
+  "bannerSeconds": 4.5
 }

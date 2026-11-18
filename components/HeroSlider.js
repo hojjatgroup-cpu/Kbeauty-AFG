@@ -3,21 +3,23 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-// Auto-playing image slider with a soft cross-fade, dots and swipe.
-export default function HeroSlider({ slides, interval = 4500 }) {
+// Auto-playing banner slider with a soft frosted look.
+// Each slide: blurred copy of the image fills the frame, the image itself sits on top.
+export default function HeroSlider({ banners = [], seconds = 4.5 }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchX = useRef(null);
-  const count = slides.length;
+  const count = banners.length;
 
   useEffect(() => {
-    if (paused || count < 2) return;
-    const id = setTimeout(() => setIndex((i) => (i + 1) % count), interval);
+    if (count < 2 || paused) return;
+    const id = setTimeout(() => setIndex((i) => (i + 1) % count), seconds * 1000);
     return () => clearTimeout(id);
-  }, [index, paused, count, interval]);
+  }, [index, paused, count, seconds]);
 
-  const go = (i) => setIndex(((i % count) + count) % count);
+  if (!count) return null;
 
+  const go = (i) => setIndex((i + count) % count);
   const onTouchStart = (e) => {
     touchX.current = e.touches[0].clientX;
     setPaused(true);
@@ -31,8 +33,6 @@ export default function HeroSlider({ slides, interval = 4500 }) {
     if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
   };
 
-  if (!count) return null;
-
   return (
     <div
       className="slider"
@@ -41,40 +41,39 @@ export default function HeroSlider({ slides, interval = 4500 }) {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
-      <div className="slider-frame">
-        {slides.map((s, i) => {
-          const img = (
-            <img
-              src={s.image}
-              alt={s.alt || ""}
-              loading={i === 0 ? "eager" : "lazy"}
-              draggable="false"
-            />
-          );
-          const cls = `slide ${i === index ? "is-active" : ""}`;
-          return s.href ? (
-            <Link key={s.image} href={s.href} className={cls} tabIndex={i === index ? 0 : -1}>
-              {img}
-            </Link>
-          ) : (
-            <div key={s.image} className={cls} aria-hidden={i !== index}>
-              {img}
-            </div>
-          );
-        })}
-        <div className="slider-veil" aria-hidden="true" />
-      </div>
+      {banners.map((b, i) => {
+        const active = i === index;
+        const inner = (
+          <>
+            <img className="slide-bg" src={b.image} alt="" aria-hidden="true" loading={i === 0 ? "eager" : "lazy"} />
+            <img className="slide-img" src={b.image} alt={b.alt || ""} loading={i === 0 ? "eager" : "lazy"} />
+            <span className="slide-veil" aria-hidden="true" />
+          </>
+        );
+        const cls = `slide ${active ? "slide-active" : ""}`;
+        return b.href ? (
+          <Link key={b.image} href={b.href} className={cls} aria-hidden={!active} tabIndex={active ? 0 : -1}>
+            {inner}
+          </Link>
+        ) : (
+          <div key={b.image} className={cls} aria-hidden={!active}>
+            {inner}
+          </div>
+        );
+      })}
 
       {count > 1 && (
         <div className="slider-dots">
-          {slides.map((s, i) => (
+          {banners.map((b, i) => (
             <button
-              key={s.image}
+              key={b.image}
               className={i === index ? "on" : ""}
-              onClick={() => go(i)}
               aria-label={`${i + 1}`}
+              onClick={() => go(i)}
             >
-              {i === index && !paused && <span style={{ animationDuration: `${interval}ms` }} />}
+              {i === index && !paused && (
+                <span className="dot-fill" style={{ animationDuration: `${seconds}s` }} />
+              )}
             </button>
           ))}
         </div>

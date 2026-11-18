@@ -3,7 +3,7 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
-import Banner from "@/components/Banner";
+import HeroSlider from "@/components/HeroSlider";
 import HeroSlider from "@/components/HeroSlider";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
@@ -44,9 +44,7 @@ export default function HomeClient() {
 
         {banners.length > 0 && (
           <div className="container hero-banners">
-            {banners.map((b) => (
-              <Banner key={b.image} banner={b} />
-            ))}
+            <HeroSlider banners={banners} seconds={site.bannerSeconds || 4.5} />
           </div>
         )}
       </section>
