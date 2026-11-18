@@ -13,7 +13,7 @@ const content = {
       { h: "۴. بارکد", p: "بارکد محصولات کوریایی معمولاً با ۸۸۰ شروع می‌شود. این به‌تنهایی کافی نیست، ولی نشانهٔ خوبی است." },
       { h: "۵. بافت، رنگ و بو", p: "اگر بافت، رنگ یا بوی محصول عجیب است یا با همیشه فرق دارد، استفاده نکنید و با فروشنده تماس بگیرید." },
       { h: "۶. قیمت خیلی ارزان", p: "قیمتی که خیلی پایین‌تر از بازار است، معمولاً نشانهٔ محصول تقلبی یا تاریخ‌گذشته است." },
-      { h: "تعهد ما", p: "محصولات K Beauty AFG از [منبع تهیهٔ محصولات] تهیه می‌شوند. اگر دربارهٔ اصل بودن محصولی سوال دارید، در اینستاگرام از ما بپرسید." },
+      { h: "تعهد ما", p: "محصولات K Beauty AFG مستقیم از منبع در کوریای جنوبی تهیه می‌شوند. اگر دربارهٔ اصل بودن محصولی سوال دارید، در اینستاگرام از ما بپرسید." },
     ],
   },
   en: {
@@ -26,7 +26,7 @@ const content = {
       { h: "4. Barcode", p: "Korean barcodes usually start with 880. Not proof on its own, but a good sign." },
       { h: "5. Texture, color and scent", p: "If the texture, color or scent seems odd or different from usual, don't use it and contact the seller." },
       { h: "6. Too-cheap prices", p: "A price far below market usually means a fake or expired product." },
-      { h: "Our promise", p: "K Beauty AFG products are sourced from [product source]. Questions about any product? Ask us on Instagram." },
+      { h: "Our promise", p: "K Beauty AFG products are sourced directly from the source in South Korea. Questions about any product? Ask us on Instagram." },
     ],
   },
 };

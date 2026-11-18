@@ -1,0 +1,7 @@
+{
+  "zones": [
+    { "id": "kabul", "fa": "کابل — مرکز شهر", "en": "Kabul — city center", "fee": 100, "time": "kabul" },
+    { "id": "kabul-far", "fa": "کابل — نواحی دور (مانند خیرخانه)", "en": "Kabul — outer areas (e.g. Khair Khana)", "fee": 150, "time": "kabul" },
+    { "id": "province", "fee": 200, "time": "province" }
+  ]
+}

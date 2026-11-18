@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>forms</title></head>
+<body>
+<!-- Hidden form so Netlify can detect and store orders. The site posts to it with JavaScript. -->
+<form name="order" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="order_id">
+  <input name="name">
+  <input name="phone">
+  <input name="province">
+  <input name="address">
+  <input name="email">
+  <textarea name="items"></textarea>
+  <input name="subtotal">
+  <input name="shipping">
+  <input name="total">
+  <input name="language">
+</form>
+</body></html>
