@@ -2,36 +2,46 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Muted, looping, softly blurred background video for the home hero.
-// Shows a still poster on slow connections, data-saver mode or reduced-motion.
+// Muted, looping background video for the home hero.
+// The still poster shows right away; the small video file starts loading only after
+// the rest of the page has loaded, so it never slows the page down.
 export default function HeroVideo() {
   const ref = useRef(null);
-  const [play, setPlay] = useState(false);
+  const [src, setSrc] = useState(null);
 
   useEffect(() => {
     const conn = navigator.connection || {};
     const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const slow = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "");
-    if (!reduce && !slow) setPlay(true);
+    if (reduce || slow) return;
+    let timer;
+    const start = () => {
+      timer = setTimeout(() => setSrc("/video/hero.mp4"), 300);
+    };
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("load", start);
+    };
   }, []);
 
   useEffect(() => {
     const v = ref.current;
-    if (!play || !v) return;
+    if (!src || !v) return;
     v.muted = true;
     const p = v.play();
     if (p && p.catch) p.catch(() => {});
-  }, [play]);
+  }, [src]);
 
   return (
     <div className="hero-media" aria-hidden="true">
-      <img className="hero-poster" src="/video/hero-poster.jpg" alt="" />
-      {play && (
+      <img className="hero-poster" src="/video/hero-poster.jpg" alt="" fetchPriority="high" />
+      {src && (
         <video
           ref={ref}
           className="hero-vid"
-          src="/video/hero.mp4"
-          poster="/video/hero-poster.jpg"
+          src={src}
           autoPlay
           muted
           loop

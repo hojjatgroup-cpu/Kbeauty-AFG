@@ -2,24 +2,28 @@
 
 import { useEffect, useState } from "react";
 
-// Loading screen with the spinning star from the logo. Fades out once the page has loaded.
+// Loading screen with the spinning star. Hides as soon as the page is ready to use
+// (does not wait for images or the video), at most ~1.5 seconds.
 export default function Splash() {
   const [state, setState] = useState("show"); // show -> hide -> gone
 
   useEffect(() => {
-    const start = Date.now();
+    let done = false;
     const finish = () => {
-      const wait = Math.max(0, 700 - (Date.now() - start));
-      setTimeout(() => {
-        setState("hide");
-        setTimeout(() => setState("gone"), 500);
-      }, wait);
+      if (done) return;
+      done = true;
+      setState("hide");
+      setTimeout(() => setState("gone"), 500);
     };
-    if (document.readyState === "complete") finish();
-    else {
-      window.addEventListener("load", finish, { once: true });
-      return () => window.removeEventListener("load", finish);
-    }
+    const min = setTimeout(() => {
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(finish, finish);
+      else finish();
+    }, 500);
+    const max = setTimeout(finish, 1500);
+    return () => {
+      clearTimeout(min);
+      clearTimeout(max);
+    };
   }, []);
 
   if (state === "gone") return null;

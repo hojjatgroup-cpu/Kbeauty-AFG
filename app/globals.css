@@ -389,7 +389,7 @@ main { min-height: 60vh; position: relative; z-index: 1; }
 .splash {
   position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
   background: var(--bg); transition: opacity .5s ease;
-  animation: splash-failsafe 0s linear 6s forwards;
+  animation: splash-failsafe 0s linear 3s forwards;
 }
 .splash-hide { opacity: 0; pointer-events: none; }
 .splash-star { width: 64px; height: 64px; animation: spin 1.6s linear infinite; }

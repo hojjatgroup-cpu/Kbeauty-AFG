@@ -5,7 +5,14 @@ export default function ProductImage({ product, large = false }) {
   if (product.image) {
     return (
       <div className={cls}>
-        <img src={product.image} alt={`${product.brand} ${product.name_en || product.name}`} loading="lazy" />
+        <img
+          src={large ? product.image : product.image.replace("/products/", "/products/thumb/")}
+          alt={`${product.brand} ${product.name_en || product.name}`}
+          loading={large ? "eager" : "lazy"}
+          decoding="async"
+          width={large ? 720 : 420}
+          height={large ? 720 : 420}
+        />
       </div>
     );
   }

@@ -9,9 +9,9 @@ import site from "@/data/site.json";
 
 const modam = localFont({
   src: [
-    { path: "./fonts/Modam-ExtraLight.ttf", weight: "200", style: "normal" },
-    { path: "./fonts/Modam-Light.ttf", weight: "400", style: "normal" },
-    { path: "./fonts/Modam-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/Modam-ExtraLight.woff", weight: "200", style: "normal" },
+    { path: "./fonts/Modam-Light.woff", weight: "400", style: "normal" },
+    { path: "./fonts/Modam-Bold.woff", weight: "700", style: "normal" },
   ],
   display: "swap",
 });

@@ -17,21 +17,21 @@ export default function HomeClient() {
       <section className="hero hero-video">
         <HeroVideo />
         <div className="container hero-content">
-          <span className="kicker rise" style={{ "--d": "0.9s" }}>
+          <span className="kicker rise" style={{ "--d": "0.6s" }}>
             {t("home.kicker")}
           </span>
           <h1>
-            <span className="rise" style={{ "--d": "1.1s" }}>
+            <span className="rise" style={{ "--d": "0.8s" }}>
               {t("home.title1")}
             </span>
-            <span className="rise" style={{ "--d": "1.35s" }}>
+            <span className="rise" style={{ "--d": "1.0s" }}>
               {t("home.title2")}
             </span>
           </h1>
-          <p className="rise" style={{ "--d": "1.6s" }}>
+          <p className="rise" style={{ "--d": "1.2s" }}>
             {t("home.sub")}
           </p>
-          <div className="hero-actions rise" style={{ "--d": "1.85s" }}>
+          <div className="hero-actions rise" style={{ "--d": "1.4s" }}>
             <Link href="/shop" className="btn btn-ink">
               {t("home.cta")}
             </Link>
@@ -40,7 +40,7 @@ export default function HomeClient() {
             </Link>
           </div>
         </div>
-        <span className="scroll-hint rise" style={{ "--d": "2.3s" }} aria-hidden="true" />
+        <span className="scroll-hint rise" style={{ "--d": "1.9s" }} aria-hidden="true" />
       </section>
 
 
