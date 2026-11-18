@@ -2,14 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useCart } from "./CartProvider";
 import site from "@/data/site.json";
-import { toFa } from "@/lib/products";
 
 const links = [
   { href: "/", label: "خانه" },
-  { href: "/shop", label: "فروشگاه" },
-  { href: "/skin-test", label: "تست نوع پوست" },
+  { href: "/shop", label: "محصولات" },
   { href: "/authenticity", label: "بررسی اورجینال بودن" },
   { href: "/faq", label: "سوالات پرتکرار" },
   { href: "/about", label: "دربارهٔ ما" },
@@ -18,32 +15,48 @@ const links = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { count } = useCart();
+  const close = () => setOpen(false);
 
   return (
     <header className="header">
-      <div className="topbar">✨ همهٔ محصولات اورجینال کره‌ای | مشوره رایگان در اینستاگرام</div>
       <div className="container header-row">
-        <button className="icon-btn" aria-label="منو" onClick={() => setOpen(!open)}>
-          {open ? "✕" : "☰"}
-        </button>
-        <Link href="/" className="logo" onClick={() => setOpen(false)}>
-          {site.name}
+        <Link href="/" className="logo" onClick={close}>
+          <span className="logo-mark">K</span>
+          <span className="logo-text">{site.name}</span>
         </Link>
-        <Link href="/cart" className="icon-btn cart-btn" aria-label="سبد خرید" onClick={() => setOpen(false)}>
-          🛍️
-          {count > 0 && <span className="badge">{toFa(count)}</span>}
-        </Link>
-      </div>
-      <nav className={`nav ${open ? "nav-open" : ""}`}>
-        <div className="container nav-inner">
+
+        <nav className="nav-desktop">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <Link key={l.href} href={l.href}>
               {l.label}
             </Link>
           ))}
+          <Link href="/skin-test" className="btn btn-primary btn-sm">
+            تست نوع پوست
+          </Link>
+        </nav>
+
+        <button className="round-btn menu-btn" aria-label="منو" onClick={() => setOpen(!open)}>
+          {open ? "✕" : "☰"}
+        </button>
+      </div>
+
+      {open && (
+        <div className="menu-panel">
+          <div className="container">
+            <Link href="/skin-test" className="btn btn-primary btn-block" onClick={close}>
+              تست نوع پوست
+            </Link>
+            <div className="menu-links">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} onClick={close}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </nav>
+      )}
     </header>
   );
 }

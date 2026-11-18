@@ -1,7 +1,8 @@
 import ShopClient from "./ShopClient";
+import SectionTitle from "@/components/SectionTitle";
 import { SKIN_TYPES, PRODUCT_TYPES } from "@/lib/products";
 
-export const metadata = { title: "فروشگاه" };
+export const metadata = { title: "محصولات" };
 
 export default async function ShopPage({ searchParams }) {
   const sp = (await searchParams) || {};
@@ -9,8 +10,10 @@ export default async function ShopPage({ searchParams }) {
   const type = PRODUCT_TYPES[sp.type] ? sp.type : "all";
 
   return (
-    <div className="container">
-      <h1 className="page-title">فروشگاه</h1>
+    <div className="container page">
+      <SectionTitle center sub="محصول مناسب را با نوع پوست یا دسته‌بندی پیدا کن.">
+        محصولات
+      </SectionTitle>
       <ShopClient key={`${skin}-${type}`} initialSkin={skin} initialType={type} />
     </div>
   );
