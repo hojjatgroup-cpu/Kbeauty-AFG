@@ -10,7 +10,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 990,
     "size": "50 ml",
     "image": "/products/boj-relief-sun-aqua-fresh.jpg",
     "bestseller": true,
@@ -65,7 +65,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 1379,
     "size": "50 ml",
     "image": "/products/dr-althea-345-relief-cream.jpg",
     "bestseller": true,
@@ -126,7 +126,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 1250,
     "size": "250 ml",
     "image": "/products/anua-heartleaf-77-toner.jpg",
     "bestseller": true,
@@ -180,7 +180,7 @@
       "oily",
       "combination"
     ],
-    "price": null,
+    "price": 1499,
     "size": "30 ml",
     "image": "/products/anua-azelaic-acid-10-serum.jpg",
     "bestseller": true,
@@ -240,7 +240,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 1380,
     "size": "60 ml",
     "image": "/products/anua-pdrn-hyaluronic-cream.jpg",
     "bestseller": false,
@@ -300,7 +300,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 690,
     "size": "150 ml",
     "image": "/products/cosrx-low-ph-cleanser.jpg",
     "bestseller": false,
@@ -354,7 +354,7 @@
       "combination",
       "sensitive"
     ],
-    "price": null,
+    "price": 1355,
     "size": "100 ml",
     "image": "/products/purito-oat-in-gel-cream.jpg",
     "bestseller": false,
@@ -414,7 +414,7 @@
       "sensitive",
       "combination"
     ],
-    "price": null,
+    "price": 1355,
     "size": "100 ml",
     "image": "/products/purito-bamboo-panthenol-cream.jpg",
     "bestseller": false,
@@ -474,7 +474,7 @@
       "combination",
       "dry"
     ],
-    "price": null,
+    "price": 1390,
     "size": "30 ml",
     "image": "/products/purito-txa6-retinal-serum.jpg",
     "bestseller": false,
@@ -534,7 +534,7 @@
       "combination",
       "dry"
     ],
-    "price": null,
+    "price": 1390,
     "size": "30 ml",
     "image": "/products/anua-niacinamide-10-txa-4-serum.jpg",
     "bestseller": false,
