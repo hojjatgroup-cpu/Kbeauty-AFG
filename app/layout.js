@@ -4,6 +4,7 @@ import { LangProvider } from "@/components/LangProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartProvider";
+import Splash from "@/components/Splash";
 import site from "@/data/site.json";
 
 const modam = localFont({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl">
       <body className={modam.className}>
+        <Splash />
         <div className="bg-blobs" aria-hidden="true" />
         <LangProvider>
           <CartProvider>
