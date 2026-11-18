@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
-// Loading screen with the spinning star. Hides as soon as the page is ready to use
-// (does not wait for images or the video), at most ~1.5 seconds.
+// Loading screen with the spinning star.
+// On the home page it waits for the background video to be ready (max 4 seconds);
+// on other pages it hides as soon as the fonts are ready.
 export default function Splash() {
+  const pathname = usePathname();
   const [state, setState] = useState("show"); // show -> hide -> gone
 
   useEffect(() => {
@@ -13,17 +16,28 @@ export default function Splash() {
       if (done) return;
       done = true;
       setState("hide");
-      setTimeout(() => setState("gone"), 500);
+      setTimeout(() => setState("gone"), 600);
     };
-    const min = setTimeout(() => {
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(finish, finish);
-      else finish();
-    }, 500);
-    const max = setTimeout(finish, 1500);
+    const isHome = pathname === "/" || pathname === "";
+    const timers = [];
+    if (isHome) {
+      window.addEventListener("hero-video-ready", finish, { once: true });
+      timers.push(setTimeout(finish, 4000));
+    } else {
+      timers.push(
+        setTimeout(() => {
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(finish, finish);
+          else finish();
+        }, 400)
+      );
+      timers.push(setTimeout(finish, 1500));
+    }
     return () => {
-      clearTimeout(min);
-      clearTimeout(max);
+      timers.forEach(clearTimeout);
+      window.removeEventListener("hero-video-ready", finish);
     };
+    // only on first load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (state === "gone") return null;

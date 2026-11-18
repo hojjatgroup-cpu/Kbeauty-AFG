@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 
-// Muted, looping background video for the home hero. Starts loading right away (small file).
-// Calls onPlaying once the video is actually playing.
+// Muted, looping background video for the home hero. Small file that starts loading immediately.
+// Tells the loading screen when it can play, and retries play() on the first touch if the browser blocked it.
 export default function HeroVideo({ onPlaying }) {
   const ref = useRef(null);
 
@@ -11,10 +11,28 @@ export default function HeroVideo({ onPlaying }) {
     const v = ref.current;
     if (!v) return;
     v.muted = true;
-    const p = v.play();
-    if (p && p.catch) p.catch(() => {});
-    if (!v.paused && v.readyState > 2) onPlaying && onPlaying();
-  }, [onPlaying]);
+    v.defaultMuted = true;
+    v.setAttribute("muted", "");
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && p.catch) p.catch(() => {});
+    };
+    const ready = () => {
+      window.dispatchEvent(new Event("hero-video-ready"));
+      tryPlay();
+    };
+    if (v.readyState >= 3) ready();
+    v.addEventListener("canplay", ready);
+    tryPlay();
+    const onTouch = () => tryPlay();
+    window.addEventListener("touchstart", onTouch, { once: true, passive: true });
+    window.addEventListener("scroll", onTouch, { once: true, passive: true });
+    return () => {
+      v.removeEventListener("canplay", ready);
+      window.removeEventListener("touchstart", onTouch);
+      window.removeEventListener("scroll", onTouch);
+    };
+  }, []);
 
   return (
     <div className="hero-media" aria-hidden="true">

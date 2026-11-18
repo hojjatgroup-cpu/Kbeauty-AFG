@@ -14,11 +14,12 @@ export default function HomeClient() {
   const mounted = useRef(Date.now());
   // Texts come in once the video is playing (after the loading star), or after 2.5s at the latest.
   const onVideo = useCallback(() => {
-    const wait = Math.max(0, 1000 - (Date.now() - mounted.current));
-    setTimeout(() => setGo(true), wait);
+    // wait for the loading star to fade out first
+    const wait = Math.max(0, 700 - (Date.now() - mounted.current));
+    setTimeout(() => setGo(true), wait + 500);
   }, []);
   useEffect(() => {
-    const id = setTimeout(() => setGo(true), 2500);
+    const id = setTimeout(() => setGo(true), 4800);
     return () => clearTimeout(id);
   }, []);
   const { t, types } = useLang();
