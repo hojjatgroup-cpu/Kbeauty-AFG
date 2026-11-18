@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
@@ -9,29 +10,40 @@ import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
 
 export default function HomeClient() {
+  const [go, setGo] = useState(false);
+  const mounted = useRef(Date.now());
+  // Texts come in once the video is playing (after the loading star), or after 2.5s at the latest.
+  const onVideo = useCallback(() => {
+    const wait = Math.max(0, 1000 - (Date.now() - mounted.current));
+    setTimeout(() => setGo(true), wait);
+  }, []);
+  useEffect(() => {
+    const id = setTimeout(() => setGo(true), 2500);
+    return () => clearTimeout(id);
+  }, []);
   const { t, types } = useLang();
   const bestsellers = getBestsellers();
 
   return (
     <>
-      <section className="hero hero-video">
-        <HeroVideo />
+      <section className={`hero hero-video ${go ? "go" : ""}`}>
+        <HeroVideo onPlaying={onVideo} />
         <div className="container hero-content">
-          <span className="kicker rise" style={{ "--d": "0.6s" }}>
-            {t("home.kicker")}
-          </span>
+          <span className="kicker h-kicker">{t("home.kicker")}</span>
           <h1>
-            <span className="rise" style={{ "--d": "0.8s" }}>
-              {t("home.title1")}
+            <span className="h-line">
+              <span className="h-inner" style={{ "--d": "0.25s" }}>
+                {t("home.title1")}
+              </span>
             </span>
-            <span className="rise" style={{ "--d": "1.0s" }}>
-              {t("home.title2")}
+            <span className="h-line">
+              <span className="h-inner" style={{ "--d": "0.45s" }}>
+                {t("home.title2")}
+              </span>
             </span>
           </h1>
-          <p className="rise" style={{ "--d": "1.2s" }}>
-            {t("home.sub")}
-          </p>
-          <div className="hero-actions rise" style={{ "--d": "1.4s" }}>
+          <p className="h-sub">{t("home.sub")}</p>
+          <div className="hero-actions h-actions">
             <Link href="/shop" className="btn btn-ink">
               {t("home.cta")}
             </Link>
@@ -40,7 +52,7 @@ export default function HomeClient() {
             </Link>
           </div>
         </div>
-        <span className="scroll-hint rise" style={{ "--d": "1.9s" }} aria-hidden="true" />
+        <span className="scroll-hint" aria-hidden="true" />
       </section>
 
 
