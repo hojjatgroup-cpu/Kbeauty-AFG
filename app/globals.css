@@ -390,3 +390,13 @@ main { min-height: 60vh; position: relative; z-index: 1; }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes splash-failsafe { to { opacity: 0; visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .splash-star { animation-duration: 4s; } }
+
+/* Sale */
+.pcard-media { position: relative; }
+.sale-badge {
+  position: absolute; top: 10px; inset-inline-start: 10px; background: #b4546b; color: #fff;
+  font-size: 11px; padding: 2px 10px; border-radius: 999px;
+}
+.sale-badge.inline { position: static; }
+.old-price { color: var(--muted); font-size: .85em; margin-inline-end: 6px; text-decoration: line-through; }
+.price-wrap { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }

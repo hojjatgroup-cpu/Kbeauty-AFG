@@ -7,7 +7,7 @@ import AddToCartButton from "@/components/AddToCartButton";
 import site from "@/data/site.json";
 import SectionTitle from "@/components/SectionTitle";
 import { useLang } from "@/components/LangProvider";
-import { getProduct, getRelated, formatPrice, num } from "@/lib/products";
+import { getProduct, getRelated, formatPrice, num, discountPercent } from "@/lib/products";
 import { pf } from "@/lib/i18n";
 
 export default function ProductClient({ slug }) {
@@ -18,6 +18,7 @@ export default function ProductClient({ slug }) {
   const steps = pf(product, "steps", lang) || [];
   const full = pf(product, "fullIngredients", lang);
   const size = pf(product, "size", lang);
+  const off = discountPercent(product);
 
   return (
     <div className="container page">
@@ -46,7 +47,11 @@ export default function ProductClient({ slug }) {
           <div className="glass buybox">
             <div className="buybox-price">
               <span className="muted">{t("p.price")}</span>
-              <strong>{formatPrice(product.price, lang)}</strong>
+              <span className="price-wrap">
+                {off > 0 && <span className="sale-badge inline">{t("sale.off", { n: num(off, lang) })}</span>}
+                {off > 0 && <s className="old-price">{formatPrice(product.oldPrice, lang)}</s>}
+                <strong>{formatPrice(product.price, lang)}</strong>
+              </span>
             </div>
             <AddToCartButton slug={product.slug} />
             <Link href="/cart" className="btn btn-line btn-block">

@@ -180,7 +180,7 @@
       "oily",
       "combination"
     ],
-    "price": 1499,
+    "price": 1390,
     "size": "30 ml",
     "image": "/products/anua-azelaic-acid-10-serum.jpg",
     "bestseller": true,
@@ -227,7 +227,8 @@
       "Always wear sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "oldPrice": 1499
   },
   {
     "slug": "anua-pdrn-hyaluronic-acid-100-cream",
@@ -581,6 +582,7 @@
       "Always wear sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "oldPrice": 1499
   }
 ]
