@@ -4,7 +4,6 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroSlider from "@/components/HeroSlider";
-import HeroSlider from "@/components/HeroSlider";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -35,12 +34,6 @@ export default function HomeClient() {
             </Link>
           </div>
         </div>
-
-        {site.slides?.length > 0 && (
-          <div className="container hero-slider">
-            <HeroSlider slides={site.slides} />
-          </div>
-        )}
 
         {banners.length > 0 && (
           <div className="container hero-banners">
