@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import { useLang } from "@/components/LangProvider";
-import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num, usedTypes } from "@/lib/products";
+import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num, usedTypes, matchesSearch } from "@/lib/products";
 
 function Select({ label, allLabel, options, value, onChange }) {
   return (
@@ -40,13 +40,11 @@ export default function ShopClient() {
     setQ(params.get("q") || "");
   }, [params]);
 
-  const query = q.trim().toLowerCase();
   const products = getAllProducts().filter(
     (p) =>
       (skin === "all" || p.skin.includes(skin)) &&
       (type === "all" || p.type === type) &&
-      (!query ||
-        `${p.name} ${p.name_en || ""} ${p.brand} ${p.short} ${p.short_en || ""}`.toLowerCase().includes(query))
+      matchesSearch(p, q)
   );
 
   return (

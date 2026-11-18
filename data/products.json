@@ -1,7 +1,7 @@
 [
   {
     "slug": "beauty-of-joseon-relief-sun-aqua-fresh",
-    "name": "ضدآفتاب Relief Sun Aqua-Fresh برنج + B5 SPF50+",
+    "name": "ضدآفتاب آبرسان ریلیف سان آکوا فرش برنج و B5 بیوتی آف جوسان SPF50+",
     "name_en": "Relief Sun Aqua-Fresh: Rice + B5 SPF50+ PA++++",
     "brand": "Beauty of Joseon",
     "type": "sunscreen",
@@ -51,11 +51,20 @@
       "Reapply every 2–3 hours."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "بیوتی آف جوسان",
+    "keywords": [
+      "ضد آفتاب",
+      "کرم ضدآفتاب",
+      "جوسان",
+      "جوزان",
+      "آکوا",
+      "برنج"
+    ]
   },
   {
     "slug": "dr-althea-345-relief-cream",
-    "name": "کرم 345 Relief Cream",
+    "name": "کرم آرام‌بخش ۳۴۵ ریلیف دکتر آلتیا",
     "name_en": "345 Relief Cream",
     "brand": "Dr.Althea",
     "type": "cream",
@@ -112,11 +121,19 @@
       "Follow with sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "دکتر آلتیا",
+    "keywords": [
+      "دکترالتیا",
+      "التیا",
+      "345",
+      "ریلیف",
+      "کریم"
+    ]
   },
   {
     "slug": "anua-heartleaf-77-soothing-toner",
-    "name": "تونر Heartleaf 77% Soothing",
+    "name": "تونر آرام‌بخش هارت‌لیف ۷۷٪ انوا",
     "name_en": "Heartleaf 77% Soothing Toner",
     "brand": "Anua",
     "type": "toner",
@@ -167,11 +184,18 @@
       "For extra calm, leave soaked cotton pads on the skin for a few minutes."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "انوا",
+    "keywords": [
+      "آنوا",
+      "هارتلیف",
+      "هارت لیف",
+      "تونر"
+    ]
   },
   {
     "slug": "anua-azelaic-acid-10-hyaluron-serum",
-    "name": "سرم Azelaic Acid 10 + Hyaluron",
+    "name": "سرم آزلائیک اسید ۱۰٪ و هیالورون انوا",
     "name_en": "Azelaic Acid 10 Hyaluron Redness Soothing Serum",
     "brand": "Anua",
     "type": "serum",
@@ -228,11 +252,20 @@
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
     "fullIngredients_en": "[Full ingredient list from the packaging]",
-    "oldPrice": 1499
+    "oldPrice": 1499,
+    "brand_fa": "انوا",
+    "keywords": [
+      "آنوا",
+      "آزلیک",
+      "آزولیک",
+      "آزلاییک",
+      "ازلائیک",
+      "سیروم"
+    ]
   },
   {
     "slug": "anua-pdrn-hyaluronic-acid-100-cream",
-    "name": "کرم PDRN Hyaluronic Acid 100",
+    "name": "کرم آبرسان پی‌دی‌آر‌ان و هیالورونیک اسید ۱۰۰ انوا",
     "name_en": "PDRN Hyaluronic Acid 100 Moisturizing Cream",
     "brand": "Anua",
     "type": "cream",
@@ -288,11 +321,20 @@
       "Follow with sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "انوا",
+    "keywords": [
+      "آنوا",
+      "pdrn",
+      "پی دی آر ان",
+      "پیدارن",
+      "هیالورونیک",
+      "کریم"
+    ]
   },
   {
     "slug": "cosrx-low-ph-good-morning-gel-cleanser",
-    "name": "ژل شستشوی Low pH Good Morning",
+    "name": "ژل شستشوی صورت گود مورنینگ با پی‌اچ پایین کوزارکس",
     "name_en": "Low pH Good Morning Gel Cleanser",
     "brand": "COSRX",
     "type": "cleanser",
@@ -342,11 +384,19 @@
       "Rinse with lukewarm water."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "کوزارکس",
+    "keywords": [
+      "کوزرکس",
+      "کوزارکس",
+      "گودمورنینگ",
+      "شوینده",
+      "ژل شستشو"
+    ]
   },
   {
     "slug": "purito-oat-in-calming-gel-cream",
-    "name": "ژل‌کرم Oat-in Calming",
+    "name": "ژل‌کرم آرام‌بخش جو دوسر اوت‌این پوریتو",
     "name_en": "Oat-in Calming Gel Cream",
     "brand": "Purito Seoul",
     "type": "cream",
@@ -402,11 +452,18 @@
       "Follow with sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "پوریتو",
+    "keywords": [
+      "اوت این",
+      "جودوسر",
+      "کریم",
+      "مرطوب کننده"
+    ]
   },
   {
     "slug": "purito-mighty-bamboo-panthenol-cream",
-    "name": "کرم Mighty Bamboo Panthenol",
+    "name": "کرم پانتنول مایتی بامبو پوریتو",
     "name_en": "Mighty Bamboo Panthenol Cream",
     "brand": "Purito Seoul",
     "type": "cream",
@@ -462,11 +519,18 @@
       "Follow with sunscreen in the morning."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "پوریتو",
+    "keywords": [
+      "بامبو",
+      "پانتنول",
+      "کریم",
+      "مرطوب کننده"
+    ]
   },
   {
     "slug": "purito-txa-6-niacinamide-10-retinal-serum",
-    "name": "سرم TXA 6 Niacinamide 10 Retinal",
+    "name": "سرم ترانگزامیک اسید ۶٪، نیاسینامید ۱۰٪ و رتینال پوریتو",
     "name_en": "TXA 6 Niacinamide 10 Retinal Serum",
     "brand": "Purito Seoul",
     "type": "serum",
@@ -522,11 +586,19 @@
       "Start a few nights a week; always wear sunscreen by day. If pregnant, ask your doctor first."
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "brand_fa": "پوریتو",
+    "keywords": [
+      "نیاسینامید",
+      "نیاسینامیت",
+      "رتینال",
+      "ترانگزامیک",
+      "سیروم"
+    ]
   },
   {
     "slug": "anua-niacinamide-10-txa-4-serum",
-    "name": "سرم Niacinamide 10 + TXA 4",
+    "name": "سرم نیاسینامید ۱۰٪ و ترانگزامیک اسید ۴٪ انوا",
     "name_en": "Niacinamide 10 TXA 4 Serum",
     "brand": "Anua",
     "type": "serum",
@@ -583,6 +655,14 @@
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
     "fullIngredients_en": "[Full ingredient list from the packaging]",
-    "oldPrice": 1499
+    "oldPrice": 1499,
+    "brand_fa": "انوا",
+    "keywords": [
+      "آنوا",
+      "نیاسینامید",
+      "نیاسینامیت",
+      "ترانگزامیک",
+      "سیروم"
+    ]
   }
 ]
