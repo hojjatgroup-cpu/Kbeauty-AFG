@@ -3,13 +3,17 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
-import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, toFa } from "@/lib/products";
+import SectionTitle from "@/components/SectionTitle";
+import { useLang } from "@/components/LangProvider";
+import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num } from "@/lib/products";
 
-function Select({ label, options, value, onChange }) {
+function Select({ label, allLabel, options, value, onChange }) {
   return (
     <label className="select glass">
       <select value={value} onChange={(e) => onChange(e.target.value)} aria-label={label}>
-        <option value="all">{label}: همه</option>
+        <option value="all">
+          {label}: {allLabel}
+        </option>
         {Object.entries(options).map(([key, text]) => (
           <option key={key} value={key}>
             {text}
@@ -23,15 +27,17 @@ function Select({ label, options, value, onChange }) {
 
 export default function ShopClient() {
   const params = useSearchParams();
+  const { t, lang, skins, types } = useLang();
   const [skin, setSkin] = useState("all");
   const [type, setType] = useState("all");
   const [q, setQ] = useState("");
 
   useEffect(() => {
     const s = params.get("skin");
-    const t = params.get("type");
+    const ty = params.get("type");
     setSkin(SKIN_TYPES[s] ? s : "all");
-    setType(PRODUCT_TYPES[t] ? t : "all");
+    setType(PRODUCT_TYPES[ty] ? ty : "all");
+    setQ(params.get("q") || "");
   }, [params]);
 
   const query = q.trim().toLowerCase();
@@ -39,23 +45,33 @@ export default function ShopClient() {
     (p) =>
       (skin === "all" || p.skin.includes(skin)) &&
       (type === "all" || p.type === type) &&
-      (!query || `${p.name} ${p.brand} ${p.short}`.toLowerCase().includes(query))
+      (!query ||
+        `${p.name} ${p.name_en || ""} ${p.brand} ${p.short} ${p.short_en || ""}`.toLowerCase().includes(query))
   );
 
   return (
     <>
+      <SectionTitle center sub={t("shop.sub")}>
+        {t("shop.title")}
+      </SectionTitle>
+
       <div className="filters">
         <label className="search glass">
-          <span aria-hidden="true">⌕</span>
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="جستجوی محصول" />
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("search.placeholder")} />
         </label>
         <div className="filter-row">
-          <Select label="نوع پوست" options={SKIN_TYPES} value={skin} onChange={setSkin} />
-          <Select label="دسته" options={PRODUCT_TYPES} value={type} onChange={setType} />
+          <Select label={t("shop.skin")} allLabel={t("shop.all")} options={skins} value={skin} onChange={setSkin} />
+          <Select label={t("shop.type")} allLabel={t("shop.all")} options={types} value={type} onChange={setType} />
         </div>
       </div>
 
-      <p className="muted count">{toFa(products.length)} محصول</p>
+      <p className="count">
+        {num(products.length, lang)} {t("shop.count")}
+      </p>
 
       {products.length ? (
         <div className="grid">
@@ -64,7 +80,7 @@ export default function ShopClient() {
           ))}
         </div>
       ) : (
-        <div className="empty glass">محصولی با این فیلترها پیدا نشد.</div>
+        <div className="empty">{t("shop.empty")}</div>
       )}
     </>
   );

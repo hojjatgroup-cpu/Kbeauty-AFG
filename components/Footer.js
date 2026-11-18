@@ -1,38 +1,37 @@
+"use client";
+
 import Link from "next/link";
+import { useLang } from "./LangProvider";
 import site from "@/data/site.json";
 
 export default function Footer() {
+  const { t } = useLang();
   return (
     <footer className="footer">
-      <div className="footer-line" />
       <div className="container footer-inner">
         <Link href="/" className="logo">
-          <span className="logo-mark">K</span>
+          <img src="/logo.png" alt="" width="34" height="34" />
           <span className="logo-text">{site.name}</span>
         </Link>
-        <p className="muted">{site.tagline}</p>
+        <p className="muted">{t("tagline")}</p>
         <div className="footer-links">
-          <Link href="/shop">محصولات</Link>
-          <Link href="/skin-test">تست نوع پوست</Link>
-          <Link href="/authenticity">بررسی اورجینال بودن</Link>
-          <Link href="/faq">سوالات پرتکرار</Link>
-          <Link href="/about">دربارهٔ ما</Link>
-          <Link href="/contact">تماس</Link>
+          <Link href="/shop">{t("nav.shop")}</Link>
+          <Link href="/skin-test">{t("nav.skinTest")}</Link>
+          <Link href="/authenticity">{t("nav.auth")}</Link>
+          <Link href="/faq">{t("nav.faq")}</Link>
+          <Link href="/about">{t("nav.about")}</Link>
+          <Link href="/contact">{t("nav.contact")}</Link>
         </div>
-        <a
-          className="round-btn insta"
-          href={`https://instagram.com/${site.instagram}`}
-          target="_blank"
-          rel="noopener"
-          aria-label="اینستاگرام"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <a className="round-btn insta" href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
             <rect x="3" y="3" width="18" height="18" rx="5" />
             <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
           </svg>
         </a>
-        <div className="copyright">© {site.name} · تمامی حقوق محفوظ است</div>
+        <div className="copyright">
+          © {site.name} · {t("footer.rights")}
+        </div>
       </div>
     </footer>
   );

@@ -3,31 +3,33 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/components/CartProvider";
+import { useLang } from "@/components/LangProvider";
 import ProductImage from "@/components/ProductImage";
-import { getProduct, formatPrice, hasPrice, toFa } from "@/lib/products";
+import SectionTitle from "@/components/SectionTitle";
+import { getProduct, formatPrice, hasPrice, num } from "@/lib/products";
+import { pf } from "@/lib/i18n";
+import provinces from "@/data/provinces.json";
 import site from "@/data/site.json";
 
 export default function CartClient() {
   const { items, setQty, remove, loaded } = useCart();
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [city, setCity] = useState("");
-  const [note, setNote] = useState("");
+  const { t, lang } = useLang();
+  const [step, setStep] = useState("bag"); // bag -> checkout
+  const [form, setForm] = useState({ name: "", phone: "", province: "", address: "", email: "" });
+  const [tried, setTried] = useState(false);
   const [copied, setCopied] = useState(false);
 
   if (!loaded) return null;
 
-  const rows = items
-    .map((i) => ({ ...i, product: getProduct(i.slug) }))
-    .filter((r) => r.product);
+  const rows = items.map((i) => ({ ...i, product: getProduct(i.slug) })).filter((r) => r.product);
 
   if (!rows.length) {
     return (
       <div className="empty">
-        <p style={{ fontSize: 40 }}>🛍️</p>
-        <p>سبد خرید شما خالی است.</p>
-        <Link href="/shop" className="btn btn-primary" style={{ marginTop: 14 }}>
-          رفتن به فروشگاه
+        <SectionTitle center>{t("cart.title")}</SectionTitle>
+        <p>{t("cart.empty")}</p>
+        <Link href="/shop" className="btn btn-ink" style={{ marginTop: 16 }}>
+          {t("cart.go")}
         </Link>
       </div>
     );
@@ -35,104 +37,172 @@ export default function CartClient() {
 
   const allPriced = rows.every((r) => hasPrice(r.product.price));
   const total = rows.reduce((s, r) => s + (Number(r.product.price) || 0) * r.qty, 0);
+  const totalText = allPriced ? formatPrice(total, lang) : t("cart.totalLater");
+  const count = rows.reduce((s, r) => s + r.qty, 0);
+
+  const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  const missing = {
+    name: !form.name.trim(),
+    phone: form.phone.replace(/\D/g, "").length < 7,
+    province: !form.province,
+    address: !form.address.trim(),
+  };
+  const valid = !Object.values(missing).some(Boolean);
+  const province = provinces.find((p) => p.en === form.province);
 
   const orderText = [
-    `سلام، می‌خواهم از ${site.name} سفارش بدهم:`,
+    t("cart.msgHello", { name: site.name }),
     "",
     ...rows.map(
-      (r, idx) =>
-        `${toFa(idx + 1)}. ${r.product.brand} - ${r.product.name} (${r.product.size}) × ${toFa(r.qty)}`
+      (r, i) =>
+        `${num(i + 1, lang)}. ${r.product.brand} - ${pf(r.product, "name", lang)} (${pf(r.product, "size", lang)}) × ${num(r.qty, lang)}`
     ),
     "",
-    allPriced ? `جمع کل: ${formatPrice(total)}` : "",
-    `نام: ${name || "-"}`,
-    `شمارهٔ تماس: ${phone || "-"}`,
-    `شهر / آدرس: ${city || "-"}`,
-    note ? `توضیحات: ${note}` : "",
+    `${t("cart.total")}: ${totalText}`,
+    "",
+    `${t("cart.name")}: ${form.name}`,
+    `${t("cart.phone")}: ${form.phone}`,
+    `${t("cart.province")}: ${province ? province[lang] : ""}`,
+    `${t("cart.address")}: ${form.address}`,
+    form.email ? `${t("cart.email")}: ${form.email}` : "",
   ]
     .filter((line, i, arr) => !(line === "" && arr[i - 1] === ""))
     .join("\n");
 
-  const handleOrder = () => {
+  const onOrder = (e) => {
+    if (!valid) {
+      e.preventDefault();
+      setTried(true);
+      return;
+    }
     try {
       navigator.clipboard.writeText(orderText).then(
         () => setCopied(true),
-        () => setCopied(false)
+        () => {}
       );
-    } catch (e) {}
+    } catch (err) {}
   };
 
+  const err = (k) => (tried && missing[k] ? "field field-error" : "field");
+
   return (
-    <>
-      {rows.map((r) => (
-        <div key={r.slug} className="cart-item">
-          <Link href={`/product/${r.slug}`}>
-            <ProductImage product={r.product} />
-          </Link>
-          <div>
-            <div className="card-brand">{r.product.brand}</div>
-            <div className="cart-name">{r.product.name}</div>
-            <div className="muted" style={{ fontSize: 13 }}>
-              {formatPrice(r.product.price)}
-            </div>
-            <div className="cart-row">
-              <div className="qty">
-                <button onClick={() => setQty(r.slug, r.qty + 1)} aria-label="بیشتر">
-                  +
-                </button>
-                <span>{toFa(r.qty)}</span>
-                <button onClick={() => setQty(r.slug, r.qty - 1)} aria-label="کمتر">
-                  −
-                </button>
-              </div>
-              <button className="remove" onClick={() => remove(r.slug)}>
-                حذف
-              </button>
-            </div>
-          </div>
-        </div>
-      ))}
+    <div className="cart">
+      <SectionTitle center>{step === "bag" ? t("cart.title") : t("cart.checkout")}</SectionTitle>
 
-      <div className="summary">
-        <div className="cart-row" style={{ marginTop: 0, marginBottom: 14 }}>
-          <strong>جمع کل</strong>
-          <strong>{allPriced ? formatPrice(total) : "[پس از تأیید سفارش اعلام می‌شود]"}</strong>
-        </div>
-
-        <label className="field">
-          <span>نام</span>
-          <input value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label className="field">
-          <span>شمارهٔ تماس</span>
-          <input value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" dir="ltr" />
-        </label>
-        <label className="field">
-          <span>شهر / آدرس</span>
-          <input value={city} onChange={(e) => setCity(e.target.value)} />
-        </label>
-        <label className="field">
-          <span>توضیحات (اختیاری)</span>
-          <textarea rows={2} value={note} onChange={(e) => setNote(e.target.value)} />
-        </label>
-
-        <a
-          className="btn btn-primary btn-block"
-          href={`https://ig.me/m/${site.instagram}`}
-          target="_blank"
-          rel="noopener"
-          onClick={handleOrder}
-        >
-          📷 ثبت سفارش در اینستاگرام
-        </a>
-        {copied && <p className="success">✓ متن سفارش کپی شد. در صفحهٔ اینستاگرام آن را Paste کنید و بفرستید.</p>}
-
-        <p className="muted" style={{ fontSize: 13, marginTop: 12 }}>
-          با زدن دکمه، متن سفارش کپی می‌شود و صفحهٔ پیام اینستاگرام ما باز می‌شود. متن را آن‌جا بچسبانید و بفرستید. اگر
-          کپی نشد، متن زیر را خودتان کپی کنید:
-        </p>
-        <textarea className="order-text" readOnly value={orderText} onFocus={(e) => e.target.select()} />
+      <div className="steps-bar">
+        <span className={step === "bag" ? "on" : ""}>{num(1, lang)}. {t("cart.step1")}</span>
+        <span className={step === "checkout" ? "on" : ""}>{num(2, lang)}. {t("cart.step2")}</span>
       </div>
-    </>
+
+      {step === "bag" && (
+        <>
+          {rows.map((r) => (
+            <div key={r.slug} className="cart-item">
+              <Link href={`/product/${r.slug}`}>
+                <ProductImage product={r.product} />
+              </Link>
+              <div>
+                <div className="card-brand">{r.product.brand}</div>
+                <div className="cart-name">{pf(r.product, "name", lang)}</div>
+                <div className="muted small">{formatPrice(r.product.price, lang)}</div>
+                <div className="cart-row">
+                  <div className="qty">
+                    <button onClick={() => setQty(r.slug, r.qty + 1)} aria-label="+">
+                      +
+                    </button>
+                    <span>{num(r.qty, lang)}</span>
+                    <button onClick={() => setQty(r.slug, r.qty - 1)} aria-label="−">
+                      −
+                    </button>
+                  </div>
+                  <button className="remove" onClick={() => remove(r.slug)}>
+                    {t("cart.remove")}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <div className="summary">
+            <div className="sum-row">
+              <span className="muted">{t("cart.items")}</span>
+              <span>{num(count, lang)}</span>
+            </div>
+            <div className="sum-row">
+              <strong>{t("cart.total")}</strong>
+              <strong>{totalText}</strong>
+            </div>
+            <button className="btn btn-ink btn-block" onClick={() => setStep("checkout")}>
+              {t("cart.continue")}
+            </button>
+            <Link href="/shop" className="btn btn-line btn-block" style={{ marginTop: 8 }}>
+              {t("cart.more")}
+            </Link>
+          </div>
+        </>
+      )}
+
+      {step === "checkout" && (
+        <div className="summary">
+          <label className={err("name")}>
+            <span>{t("cart.name")} *</span>
+            <input value={form.name} onChange={set("name")} autoComplete="name" />
+          </label>
+          <label className={err("phone")}>
+            <span>{t("cart.phone")} *</span>
+            <input value={form.phone} onChange={set("phone")} inputMode="tel" dir="ltr" autoComplete="tel" placeholder="07xx xxx xxx" />
+          </label>
+          <label className={err("province")}>
+            <span>{t("cart.province")} *</span>
+            <select value={form.province} onChange={set("province")}>
+              <option value="">{t("cart.choose")}</option>
+              {provinces.map((p) => (
+                <option key={p.en} value={p.en}>
+                  {p[lang]}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className={err("address")}>
+            <span>{t("cart.address")} *</span>
+            <textarea rows={3} value={form.address} onChange={set("address")} autoComplete="street-address" />
+          </label>
+          <label className="field">
+            <span>
+              {t("cart.email")} <em className="muted">({t("cart.optional")})</em>
+            </span>
+            <input type="email" value={form.email} onChange={set("email")} dir="ltr" autoComplete="email" />
+          </label>
+
+          {tried && !valid && <p className="form-error">{t("cart.fill")}</p>}
+
+          <div className="sum-row" style={{ marginTop: 6 }}>
+            <strong>{t("cart.total")}</strong>
+            <strong>{totalText}</strong>
+          </div>
+
+          <a
+            className="btn btn-ink btn-block"
+            href={`https://ig.me/m/${site.instagram}`}
+            target="_blank"
+            rel="noopener"
+            onClick={onOrder}
+          >
+            {t("cart.order")}
+          </a>
+          {copied && <p className="success">{t("cart.copied")}</p>}
+          <button className="btn btn-line btn-block" style={{ marginTop: 8 }} onClick={() => setStep("bag")}>
+            {t("cart.back")}
+          </button>
+
+          {valid && (
+            <>
+              <p className="hint">{t("cart.help")}</p>
+              <textarea className="order-text" readOnly value={orderText} onFocus={(e) => e.target.select()} />
+            </>
+          )}
+        </div>
+      )}
+    </div>
   );
 }

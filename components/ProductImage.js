@@ -5,7 +5,7 @@ export default function ProductImage({ product, large = false }) {
   if (product.image) {
     return (
       <div className={cls}>
-        <img src={product.image} alt={`${product.brand} ${product.name}`} loading="lazy" />
+        <img src={product.image} alt={`${product.brand} ${product.name_en || product.name}`} loading="lazy" />
       </div>
     );
   }

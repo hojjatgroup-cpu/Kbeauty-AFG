@@ -1,36 +1,36 @@
-import site from "@/data/site.json";
+import InfoPage from "@/components/InfoPage";
 
-export const metadata = { title: "چطور اورجینال بودن را بررسی کنیم" };
+export const metadata = { title: "بررسی اورجینال بودن | Authenticity" };
+
+const content = {
+  fa: {
+    title: "چطور اورجینال بودن را بررسی کنیم؟",
+    intro: "محصولات تقلبی مراقبت پوست زیاد است. با این نکته‌ها محصول اصل را بهتر تشخیص می‌دهید:",
+    sections: [
+      { h: "۱. بسته‌بندی را دقیق ببینید", p: "چاپ محصول اصل تمیز و دقیق است. رنگ‌های کم‌رنگ، نوشته‌های کج یا غلط املایی نشانهٔ هشدار است." },
+      { h: "۲. نوشته‌های کوریایی و معلومات سازنده", p: "روی بیشتر محصولات کوریایی، نوشته‌های کوریایی، نام و آدرس شرکت سازنده و Made in Korea درج شده است." },
+      { h: "۳. کد بچ و تاریخ", p: "کد بچ (Batch Code) و تاریخ تولید یا انقضا معمولاً روی جعبه و ظرف چاپ شده و باید با هم یکی باشند." },
+      { h: "۴. بارکد", p: "بارکد محصولات کوریایی معمولاً با ۸۸۰ شروع می‌شود. این به‌تنهایی کافی نیست، ولی نشانهٔ خوبی است." },
+      { h: "۵. بافت، رنگ و بو", p: "اگر بافت، رنگ یا بوی محصول عجیب است یا با همیشه فرق دارد، استفاده نکنید و با فروشنده تماس بگیرید." },
+      { h: "۶. قیمت خیلی ارزان", p: "قیمتی که خیلی پایین‌تر از بازار است، معمولاً نشانهٔ محصول تقلبی یا تاریخ‌گذشته است." },
+      { h: "تعهد ما", p: "محصولات K Beauty AFG از [منبع تهیهٔ محصولات] تهیه می‌شوند. اگر دربارهٔ اصل بودن محصولی سوال دارید، در اینستاگرام از ما بپرسید." },
+    ],
+  },
+  en: {
+    title: "How to check authenticity",
+    intro: "Counterfeit skincare is common. These tips help you spot the real thing:",
+    sections: [
+      { h: "1. Look closely at the packaging", p: "Genuine printing is clean and precise. Faded colors, crooked text or spelling mistakes are warning signs." },
+      { h: "2. Korean text and maker details", p: "Most Korean products show Korean text, the maker's name and address, and Made in Korea." },
+      { h: "3. Batch code and dates", p: "The batch code and production or expiry date are usually printed on both the box and the container, and should match." },
+      { h: "4. Barcode", p: "Korean barcodes usually start with 880. Not proof on its own, but a good sign." },
+      { h: "5. Texture, color and scent", p: "If the texture, color or scent seems odd or different from usual, don't use it and contact the seller." },
+      { h: "6. Too-cheap prices", p: "A price far below market usually means a fake or expired product." },
+      { h: "Our promise", p: "K Beauty AFG products are sourced from [product source]. Questions about any product? Ask us on Instagram." },
+    ],
+  },
+};
 
 export default function AuthenticityPage() {
-  return (
-    <div className="container prose" style={{ maxWidth: 760 }}>
-      <h1 className="page-title">چطور اورجینال بودن محصول را بررسی کنیم؟</h1>
-      <p>محصولات تقلبی آرایشی و مراقبت پوست زیاد است. با این نکته‌ها می‌توانید محصول اصل را بهتر تشخیص دهید:</p>
-
-      <h2>۱. بسته‌بندی را دقیق ببینید</h2>
-      <p>چاپ محصول اصل تمیز و دقیق است. رنگ‌های کم‌رنگ، نوشته‌های کج یا غلط املایی نشانهٔ هشدار است.</p>
-
-      <h2>۲. نوشته‌های کره‌ای و معلومات تولیدکننده</h2>
-      <p>روی بیشتر محصولات کره‌ای، نوشته‌های کره‌ای، نام و آدرس شرکت سازنده و کشور سازنده (Made in Korea) درج شده است.</p>
-
-      <h2>۳. کد بچ و تاریخ</h2>
-      <p>کد بچ (Batch Code) و تاریخ تولید یا انقضا معمولاً روی جعبه و خود ظرف چاپ شده است و باید با هم یکی باشند.</p>
-
-      <h2>۴. بارکد</h2>
-      <p>بارکد محصولات کره‌ای معمولاً با ۸۸۰ شروع می‌شود. این به‌تنهایی دلیل کافی نیست، ولی یک نشانهٔ خوب است.</p>
-
-      <h2>۵. بافت، رنگ و بو</h2>
-      <p>اگر بافت، رنگ یا بوی محصول با همیشه فرق دارد یا عجیب است، از آن استفاده نکنید و با فروشنده تماس بگیرید.</p>
-
-      <h2>۶. قیمت خیلی ارزان</h2>
-      <p>قیمتی که خیلی پایین‌تر از بازار است، معمولاً نشانهٔ محصول تقلبی یا تاریخ‌گذشته است.</p>
-
-      <h2>تعهد ما</h2>
-      <p>
-        محصولات {site.name} از [منبع تهیهٔ محصولات] تهیه می‌شوند. اگر دربارهٔ اصل بودن هر محصول سوالی داشتید، در
-        اینستاگرام ({site.instagram}) از ما بپرسید.
-      </p>
-    </div>
-  );
+  return <InfoPage content={content} />;
 }

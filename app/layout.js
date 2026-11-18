@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { CartProvider } from "@/components/CartProvider";
+import { LangProvider } from "@/components/LangProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingCart from "@/components/FloatingCart";
+import { CartProvider } from "@/components/CartProvider";
 import site from "@/data/site.json";
 
 const modam = localFont({
@@ -17,13 +17,13 @@ const modam = localFont({
 
 export const metadata = {
   title: { default: `${site.name} | ${site.tagline}`, template: `%s | ${site.name}` },
-  description: "فروشگاه آنلاین محصولات اورجینال کره‌ای مراقبت پوست: شوینده، ضدآفتاب، سرم، کرم و ماسک، با مشورهٔ رایگان.",
+  description: "محصولات اورجینال کره‌ای مراقبت پوست | Authentic Korean skincare",
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f4f0fd",
+  themeColor: "#faf8fc",
 };
 
 export default function RootLayout({ children }) {
@@ -31,12 +31,13 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body className={modam.className}>
         <div className="bg-blobs" aria-hidden="true" />
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <FloatingCart />
-        </CartProvider>
+        <LangProvider>
+          <CartProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </CartProvider>
+        </LangProvider>
       </body>
     </html>
   );

@@ -1,25 +1,30 @@
-import site from "@/data/site.json";
+import InfoPage from "@/components/InfoPage";
 
-export const metadata = { title: "دربارهٔ ما" };
+export const metadata = { title: "دربارهٔ ما | About" };
+
+const content = {
+  fa: {
+    title: "دربارهٔ ما",
+    intro:
+      "K Beauty AFG یک برند آنلاین برای محصولات اورجینال کره‌ای مراقبت پوست است. هدف ما این است که دسترسی به محصولات اصل و باکیفیت کره‌ای را آسان کنیم و در انتخاب محصول مناسب نوع پوست کنارتان باشیم.",
+    sections: [
+      { h: "چرا ما؟", p: ["فقط محصولات اورجینال کره‌ای", "مشورهٔ رایگان برای انتخاب روتین مناسب پوست", "ارسال به [شهرها / ولایات]"] },
+      { h: "داستان ما", p: "[داستان شروع برند، تجربهٔ شما در مشورهٔ پوست و چرا محصولات کره‌ای را انتخاب کردید.]" },
+      { h: "محصولات ما از کجا می‌آیند؟", p: "[منبع تهیهٔ محصولات: مثلاً خرید مستقیم از نمایندگی‌ها یا فروشگاه‌های رسمی در کوریا.]" },
+    ],
+  },
+  en: {
+    title: "About us",
+    intro:
+      "K Beauty AFG is an online brand for authentic Korean skincare. We make genuine, quality Korean products easy to get, and help you choose what suits your skin.",
+    sections: [
+      { h: "Why us?", p: ["Only authentic Korean products", "Free advice to build the right routine", "Delivery to [cities / provinces]"] },
+      { h: "Our story", p: "[How the brand started, your skincare consulting experience, and why Korean skincare.]" },
+      { h: "Where do our products come from?", p: "[Product sourcing: e.g. bought directly from official distributors or stores in Korea.]" },
+    ],
+  },
+};
 
 export default function AboutPage() {
-  return (
-    <div className="container prose" style={{ maxWidth: 760 }}>
-      <h1 className="page-title">دربارهٔ ما</h1>
-      <p>
-        {site.name} یک فروشگاه آنلاین برای محصولات اورجینال کره‌ای مراقبت پوست است. هدف ما این است که دسترسی به
-        محصولات اصل و باکیفیت کره‌ای را برای همه آسان کنیم و در انتخاب محصول مناسب نوع پوست، کنارتان باشیم.
-      </p>
-      <h2>چرا ما؟</h2>
-      <ul>
-        <li>فقط محصولات اورجینال کره‌ای عرضه می‌کنیم.</li>
-        <li>مشورهٔ رایگان برای انتخاب روتین مناسب پوست شما.</li>
-        <li>ارسال به [شهرها / کشورها].</li>
-      </ul>
-      <h2>داستان ما</h2>
-      <p>[داستان شروع فروشگاه، تجربهٔ شما در مشورهٔ پوست و چرا محصولات کره‌ای را انتخاب کردید.]</p>
-      <h2>محصولات ما از کجا می‌آیند؟</h2>
-      <p>[منبع تهیهٔ محصولات: مثلاً خرید مستقیم از نمایندگی‌ها یا فروشگاه‌های رسمی در کره.]</p>
-    </div>
-  );
+  return <InfoPage content={content} />;
 }

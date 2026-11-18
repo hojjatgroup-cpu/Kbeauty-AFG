@@ -4,7 +4,11 @@
     "name": "ژل شستشوی Low pH Good Morning",
     "brand": "COSRX",
     "type": "cleanser",
-    "skin": ["oily", "combination", "sensitive"],
+    "skin": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "150 ml",
     "image": "",
@@ -16,22 +20,49 @@
       "بافت ژلی سبک دارد و با کمی آب کف می‌کند."
     ],
     "keyIngredients": [
-      { "name": "روغن درخت چای", "desc": "حس تمیزی و طراوت می‌دهد" },
-      { "name": "BHA ملایم (Betaine Salicylate)", "desc": "به تمیزی منافذ کمک می‌کند" }
+      {
+        "name": "روغن درخت چای",
+        "desc": "حس تمیزی و طراوت می‌دهد",
+        "name_en": "Tea Tree Oil",
+        "desc_en": "Leaves skin feeling fresh and clean"
+      },
+      {
+        "name": "BHA ملایم (Betaine Salicylate)",
+        "desc": "به تمیزی منافذ کمک می‌کند",
+        "name_en": "Mild BHA (Betaine Salicylate)",
+        "desc_en": "Helps keep pores clean"
+      }
     ],
     "steps": [
       "مقدار کمی ژل را روی صورت مرطوب بزنید.",
       "به آرامی و با حرکات دورانی ماساژ دهید.",
       "با آب ولرم بشویید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Low pH Good Morning Gel Cleanser",
+    "short_en": "A gentle daily cleanse without the tight feeling.",
+    "benefits_en": [
+      "Gentle, low-pH formula suited to everyday morning and evening use.",
+      "Cleans the skin without leaving it tight or dry.",
+      "Light gel texture that lathers with a little water."
+    ],
+    "steps_en": [
+      "Apply a small amount to damp skin.",
+      "Massage gently in circular motions.",
+      "Rinse with lukewarm water."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "round-lab-1025-dokdo-cleanser",
     "name": "فوم شستشوی 1025 Dokdo",
     "brand": "Round Lab",
     "type": "cleanser",
-    "skin": ["dry", "combination", "sensitive"],
+    "skin": [
+      "dry",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "150 ml",
     "image": "",
@@ -43,21 +74,44 @@
       "برای استفادهٔ روزانه مناسب است."
     ],
     "keyIngredients": [
-      { "name": "آب عمیق دریا", "desc": "حس طراوت و نرمی می‌دهد" }
+      {
+        "name": "آب عمیق دریا",
+        "desc": "حس طراوت و نرمی می‌دهد",
+        "name_en": "Deep Sea Water",
+        "desc_en": "Leaves skin feeling fresh and soft"
+      }
     ],
     "steps": [
       "مقدار کمی را با آب کف کنید.",
       "روی صورت مرطوب به آرامی ماساژ دهید.",
       "با آب ولرم بشویید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "1025 Dokdo Cleanser",
+    "short_en": "A soft foam for skin that dries out easily.",
+    "benefits_en": [
+      "Soft, cushiony foam that cleans gently.",
+      "Skin feels soft after washing.",
+      "Suited to daily use."
+    ],
+    "steps_en": [
+      "Work a small amount into a lather with water.",
+      "Massage gently onto damp skin.",
+      "Rinse with lukewarm water."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "beauty-of-joseon-relief-sun",
     "name": "ضدآفتاب Relief Sun برنج و پروبیوتیک SPF50+",
     "brand": "Beauty of Joseon",
     "type": "sunscreen",
-    "skin": ["oily", "dry", "combination", "sensitive"],
+    "skin": [
+      "oily",
+      "dry",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "50 ml",
     "image": "",
@@ -69,22 +123,49 @@
       "زیر آرایش هم به خوبی قابل استفاده است."
     ],
     "keyIngredients": [
-      { "name": "عصارهٔ برنج", "desc": "حس نرمی و لطافت می‌دهد" },
-      { "name": "پروبیوتیک‌ها", "desc": "به حس راحتی پوست کمک می‌کند" }
+      {
+        "name": "عصارهٔ برنج",
+        "desc": "حس نرمی و لطافت می‌دهد",
+        "name_en": "Rice Extract",
+        "desc_en": "Leaves skin feeling soft and smooth"
+      },
+      {
+        "name": "پروبیوتیک‌ها",
+        "desc": "به حس راحتی پوست کمک می‌کند",
+        "name_en": "Probiotics",
+        "desc_en": "Helps skin feel comfortable"
+      }
     ],
     "steps": [
       "آخرین مرحلهٔ روتین صبح، بعد از کرم بزنید.",
       "به اندازهٔ کافی روی صورت و گردن پخش کنید.",
       "هر ۲ تا ۳ ساعت تجدید کنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Relief Sun: Rice + Probiotics SPF50+",
+    "short_en": "SPF50+ PA++++ protection in a light, creamy texture.",
+    "benefits_en": [
+      "High sun protection with SPF50+ and PA++++.",
+      "Light, creamy texture with no white cast.",
+      "Works well under makeup."
+    ],
+    "steps_en": [
+      "Apply as the last step of your morning routine, after moisturizer.",
+      "Spread a generous amount over face and neck.",
+      "Reapply every 2–3 hours."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "skin1004-centella-sun-serum",
     "name": "سرم ضدآفتاب Hyalu-Cica Water-Fit SPF50+",
     "brand": "SKIN1004",
     "type": "sunscreen",
-    "skin": ["oily", "combination", "sensitive"],
+    "skin": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "50 ml",
     "image": "",
@@ -96,22 +177,49 @@
       "محافظت SPF50+ برای استفادهٔ روزانه."
     ],
     "keyIngredients": [
-      { "name": "سنتلا آسیاتیکا", "desc": "حس آرامش به پوست می‌دهد" },
-      { "name": "هیالورونیک اسید", "desc": "رطوبت سبک می‌دهد" }
+      {
+        "name": "سنتلا آسیاتیکا",
+        "desc": "حس آرامش به پوست می‌دهد",
+        "name_en": "Centella Asiatica",
+        "desc_en": "Gives skin a calm, comfortable feel"
+      },
+      {
+        "name": "هیالورونیک اسید",
+        "desc": "رطوبت سبک می‌دهد",
+        "name_en": "Hyaluronic Acid",
+        "desc_en": "Adds light hydration"
+      }
     ],
     "steps": [
       "آخرین مرحلهٔ روتین صبح بزنید.",
       "به اندازهٔ کافی روی صورت و گردن پخش کنید.",
       "در طول روز تجدید کنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Hyalu-Cica Water-Fit Sun Serum SPF50+",
+    "short_en": "A watery, ultra-light sunscreen for warm weather.",
+    "benefits_en": [
+      "Serum-like watery texture that absorbs quickly.",
+      "No greasy or heavy feel on skin.",
+      "SPF50+ protection for daily use."
+    ],
+    "steps_en": [
+      "Apply as the last step of your morning routine.",
+      "Spread a generous amount over face and neck.",
+      "Reapply during the day."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "cosrx-advanced-snail-96-mucin-essence",
     "name": "اسنس Advanced Snail 96 Mucin",
     "brand": "COSRX",
     "type": "serum",
-    "skin": ["dry", "combination", "sensitive"],
+    "skin": [
+      "dry",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "100 ml",
     "image": "",
@@ -123,21 +231,42 @@
       "با بیشتر محصولات روتین سازگار است."
     ],
     "keyIngredients": [
-      { "name": "موسین حلزون ۹۶٪", "desc": "رطوبت و نرمی می‌دهد" }
+      {
+        "name": "موسین حلزون ۹۶٪",
+        "desc": "رطوبت و نرمی می‌دهد",
+        "name_en": "96% Snail Mucin",
+        "desc_en": "Adds moisture and softness"
+      }
     ],
     "steps": [
       "بعد از شستشو و تونر استفاده کنید.",
       "چند قطره روی صورت بزنید.",
       "با ضربه‌های آرام انگشت جذب کنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Advanced Snail 96 Mucin Power Essence",
+    "short_en": "Light hydration with 96% snail mucin.",
+    "benefits_en": [
+      "Silky, lightweight texture that absorbs quickly.",
+      "Leaves skin feeling soft and fresh.",
+      "Pairs easily with most routines."
+    ],
+    "steps_en": [
+      "Use after cleansing and toner.",
+      "Apply a few drops to the face.",
+      "Pat gently until absorbed."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "beauty-of-joseon-glow-serum",
     "name": "سرم Glow پروپولیس و نیاسینامید",
     "brand": "Beauty of Joseon",
     "type": "serum",
-    "skin": ["oily", "combination"],
+    "skin": [
+      "oily",
+      "combination"
+    ],
     "price": null,
     "size": "30 ml",
     "image": "",
@@ -149,22 +278,48 @@
       "برای روتین صبح و شب مناسب است."
     ],
     "keyIngredients": [
-      { "name": "پروپولیس", "desc": "حس تغذیه و لطافت می‌دهد" },
-      { "name": "نیاسینامید", "desc": "به یکدستی ظاهر پوست کمک می‌کند" }
+      {
+        "name": "پروپولیس",
+        "desc": "حس تغذیه و لطافت می‌دهد",
+        "name_en": "Propolis",
+        "desc_en": "Leaves skin feeling nourished and smooth"
+      },
+      {
+        "name": "نیاسینامید",
+        "desc": "به یکدستی ظاهر پوست کمک می‌کند",
+        "name_en": "Niacinamide",
+        "desc_en": "Helps skin look more even"
+      }
     ],
     "steps": [
       "بعد از تونر استفاده کنید.",
       "۲ تا ۳ قطره روی صورت بزنید.",
       "پیش از کرم بگذارید جذب شود."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Glow Serum: Propolis + Niacinamide",
+    "short_en": "A light serum for fresher, more even-looking skin.",
+    "benefits_en": [
+      "Light texture that absorbs quickly.",
+      "Gives skin a fresher look.",
+      "Suited to morning and evening routines."
+    ],
+    "steps_en": [
+      "Use after toner.",
+      "Apply 2–3 drops to the face.",
+      "Let it absorb before moisturizer."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "illiyoon-ceramide-ato-concentrate-cream",
     "name": "کرم Ceramide Ato Concentrate",
     "brand": "ILLIYOON",
     "type": "cream",
-    "skin": ["dry", "sensitive"],
+    "skin": [
+      "dry",
+      "sensitive"
+    ],
     "price": null,
     "size": "200 ml",
     "image": "",
@@ -176,21 +331,42 @@
       "مناسب روزهای سرد و خشک."
     ],
     "keyIngredients": [
-      { "name": "سرامید", "desc": "به نگه داشتن رطوبت پوست کمک می‌کند" }
+      {
+        "name": "سرامید",
+        "desc": "به نگه داشتن رطوبت پوست کمک می‌کند",
+        "name_en": "Ceramide",
+        "desc_en": "Helps skin hold on to moisture"
+      }
     ],
     "steps": [
       "آخرین مرحلهٔ روتین استفاده کنید.",
       "مقدار کافی روی پوست بمالید.",
       "صبح‌ها بعد از آن ضدآفتاب بزنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Ceramide Ato Concentrate Cream",
+    "short_en": "A rich ceramide cream for long-lasting moisture.",
+    "benefits_en": [
+      "Long-lasting moisture and softness.",
+      "For face and body.",
+      "Ideal for cold, dry days."
+    ],
+    "steps_en": [
+      "Use as the last step of your routine.",
+      "Apply a generous amount to skin.",
+      "Follow with sunscreen in the morning."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "cosrx-oil-free-ultra-moisturizing-lotion",
     "name": "لوسیون Oil-Free Ultra-Moisturizing",
     "brand": "COSRX",
     "type": "cream",
-    "skin": ["oily", "combination"],
+    "skin": [
+      "oily",
+      "combination"
+    ],
     "price": null,
     "size": "100 ml",
     "image": "",
@@ -202,21 +378,42 @@
       "برای استفادهٔ صبح و شب مناسب است."
     ],
     "keyIngredients": [
-      { "name": "شیرهٔ درخت توس", "desc": "رطوبت سبک و طراوت می‌دهد" }
+      {
+        "name": "شیرهٔ درخت توس",
+        "desc": "رطوبت سبک و طراوت می‌دهد",
+        "name_en": "Birch Sap",
+        "desc_en": "Adds light moisture and freshness"
+      }
     ],
     "steps": [
       "بعد از سرم استفاده کنید.",
       "لایه‌ای نازک روی کل صورت پخش کنید.",
       "صبح‌ها بعد از آن ضدآفتاب بزنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Oil-Free Ultra-Moisturizing Lotion",
+    "short_en": "A light, oil-free moisturizer.",
+    "benefits_en": [
+      "Hydrates without feeling heavy or shiny.",
+      "Light lotion texture that absorbs quickly.",
+      "Suited to morning and evening use."
+    ],
+    "steps_en": [
+      "Use after serum.",
+      "Spread a thin layer over the face.",
+      "Follow with sunscreen in the morning."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "beauty-of-joseon-red-bean-pore-mask",
     "name": "ماسک Red Bean Refreshing Pore",
     "brand": "Beauty of Joseon",
     "type": "mask",
-    "skin": ["oily", "combination"],
+    "skin": [
+      "oily",
+      "combination"
+    ],
     "price": null,
     "size": "140 ml",
     "image": "",
@@ -228,22 +425,49 @@
       "بعد از شستن، حس سبکی روی پوست می‌ماند."
     ],
     "keyIngredients": [
-      { "name": "لوبیای سرخ", "desc": "حس تمیزی ملایم می‌دهد" },
-      { "name": "خاک رس", "desc": "چربی اضافهٔ سطح پوست را جذب می‌کند" }
+      {
+        "name": "لوبیای سرخ",
+        "desc": "حس تمیزی ملایم می‌دهد",
+        "name_en": "Red Bean",
+        "desc_en": "Gives a gentle clean feel"
+      },
+      {
+        "name": "خاک رس",
+        "desc": "چربی اضافهٔ سطح پوست را جذب می‌کند",
+        "name_en": "Clay",
+        "desc_en": "Absorbs excess surface oil"
+      }
     ],
     "steps": [
       "لایه‌ای نازک روی پوست تمیز بزنید.",
       "۵ تا ۱۰ دقیقه صبر کنید.",
       "با آب ولرم بشویید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Red Bean Refreshing Pore Mask",
+    "short_en": "A wash-off clay mask for a clean, fresh feel.",
+    "benefits_en": [
+      "Leaves skin feeling clean and refreshed.",
+      "1–2 times a week is enough.",
+      "Skin feels light after rinsing."
+    ],
+    "steps_en": [
+      "Apply a thin layer to clean skin.",
+      "Wait 5–10 minutes.",
+      "Rinse with lukewarm water."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   },
   {
     "slug": "mediheal-tea-tree-sheet-mask",
     "name": "ماسک ورقه‌ای Tea Tree Care Solution",
     "brand": "Mediheal",
     "type": "mask",
-    "skin": ["oily", "combination", "sensitive"],
+    "skin": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
     "price": null,
     "size": "۱ عدد",
     "image": "",
@@ -255,13 +479,32 @@
       "پوست را نرم و با طراوت حس می‌کند."
     ],
     "keyIngredients": [
-      { "name": "روغن درخت چای", "desc": "حس تازگی و تمیزی می‌دهد" }
+      {
+        "name": "روغن درخت چای",
+        "desc": "حس تازگی و تمیزی می‌دهد",
+        "name_en": "Tea Tree",
+        "desc_en": "Gives a fresh, clean feel"
+      }
     ],
     "steps": [
       "ماسک را روی پوست تمیز بگذارید.",
       "۱۵ تا ۲۰ دقیقه صبر کنید و بردارید.",
       "باقیماندهٔ اسنس را با ضربه‌های آرام جذب کنید."
     ],
-    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]"
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "name_en": "Tea Tree Care Solution Essential Mask",
+    "short_en": "Quick, cooling care in 20 minutes.",
+    "benefits_en": [
+      "Gives skin a cool, calm feeling.",
+      "Easy, quick care.",
+      "Leaves skin feeling soft and fresh."
+    ],
+    "steps_en": [
+      "Place the mask on clean skin.",
+      "Wait 15–20 minutes, then remove.",
+      "Pat in the remaining essence."
+    ],
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "size_en": "1 sheet"
   }
 ]
