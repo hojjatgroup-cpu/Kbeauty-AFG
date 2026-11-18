@@ -10,5 +10,37 @@
       "alt": "بنر ویژه",
       "href": ""
     }
+  ],
+  "slides": [
+    {
+      "image": "/slides/slide-1.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/slides/slide-2.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/slides/slide-3.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/slides/slide-4.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/slides/slide-5.jpg",
+      "alt": "",
+      "href": ""
+    },
+    {
+      "image": "/slides/slide-6.jpg",
+      "alt": "",
+      "href": ""
+    }
   ]
 }

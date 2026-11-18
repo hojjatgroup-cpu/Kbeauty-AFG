@@ -400,3 +400,46 @@ main { min-height: 60vh; position: relative; z-index: 1; }
 .sale-badge.inline { position: static; }
 .old-price { color: var(--muted); font-size: .85em; margin-inline-end: 6px; text-decoration: line-through; }
 .price-wrap { display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* Hero slider */
+.hero-slider { position: relative; margin-bottom: 18px; }
+.slider { max-width: 520px; margin: 0 auto; }
+.slider-frame {
+  position: relative; aspect-ratio: 4 / 5; border-radius: 26px; overflow: hidden;
+  background: var(--lilac); box-shadow: 0 18px 40px rgba(70, 50, 110, .12);
+  /* soft fade at the top so the photo melts into the page */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 100%);
+}
+.slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity 1.1s ease;
+}
+.slide img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transform: scale(1.06); transition: transform 6s ease-out;
+}
+.slide.is-active { opacity: 1; z-index: 1; }
+.slide.is-active img { transform: scale(1); }
+/* frosted blur on the upper part of the image */
+.slider-veil {
+  position: absolute; inset: 0 0 auto 0; height: 34%; z-index: 2; pointer-events: none;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.6) 45%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.6) 45%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(250, 248, 252, .55), rgba(250, 248, 252, 0));
+}
+.slider-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+.slider-dots button {
+  position: relative; width: 6px; height: 6px; padding: 0; border: none; border-radius: 999px;
+  background: rgba(42, 36, 51, .18); overflow: hidden; transition: width .35s ease;
+}
+.slider-dots button.on { width: 26px; }
+.slider-dots button span {
+  position: absolute; inset: 0; background: var(--ink); transform-origin: left center; transform: scaleX(0);
+  animation: dot-fill linear forwards;
+}
+[dir="rtl"] .slider-dots button span { transform-origin: right center; }
+@keyframes dot-fill { to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .slide, .slide img { transition: none; }
+}
