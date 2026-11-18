@@ -5,7 +5,7 @@ import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import Banner from "@/components/Banner";
 import { useLang } from "@/components/LangProvider";
-import { getBestsellers } from "@/lib/products";
+import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
 
 export default function HomeClient() {
@@ -81,7 +81,7 @@ export default function HomeClient() {
             {t("home.cat")}
           </SectionTitle>
           <div className="cats">
-            {Object.entries(types).map(([key, label]) => (
+            {Object.entries(usedTypes(types)).map(([key, label]) => (
               <Link key={key} href={`/shop?type=${key}`} className="cat">
                 {label}
               </Link>

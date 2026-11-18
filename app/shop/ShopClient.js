@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import { useLang } from "@/components/LangProvider";
-import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num } from "@/lib/products";
+import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num, usedTypes } from "@/lib/products";
 
 function Select({ label, allLabel, options, value, onChange }) {
   return (
@@ -65,7 +65,7 @@ export default function ShopClient() {
         </label>
         <div className="filter-row">
           <Select label={t("shop.skin")} allLabel={t("shop.all")} options={skins} value={skin} onChange={setSkin} />
-          <Select label={t("shop.type")} allLabel={t("shop.all")} options={types} value={type} onChange={setType} />
+          <Select label={t("shop.type")} allLabel={t("shop.all")} options={usedTypes(types)} value={type} onChange={setType} />
         </div>
       </div>
 
