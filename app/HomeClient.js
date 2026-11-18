@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroSlider from "@/components/HeroSlider";
+import HeroVideo from "@/components/HeroVideo";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -15,32 +16,42 @@ export default function HomeClient() {
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-bg" aria-hidden="true" />
+      <section className="hero hero-video">
+        <HeroVideo />
         <div className="container hero-content">
-          <span className="kicker">{t("home.kicker")}</span>
+          <span className="kicker rise" style={{ "--d": "0.9s" }}>
+            {t("home.kicker")}
+          </span>
           <h1>
-            {t("home.title1")}
-            <br />
-            {t("home.title2")}
+            <span className="rise" style={{ "--d": "1.1s" }}>
+              {t("home.title1")}
+            </span>
+            <span className="rise" style={{ "--d": "1.35s" }}>
+              {t("home.title2")}
+            </span>
           </h1>
-          <p>{t("home.sub")}</p>
-          <div className="hero-actions">
+          <p className="rise" style={{ "--d": "1.6s" }}>
+            {t("home.sub")}
+          </p>
+          <div className="hero-actions rise" style={{ "--d": "1.85s" }}>
             <Link href="/shop" className="btn btn-ink">
               {t("home.cta")}
             </Link>
-            <Link href="/skin-test" className="btn btn-line">
+            <Link href="/skin-test" className="btn btn-glass-line">
               {t("home.cta2")}
             </Link>
           </div>
         </div>
+        <span className="scroll-hint rise" style={{ "--d": "2.3s" }} aria-hidden="true" />
+      </section>
 
-        {banners.length > 0 && (
-          <div className="container hero-banners">
+      {banners.length > 0 && (
+        <section className="slider-section">
+          <div className="container">
             <HeroSlider banners={banners} seconds={site.bannerSeconds || 4.5} />
           </div>
-        )}
-      </section>
+        </section>
+      )}
 
       <section className="section">
         <div className="container">
