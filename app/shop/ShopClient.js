@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, toFa } from "@/lib/products";
 
@@ -20,10 +21,18 @@ function Select({ label, options, value, onChange }) {
   );
 }
 
-export default function ShopClient({ initialSkin = "all", initialType = "all" }) {
-  const [skin, setSkin] = useState(initialSkin);
-  const [type, setType] = useState(initialType);
+export default function ShopClient() {
+  const params = useSearchParams();
+  const [skin, setSkin] = useState("all");
+  const [type, setType] = useState("all");
   const [q, setQ] = useState("");
+
+  useEffect(() => {
+    const s = params.get("skin");
+    const t = params.get("type");
+    setSkin(SKIN_TYPES[s] ? s : "all");
+    setType(PRODUCT_TYPES[t] ? t : "all");
+  }, [params]);
 
   const query = q.trim().toLowerCase();
   const products = getAllProducts().filter(
