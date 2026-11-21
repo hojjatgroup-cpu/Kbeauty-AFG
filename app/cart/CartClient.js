@@ -182,27 +182,41 @@ export default function CartClient() {
     const id = makeOrderId();
     const text = buildText(id);
     try {
+      const email = form.email.trim();
+      const payload = {
+        _subject: `سفارش جدید ${id} — K Beauty AFG`,
+        _template: "table",
+        _captcha: "false",
+        order_id: id,
+        name: form.name,
+        phone: form.phone,
+        province: chosen.label,
+        address: form.address,
+        items: itemLines.join("\n"),
+        subtotal: formatPrice(subtotal, lang),
+        coupon: coupon ? `${coupon.code} (${coupon.percent}%)` : "-",
+        discount: coupon ? `-${formatPrice(discount, lang)}` : "-",
+        shipping: formatPrice(shipFee, lang),
+        total: fmtTotal,
+        language: lang,
+      };
+      // If the customer gave an email, FormSubmit sends them a confirmation copy
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        payload.email = email;
+        payload._autoresponse = [
+          t("cart.mailHello", { name: form.name }),
+          t("cart.mailGot"),
+          "",
+          text,
+          "",
+          t("cart.mailWait"),
+          "K Beauty AFG — instagram.com/" + site.instagram,
+        ].join("\n");
+      }
       const res = await fetch(`https://formsubmit.co/ajax/${site.orderEmail}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          _subject: `سفارش جدید ${id} — K Beauty AFG`,
-          _template: "table",
-          _captcha: "false",
-          order_id: id,
-          name: form.name,
-          phone: form.phone,
-          province: chosen.label,
-          address: form.address,
-          email: form.email || "-",
-          items: itemLines.join("\n"),
-          subtotal: formatPrice(subtotal, lang),
-          coupon: coupon ? `${coupon.code} (${coupon.percent}%)` : "-",
-          discount: coupon ? `-${formatPrice(discount, lang)}` : "-",
-          shipping: formatPrice(shipFee, lang),
-          total: fmtTotal,
-          language: lang,
-        }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || String(data.success) !== "true") throw new Error(data.message || String(res.status));
