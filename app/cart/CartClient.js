@@ -35,6 +35,7 @@ export default function CartClient() {
   const [codeInput, setCodeInput] = useState("");
   const [coupon, setCoupon] = useState(null); // { code, percent }
   const [codeMsg, setCodeMsg] = useState("");
+  const [failWhy, setFailWhy] = useState("");
 
   // a code saved from the welcome popup is applied automatically
   useEffect(() => {
@@ -213,7 +214,7 @@ export default function CartClient() {
           "K Beauty AFG — instagram.com/" + site.instagram,
         ].join("\n");
       }
-      const res = await fetch(`https://formsubmit.co/ajax/${site.orderEmail}`, {
+      const res = await fetch("/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
@@ -235,6 +236,7 @@ export default function CartClient() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (e) {
       setFailed(text);
+      setFailWhy(String((e && e.message) || e).slice(0, 200));
     } finally {
       setSending(false);
     }
@@ -409,6 +411,11 @@ export default function CartClient() {
           {failed && (
             <div className="fail-box">
               <p className="form-error">{t("cart.failed")}</p>
+              {failWhy && (
+                <p className="muted" dir="ltr" style={{ fontSize: 11, wordBreak: "break-word" }}>
+                  {failWhy}
+                </p>
+              )}
               <a
                 className="btn btn-line btn-block"
                 href={`https://ig.me/m/${site.instagram}`}
