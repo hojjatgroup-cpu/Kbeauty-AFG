@@ -132,26 +132,28 @@ export default function CartClient() {
     const id = makeOrderId();
     const text = buildText(id);
     try {
-      const body = new URLSearchParams({
-        "form-name": "order",
-        order_id: id,
-        name: form.name,
-        phone: form.phone,
-        province: chosen.label,
-        address: form.address,
-        email: form.email,
-        items: itemLines.join("\n"),
-        subtotal: formatPrice(subtotal, lang),
-        shipping: formatPrice(shipFee, lang),
-        total: fmtTotal,
-        language: lang,
-      });
-      const res = await fetch("/__forms.html", {
+      const res = await fetch(`https://formsubmit.co/ajax/${site.orderEmail}`, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `سفارش جدید ${id} — K Beauty AFG`,
+          _template: "table",
+          _captcha: "false",
+          order_id: id,
+          name: form.name,
+          phone: form.phone,
+          province: chosen.label,
+          address: form.address,
+          email: form.email || "-",
+          items: itemLines.join("\n"),
+          subtotal: formatPrice(subtotal, lang),
+          shipping: formatPrice(shipFee, lang),
+          total: fmtTotal,
+          language: lang,
+        }),
       });
-      if (!res.ok) throw new Error(String(res.status));
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || String(data.success) !== "true") throw new Error(data.message || String(res.status));
       clear();
       setDone({ id, text });
       setStep("done");
