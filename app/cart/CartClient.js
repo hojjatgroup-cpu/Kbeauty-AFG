@@ -162,6 +162,23 @@ export default function CartClient() {
     if (!valid || sending) return;
     setSending(true);
     setFailed(false);
+    // first-order code: check this phone number on the server
+    if (coupon) {
+      try {
+        const r = await fetch("/api/coupon", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ phone: form.phone, action: "check" }),
+        }).then((x) => x.json());
+        if (r && r.reason === "used") {
+          setCoupon(null);
+          clearCoupon();
+          setCodeMsg(t("cart.couponUsedPhone"));
+          setSending(false);
+          return;
+        }
+      } catch {}
+    }
     const id = makeOrderId();
     const text = buildText(id);
     try {
@@ -193,6 +210,11 @@ export default function CartClient() {
       if (coupon) {
         markOrderDone();
         clearCoupon();
+        fetch("/api/coupon", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ phone: form.phone, action: "use", order: id }),
+        }).catch(() => {});
       }
       setDone({ id, text });
       setStep("done");

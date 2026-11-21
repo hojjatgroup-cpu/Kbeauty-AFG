@@ -15,7 +15,7 @@ export default function PromoPopup() {
   useEffect(() => {
     if (!PROMO || !promoActive() || popupSeen() || firstOrderDone()) return;
     // let the splash + hero texts appear first
-    const id = setTimeout(() => setOpen(true), 4500);
+    const id = setTimeout(() => setOpen(true), 20000);
     return () => clearTimeout(id);
   }, []);
 

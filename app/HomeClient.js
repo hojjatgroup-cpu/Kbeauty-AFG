@@ -15,14 +15,21 @@ export default function HomeClient() {
   const [go, setGo] = useState(false);
   const mounted = useRef(Date.now());
   // Texts come in once the video is playing (after the loading star), or after 2.5s at the latest.
+  // Texts come in ~2s after the video shows (or 3.5s at the latest, e.g. if autoplay is blocked)
+  const started = useRef(false);
   const onVideo = useCallback(() => {
-    // let the video play for ~2s first, then bring the texts in
+    if (started.current) return;
+    started.current = true;
     setTimeout(() => setGo(true), 2000);
   }, []);
   useEffect(() => {
-    const id = setTimeout(() => setGo(true), 6000);
-    return () => clearTimeout(id);
-  }, []);
+    window.addEventListener("hero-video-ready", onVideo);
+    const id = setTimeout(() => setGo(true), 3500);
+    return () => {
+      clearTimeout(id);
+      window.removeEventListener("hero-video-ready", onVideo);
+    };
+  }, [onVideo]);
   const { t, types } = useLang();
   const bestsellers = getBestsellers();
 
