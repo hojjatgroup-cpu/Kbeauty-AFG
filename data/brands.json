@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "anua",
+    "name": "Anua",
+    "name_fa": "انوا",
+    "logo": "/brands/anua.jpg",
+    "match": [
+      "Anua"
+    ]
+  },
+  {
+    "slug": "beauty-of-joseon",
+    "name": "Beauty of Joseon",
+    "name_fa": "بیوتی آف جوسان",
+    "logo": "/brands/beauty-of-joseon.jpg",
+    "match": [
+      "Beauty of Joseon"
+    ]
+  },
+  {
+    "slug": "purito",
+    "name": "Purito Seoul",
+    "name_fa": "پوریتو",
+    "logo": "/brands/purito.jpg",
+    "match": [
+      "Purito Seoul"
+    ]
+  },
+  {
+    "slug": "cosrx",
+    "name": "COSRX",
+    "name_fa": "کوزارکس",
+    "logo": "/brands/cosrx.jpg",
+    "match": [
+      "COSRX"
+    ]
+  },
+  {
+    "slug": "arencia",
+    "name": "Arencia",
+    "name_fa": "آرنسیا",
+    "logo": "/brands/arencia.jpg",
+    "match": [
+      "Arencia"
+    ]
+  },
+  {
+    "slug": "dr-althea",
+    "name": "Dr.Althea",
+    "name_fa": "دکتر آلتیا",
+    "logo": "",
+    "match": [
+      "Dr.Althea"
+    ]
+  },
+  {
+    "slug": "skin1004",
+    "name": "SKIN1004",
+    "name_fa": "اسکین ۱۰۰۴",
+    "logo": "/brands/skin1004.jpg",
+    "match": [
+      "SKIN1004"
+    ]
+  }
+]

@@ -664,5 +664,135 @@
       "ترانگزامیک",
       "سیروم"
     ]
+  },
+  {
+    "slug": "arencia-vitamin-c-booster-shot",
+    "name": "کرم روشن‌کنندهٔ ویتامین C بوستر شات صورت و دور چشم آرنسیا",
+    "name_en": "Arencia Vitamin C Booster Shot — Face & Eye Cream",
+    "brand": "Arencia",
+    "brand_fa": "آرنسیا",
+    "keywords": [
+      "آرنسیا",
+      "ارنسیا",
+      "ویتامین سی",
+      "ویتامین c",
+      "دور چشم",
+      "گلوتاتیون",
+      "روشن کننده",
+      "کرم"
+    ],
+    "type": "cream",
+    "skin": [
+      "dry",
+      "combination",
+      "oily"
+    ],
+    "price": 1350,
+    "size": "30 ml",
+    "image": "/products/arencia-vitamin-c-booster-shot.jpg",
+    "bestseller": false,
+    "short": "کرم سبک ویتامین C برای صورت و دور چشم؛ برای پوستی شاداب‌تر و درخشان‌تر.",
+    "short_en": "Light vitamin C cream for face and eyes, for a fresher, more radiant look.",
+    "benefits": [
+      "ترکیب ویتامین C (۵٪) با گلوتاتیون برای ظاهری روشن‌تر و یکدست‌تر.",
+      "هم برای صورت و هم برای دور چشم قابل استفاده است.",
+      "بافت سبک دارد و پوست را نرم و مرطوب نگه می‌دارد."
+    ],
+    "benefits_en": [
+      "Vitamin C complex (5%) with glutathione for a brighter, more even look.",
+      "Can be used on both face and eye area.",
+      "Light texture that keeps skin soft and moisturised."
+    ],
+    "keyIngredients": [
+      {
+        "name": "کمپلکس ویتامین C (۵٪)",
+        "desc": "برای درخشش و شادابی پوست",
+        "name_en": "Vitamin C Complex (5%)",
+        "desc_en": "For radiance and freshness"
+      },
+      {
+        "name": "گلوتاتیون",
+        "desc": "همراه ویتامین C برای ظاهری روشن‌تر",
+        "name_en": "Glutathione",
+        "desc_en": "Works with vitamin C for a brighter look"
+      }
+    ],
+    "steps": [
+      "بعد از شستشو و تونر استفاده کنید.",
+      "مقدار کمی روی صورت و با ضربه‌های آرام دور چشم بزنید.",
+      "در روتین صبح، بعد از آن حتماً ضدآفتاب بزنید."
+    ],
+    "steps_en": [
+      "Use after cleansing and toner.",
+      "Apply a small amount to the face and gently pat around the eyes.",
+      "In the morning, always follow with sunscreen."
+    ],
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
+  },
+  {
+    "slug": "beauty-of-joseon-revive-eye-serum-ginseng-retinal",
+    "name": "سرم دور چشم ریوایو جینسینگ و رتینال بیوتی آف جوسان",
+    "name_en": "Beauty of Joseon Revive Eye Serum: Ginseng + Retinal",
+    "brand": "Beauty of Joseon",
+    "brand_fa": "بیوتی آف جوسان",
+    "keywords": [
+      "جوسان",
+      "جوزان",
+      "دور چشم",
+      "چشم",
+      "جینسینگ",
+      "رتینال",
+      "رتینول",
+      "سرم چشم"
+    ],
+    "type": "serum",
+    "skin": [
+      "dry",
+      "combination",
+      "oily"
+    ],
+    "price": 1190,
+    "size": "30 ml",
+    "image": "/products/boj-revive-eye-serum-ginseng-retinal.jpg",
+    "bestseller": false,
+    "short": "سرم کرمی دور چشم با جینسینگ و رتینال، برای مراقبت شبانه از پوست ظریف دور چشم.",
+    "short_en": "Creamy eye serum with ginseng and retinal for the delicate eye area.",
+    "benefits": [
+      "مخصوص پوست ظریف دور چشم.",
+      "جینسینگ و رتینال برای پوستی نرم‌تر و شاداب‌تر.",
+      "بافت کرمی که پوست دور چشم را مرطوب نگه می‌دارد."
+    ],
+    "benefits_en": [
+      "Made for the delicate eye area.",
+      "Ginseng and retinal for softer, fresher-looking skin.",
+      "Creamy texture that keeps the eye area moisturised."
+    ],
+    "keyIngredients": [
+      {
+        "name": "جینسینگ",
+        "desc": "عصارهٔ مشهور کره‌ای برای شادابی پوست",
+        "name_en": "Ginseng",
+        "desc_en": "Classic Korean extract for vitality"
+      },
+      {
+        "name": "رتینال",
+        "desc": "از خانوادهٔ ویتامین A؛ بیشتر برای شب",
+        "name_en": "Retinal",
+        "desc_en": "A vitamin A derivative, best at night"
+      }
+    ],
+    "steps": [
+      "شب‌ها بعد از شستشو و تونر استفاده کنید.",
+      "مقدار خیلی کم را با نوک انگشت دور چشم ضربه بزنید.",
+      "در شروع، یک شب در میان استفاده کنید و صبح ضدآفتاب بزنید."
+    ],
+    "steps_en": [
+      "Use at night after cleansing and toner.",
+      "Gently pat a very small amount around the eyes.",
+      "Start every other night and wear sunscreen in the morning."
+    ],
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
   }
 ]

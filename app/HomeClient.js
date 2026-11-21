@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
+import Icon from "@/components/Icons";
+import brands from "@/data/brands.json";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -14,12 +16,11 @@ export default function HomeClient() {
   const mounted = useRef(Date.now());
   // Texts come in once the video is playing (after the loading star), or after 2.5s at the latest.
   const onVideo = useCallback(() => {
-    // wait for the loading star to fade out first
-    const wait = Math.max(0, 700 - (Date.now() - mounted.current));
-    setTimeout(() => setGo(true), wait + 500);
+    // let the video play for ~2s first, then bring the texts in
+    setTimeout(() => setGo(true), 2000);
   }, []);
   useEffect(() => {
-    const id = setTimeout(() => setGo(true), 4800);
+    const id = setTimeout(() => setGo(true), 6000);
     return () => clearTimeout(id);
   }, []);
   const { t, types } = useLang();
@@ -33,12 +34,12 @@ export default function HomeClient() {
           <span className="kicker h-kicker">{t("home.kicker")}</span>
           <h1>
             <span className="h-line">
-              <span className="h-inner" style={{ "--d": "0.25s" }}>
+              <span className="h-inner" style={{ "--d": "0.15s" }}>
                 {t("home.title1")}
               </span>
             </span>
             <span className="h-line">
-              <span className="h-inner" style={{ "--d": "0.45s" }}>
+              <span className="h-inner" style={{ "--d": "0.3s" }}>
                 {t("home.title2")}
               </span>
             </span>
@@ -62,6 +63,9 @@ export default function HomeClient() {
           <div className="trust">
             {[1, 2, 3, 4].map((n) => (
               <div key={n} className="trust-item">
+                <span className="trust-ico">
+                  <Icon name={["original", "delivery", "consult", "support"][n - 1]} />
+                </span>
                 <strong>{t(`trust.${n}`)}</strong>
                 <span>{t(`trust.${n}t`)}</span>
               </div>
@@ -96,7 +100,29 @@ export default function HomeClient() {
           <div className="cats">
             {Object.entries(usedTypes(types)).map(([key, label]) => (
               <Link key={key} href={`/shop?type=${key}`} className="cat">
-                {label}
+                <span className="cat-ico">
+                  <Icon name={key} size={30} />
+                </span>
+                <span>{label}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionTitle center kicker={t("home.brandKicker")}>
+            {t("home.brand")}
+          </SectionTitle>
+          <div className="brands">
+            {brands.map((b) => (
+              <Link key={b.slug} href={`/shop?brand=${b.slug}`} className="brand-tile" aria-label={b.name}>
+                {b.logo ? (
+                  <img src={b.logo} alt={b.name} width="480" height="240" loading="lazy" />
+                ) : (
+                  <span className="brand-word">{b.name}</span>
+                )}
               </Link>
             ))}
           </div>

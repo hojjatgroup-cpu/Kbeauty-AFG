@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import { useLang } from "@/components/LangProvider";
+import brands from "@/data/brands.json";
 import { getAllProducts, SKIN_TYPES, PRODUCT_TYPES, num, usedTypes, matchesSearch } from "@/lib/products";
 
 function Select({ label, allLabel, options, value, onChange }) {
@@ -31,6 +32,7 @@ export default function ShopClient() {
   const [skin, setSkin] = useState("all");
   const [type, setType] = useState("all");
   const [q, setQ] = useState("");
+  const [brand, setBrand] = useState("all");
 
   useEffect(() => {
     const s = params.get("skin");
@@ -38,12 +40,15 @@ export default function ShopClient() {
     setSkin(SKIN_TYPES[s] ? s : "all");
     setType(PRODUCT_TYPES[ty] ? ty : "all");
     setQ(params.get("q") || "");
+    const b = params.get("brand");
+    setBrand(brands.some((x) => x.slug === b) ? b : "all");
   }, [params]);
 
   const products = getAllProducts().filter(
     (p) =>
       (skin === "all" || p.skin.includes(skin)) &&
       (type === "all" || p.type === type) &&
+      (brand === "all" || brands.find((x) => x.slug === brand).match.includes(p.brand)) &&
       matchesSearch(p, q)
   );
 
@@ -64,6 +69,13 @@ export default function ShopClient() {
         <div className="filter-row">
           <Select label={t("shop.skin")} allLabel={t("shop.all")} options={skins} value={skin} onChange={setSkin} />
           <Select label={t("shop.type")} allLabel={t("shop.all")} options={usedTypes(types)} value={type} onChange={setType} />
+          <Select
+            label={t("shop.brand")}
+            allLabel={t("shop.all")}
+            options={Object.fromEntries(brands.map((b) => [b.slug, lang === "fa" ? b.name_fa : b.name]))}
+            value={brand}
+            onChange={setBrand}
+          />
         </div>
       </div>
 
