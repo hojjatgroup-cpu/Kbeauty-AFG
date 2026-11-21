@@ -6,7 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
 import Icon from "@/components/Icons";
-import brands from "@/data/brands.json";
+import BrandCarousel from "@/components/BrandCarousel";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -115,17 +115,7 @@ export default function HomeClient() {
           <SectionTitle center kicker={t("home.brandKicker")}>
             {t("home.brand")}
           </SectionTitle>
-          <div className="brands">
-            {brands.map((b) => (
-              <Link key={b.slug} href={`/shop?brand=${b.slug}`} className="brand-tile" aria-label={b.name}>
-                {b.logo ? (
-                  <img src={b.logo} alt={b.name} width="480" height="240" loading="lazy" />
-                ) : (
-                  <span className="brand-word">{b.name}</span>
-                )}
-              </Link>
-            ))}
-          </div>
+          <BrandCarousel />
         </div>
       </section>
 
