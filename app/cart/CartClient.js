@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "@/components/CartProvider";
 import { useLang } from "@/components/LangProvider";
 import ProductImage from "@/components/ProductImage";
@@ -12,6 +12,7 @@ import { pf } from "@/lib/i18n";
 import provinces from "@/data/provinces.json";
 import shipping from "@/data/shipping.json";
 import site from "@/data/site.json";
+import { checkCoupon, savedCoupon, saveCoupon, clearCoupon, markOrderDone, cleanCode } from "@/lib/promo";
 
 const zone = (id) => shipping.zones.find((z) => z.id === id);
 
@@ -31,6 +32,18 @@ export default function CartClient() {
   const [sending, setSending] = useState(false);
   const [failed, setFailed] = useState(false);
   const [done, setDone] = useState(null); // { id, text }
+  const [codeInput, setCodeInput] = useState("");
+  const [coupon, setCoupon] = useState(null); // { code, percent }
+  const [codeMsg, setCodeMsg] = useState("");
+
+  // a code saved from the welcome popup is applied automatically
+  useEffect(() => {
+    const c = savedCoupon();
+    if (!c) return;
+    setCodeInput(c);
+    const r = checkCoupon(c);
+    if (r.ok) setCoupon({ code: cleanCode(c), percent: r.percent });
+  }, []);
 
   if (!loaded) return null;
 
@@ -84,7 +97,26 @@ export default function CartClient() {
   ];
   const chosen = options.find((o) => o.value === form.province);
   const shipFee = chosen ? chosen.fee : 0;
-  const total = subtotal + shipFee;
+  const discount = coupon ? Math.round((subtotal * coupon.percent) / 100) : 0; // products only, not delivery
+  const total = subtotal - discount + shipFee;
+
+  const applyCode = () => {
+    const r = checkCoupon(codeInput);
+    if (r.ok) {
+      setCoupon({ code: cleanCode(codeInput), percent: r.percent });
+      saveCoupon(codeInput);
+      setCodeMsg("");
+    } else {
+      setCoupon(null);
+      setCodeMsg(t({ invalid: "cart.couponInvalid", expired: "cart.couponExpired", used: "cart.couponUsed" }[r.reason]));
+    }
+  };
+  const removeCode = () => {
+    setCoupon(null);
+    setCodeInput("");
+    setCodeMsg("");
+    clearCoupon();
+  };
   const fmtTotal = allPriced ? formatPrice(total, lang) : t("cart.totalLater");
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
@@ -112,6 +144,7 @@ export default function CartClient() {
       ...itemLines,
       "",
       `${t("cart.subtotal")}: ${formatPrice(subtotal, lang)}`,
+      coupon ? `${t("cart.discount")} (${coupon.code} — ${coupon.percent}%): −${formatPrice(discount, lang)}` : "",
       `${t("cart.shipping")}: ${formatPrice(shipFee, lang)}`,
       `${t("cart.total")}: ${fmtTotal}`,
       "",
@@ -147,6 +180,8 @@ export default function CartClient() {
           email: form.email || "-",
           items: itemLines.join("\n"),
           subtotal: formatPrice(subtotal, lang),
+          coupon: coupon ? `${coupon.code} (${coupon.percent}%)` : "-",
+          discount: coupon ? `-${formatPrice(discount, lang)}` : "-",
           shipping: formatPrice(shipFee, lang),
           total: fmtTotal,
           language: lang,
@@ -155,6 +190,10 @@ export default function CartClient() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok || String(data.success) !== "true") throw new Error(data.message || String(res.status));
       clear();
+      if (coupon) {
+        markOrderDone();
+        clearCoupon();
+      }
       setDone({ id, text });
       setStep("done");
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -272,11 +311,46 @@ export default function CartClient() {
             <input type="email" value={form.email} onChange={set("email")} dir="ltr" autoComplete="email" />
           </label>
 
+          <div className="field coupon-box">
+            <span>{t("cart.coupon")}</span>
+            {coupon ? (
+              <div className="coupon-on">
+                <span dir="ltr">{coupon.code}</span>
+                <em>{t("cart.couponOk", { n: num(coupon.percent, lang) })}</em>
+                <button type="button" onClick={removeCode}>
+                  {t("cart.remove")}
+                </button>
+              </div>
+            ) : (
+              <div className="coupon-row">
+                <input
+                  value={codeInput}
+                  onChange={(e) => setCodeInput(e.target.value)}
+                  placeholder={t("cart.couponPh")}
+                  dir="ltr"
+                  autoCapitalize="characters"
+                />
+                <button type="button" className="btn btn-line" onClick={applyCode}>
+                  {t("cart.apply")}
+                </button>
+              </div>
+            )}
+            {codeMsg && <p className="form-error">{codeMsg}</p>}
+          </div>
+
           <div className="totals">
             <div className="sum-row">
               <span className="muted">{t("cart.subtotal")}</span>
               <span>{formatPrice(subtotal, lang)}</span>
             </div>
+            {coupon && (
+              <div className="sum-row discount-row">
+                <span>
+                  {t("cart.discount")} ({num(coupon.percent, lang)}{lang === "fa" ? "٪" : "%"})
+                </span>
+                <span>−{formatPrice(discount, lang)}</span>
+              </div>
+            )}
             <div className="sum-row">
               <span className="muted">{t("cart.shipping")}</span>
               <span>{chosen ? formatPrice(shipFee, lang) : "—"}</span>

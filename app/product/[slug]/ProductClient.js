@@ -34,7 +34,7 @@ export default function ProductClient({ slug }) {
         <div className="phero-info">
           <div className="pcard-brand">{product.brand}</div>
           <h1>{pf(product, "name", lang)}</h1>
-          <p className="muted">{pf(product, "short", lang)}</p>
+          <p className="p-about">{pf(product, "about", lang) || pf(product, "short", lang)}</p>
           <div className="pills">
             {product.skin.map((s) => (
               <span key={s} className="pill pill-outline">
@@ -132,7 +132,7 @@ export default function ProductClient({ slug }) {
         <section className="section">
           <SectionTitle>{t("p.full")}</SectionTitle>
           <div className="glass text-box">
-            <p>{full}</p>
+            <p dir="ltr" className="inci">{full}</p>
           </div>
           <p className="note">{t("p.patch")}</p>
         </section>

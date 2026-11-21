@@ -42,5 +42,11 @@
     }
   ],
   "bannerSeconds": 4.5,
-  "orderEmail": "abbashojjat25@gmail.com"
+  "orderEmail": "abbashojjat25@gmail.com",
+  "promo": {
+    "code": "KBEAUTY10",
+    "percent": 10,
+    "until": "2026-11-28",
+    "firstOrderOnly": true
+  }
 }
