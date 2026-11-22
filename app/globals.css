@@ -729,3 +729,15 @@ html[dir="rtl"] .pbar-track { animation-direction: reverse; }
 .scroll-cue-ring { width: 30px; height: 30px; }
 .scroll-cue { bottom: 14px; }
 @keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* Bestseller slider: 3 per row, glides on its own */
+.bslider { overflow: hidden; margin: 0 -6px; }
+.bslider-track { display: flex; will-change: transform; }
+.bslider-cell { flex: 0 0 33.3333%; padding: 0 6px; min-width: 0; }
+.bslider-cell .pcard-name { font-size: 12px; line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bslider-cell .pcard-price { font-size: 12px; flex-wrap: wrap; }
+.bslider-cell .pcard-brand { font-size: 10.5px; }
+.bslider-cell .sale-badge { font-size: 10px; padding: 2px 6px; }
+/* Category wheel icons */
+.wheel-ico { display: grid; place-items: center; width: 100%; height: 100%; border-radius: 999px; background: var(--lilac); color: var(--accent-dark); transform: none !important; }
+.arc-item .wheel-ico svg { transform: none; }

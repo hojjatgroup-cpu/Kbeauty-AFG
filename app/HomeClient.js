@@ -7,6 +7,8 @@ import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
 import Icon from "@/components/Icons";
 import BrandCarousel from "@/components/BrandCarousel";
+import BestSlider from "@/components/BestSlider";
+import Wheel from "@/components/Wheel";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -30,7 +32,8 @@ export default function HomeClient() {
       window.removeEventListener("hero-video-ready", onVideo);
     };
   }, [onVideo]);
-  const { t, types } = useLang();
+  const { t, types, lang } = useLang();
+  const dir = lang === "fa" ? "rtl" : "ltr";
   const bestsellers = getBestsellers();
 
   return (
@@ -99,11 +102,7 @@ export default function HomeClient() {
           <SectionTitle center kicker={t("home.bestKicker")}>
             {t("home.best")}
           </SectionTitle>
-          <div className="grid">
-            {bestsellers.map((p) => (
-              <ProductCard key={p.slug} product={p} />
-            ))}
-          </div>
+          <BestSlider products={bestsellers} dir={dir} />
           <div className="center-row">
             <Link href="/shop" className="link-line">
               {t("home.all")}
@@ -117,16 +116,19 @@ export default function HomeClient() {
           <SectionTitle center kicker={t("home.catKicker")}>
             {t("home.cat")}
           </SectionTitle>
-          <div className="cats">
-            {Object.entries(usedTypes(types)).map(([key, label]) => (
-              <Link key={key} href={`/shop?type=${key}`} className="cat">
-                <span className="cat-ico">
-                  <Icon name={key} size={30} />
+          <Wheel
+            dir={dir}
+            items={Object.entries(usedTypes(types)).map(([key, label]) => ({
+              key,
+              href: `/shop?type=${key}`,
+              label,
+              node: (
+                <span className="wheel-ico">
+                  <Icon name={key} size={40} />
                 </span>
-                <span>{label}</span>
-              </Link>
-            ))}
-          </div>
+              ),
+            }))}
+          />
         </div>
       </section>
 
@@ -135,7 +137,7 @@ export default function HomeClient() {
           <SectionTitle center kicker={t("home.brandKicker")}>
             {t("home.brand")}
           </SectionTitle>
-          <BrandCarousel />
+          <BrandCarousel dir={dir} />
         </div>
       </section>
 
