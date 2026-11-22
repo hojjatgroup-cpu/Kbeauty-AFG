@@ -698,3 +698,4 @@ html[dir="ltr"] .pbar-item { direction: ltr; }
 @keyframes pbar-glint { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(420%); } }
 @keyframes pbar-twinkle { 50% { opacity: .35; transform: scale(.8); } }
 @media (prefers-reduced-motion: reduce) { .pbar-track, .pbar, .pbar::after, .pbar-spark { animation: none; } }
+html[dir="rtl"] .pbar-track { animation-direction: reverse; }
