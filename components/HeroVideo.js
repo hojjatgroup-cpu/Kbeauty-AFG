@@ -1,15 +1,33 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// A different video on each visit (never the same one twice in a row)
+const VIDEOS = ["hero", "hero2", "hero3", "hero4"];
+function pickVideo() {
+  let last = -1;
+  try {
+    last = Number(localStorage.getItem("kbeauty-hero") ?? -1);
+  } catch {}
+  let i = Math.floor(Math.random() * VIDEOS.length);
+  if (VIDEOS.length > 1 && i === last) i = (i + 1) % VIDEOS.length;
+  try {
+    localStorage.setItem("kbeauty-hero", String(i));
+  } catch {}
+  return VIDEOS[i];
+}
 
 // Muted, looping background video for the home hero. Small file that starts loading immediately.
 // Tells the loading screen when it can play, and retries play() on the first touch if the browser blocked it.
 export default function HeroVideo({ onPlaying }) {
   const ref = useRef(null);
+  const [name, setName] = useState(null);
+
+  useEffect(() => setName(pickVideo()), []);
 
   useEffect(() => {
     const v = ref.current;
-    if (!v) return;
+    if (!v || !name) return;
     v.muted = true;
     v.defaultMuted = true;
     v.setAttribute("muted", "");
@@ -32,15 +50,17 @@ export default function HeroVideo({ onPlaying }) {
       window.removeEventListener("touchstart", onTouch);
       window.removeEventListener("scroll", onTouch);
     };
-  }, []);
+  }, [name]);
 
   return (
     <div className="hero-media" aria-hidden="true">
+      {name && (
       <video
+        key={name}
         ref={ref}
         className="hero-vid is-playing"
-        src="/video/hero.mp4"
-        poster="/video/hero-poster.jpg"
+        src={`/video/${name}.mp4`}
+        poster={`/video/${name}-poster.jpg`}
         autoPlay
         muted
         loop
@@ -48,6 +68,7 @@ export default function HeroVideo({ onPlaying }) {
         preload="auto"
         onPlaying={() => onPlaying && onPlaying()}
       />
+      )}
       <span className="hero-veil" />
     </div>
   );
