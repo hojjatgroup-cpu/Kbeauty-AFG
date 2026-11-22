@@ -54,7 +54,9 @@ export default function BestSlider({ products, title, dir = "ltr", every = 4500 
         </button>
         <Link href={`/product/${p.slug}`} className="show-media" key={p.slug}>
           {off > 0 && <span className="sale-badge">{t("sale.off", { n: num(off, lang) })}</span>}
-          <img src={p.cutout || p.image} alt={pf(p, "name", lang)} width="480" height="480" draggable="false" />
+          <span className="show-disc">
+            <img src={p.png || p.image} alt={pf(p, "name", lang)} width="720" height="720" draggable="false" />
+          </span>
         </Link>
         <button className="show-arrow next" onClick={() => go(1)} aria-label="next">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
