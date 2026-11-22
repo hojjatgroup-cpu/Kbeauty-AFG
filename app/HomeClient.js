@@ -99,10 +99,7 @@ export default function HomeClient() {
 
       <section className="section">
         <div className="container">
-          <SectionTitle center kicker={t("home.bestKicker")}>
-            {t("home.best")}
-          </SectionTitle>
-          <BestSlider products={bestsellers} dir={dir} />
+          <BestSlider products={bestsellers} dir={dir} title={t("home.best")} />
           <div className="center-row">
             <Link href="/shop" className="link-line">
               {t("home.all")}

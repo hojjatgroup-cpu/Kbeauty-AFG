@@ -1,65 +1,85 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import ProductCard from "./ProductCard";
+import AddToCartButton from "./AddToCartButton";
+import { useLang } from "./LangProvider";
+import { pf } from "@/lib/i18n";
+import { formatPrice, discountPercent, num } from "@/lib/products";
 
-// 3 products per row that glide on their own, in the reading direction, and loop.
-export default function BestSlider({ products, dir = "ltr", every = 3200 }) {
-  const [i, setI] = useState(0);
-  const [anim, setAnim] = useState(true);
-  const paused = useRef(false);
-  const touch = useRef(null);
+// Showcase slider: one big product at a time on a coloured stage. Swipe or use the arrows.
+export default function BestSlider({ products, title, dir = "ltr", every = 4500 }) {
+  const { t, lang } = useLang();
   const N = products.length;
-  const list = [...products, ...products.slice(0, 3)]; // copies for a seamless loop
+  const [i, setI] = useState(0);
+  const touch = useRef(null);
+  const last = useRef(Date.now());
+
+  const go = (d) => {
+    last.current = Date.now();
+    setI((x) => (x + d + N) % N);
+  };
 
   useEffect(() => {
-    if (N <= 3) return;
-    const id = setInterval(() => !paused.current && setI((x) => x + 1), every);
+    const id = setInterval(() => {
+      if (Date.now() - last.current >= every) setI((x) => (x + 1) % N);
+    }, every);
     return () => clearInterval(id);
   }, [N, every]);
 
-  // after sliding onto the copies, jump back to the real first item without animation
-  useEffect(() => {
-    if (i < N) return;
-    const id = setTimeout(() => {
-      setAnim(false);
-      setI(0);
-      requestAnimationFrame(() => requestAnimationFrame(() => setAnim(true)));
-    }, 650);
-    return () => clearTimeout(id);
-  }, [i, N]);
-
-  const move = (d) => setI((x) => (x + d < 0 ? N - 1 : x + d));
-  const sign = dir === "rtl" ? 1 : -1;
+  const rtl = dir === "rtl";
+  const p = products[i];
+  const off = discountPercent(p);
 
   return (
-    <div
-      className="bslider"
-      onTouchStart={(e) => {
-        paused.current = true;
-        touch.current = e.touches[0].clientX;
-      }}
-      onTouchEnd={(e) => {
-        const dx = e.changedTouches[0].clientX - (touch.current ?? 0);
-        if (Math.abs(dx) > 30) move((dx < 0 ? 1 : -1) * (dir === "rtl" ? -1 : 1));
-        setTimeout(() => (paused.current = false), 4000);
-      }}
-      onMouseEnter={() => (paused.current = true)}
-      onMouseLeave={() => (paused.current = false)}
-    >
+    <section className="show" aria-roledescription="carousel">
+      <span className="show-sparkle" aria-hidden="true" />
+      <h2 className="show-title">{title}</h2>
       <div
-        className="bslider-track"
-        style={{
-          transform: `translateX(${sign * i * (100 / 3)}%)`,
-          transition: anim ? "transform .6s cubic-bezier(.4,0,.2,1)" : "none",
+        className="show-stage"
+        onTouchStart={(e) => (touch.current = e.touches[0].clientX)}
+        onTouchEnd={(e) => {
+          if (touch.current == null) return;
+          const dx = e.changedTouches[0].clientX - touch.current;
+          touch.current = null;
+          if (Math.abs(dx) < 35) return;
+          // swipe toward the start of the reading direction → next
+          go((dx < 0 ? 1 : -1) * (rtl ? -1 : 1));
         }}
       >
-        {list.map((p, k) => (
-          <div className="bslider-cell" key={p.slug + k}>
-            <ProductCard product={p} />
-          </div>
+        <button className="show-arrow prev" onClick={() => go(-1)} aria-label="previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d={rtl ? "M9 6l6 6-6 6" : "M15 6l-6 6 6 6"} />
+          </svg>
+        </button>
+        <Link href={`/product/${p.slug}`} className="show-media" key={p.slug}>
+          {off > 0 && <span className="sale-badge">{t("sale.off", { n: num(off, lang) })}</span>}
+          <img src={p.image} alt={pf(p, "name", lang)} width="720" height="720" draggable="false" />
+        </Link>
+        <button className="show-arrow next" onClick={() => go(1)} aria-label="next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d={rtl ? "M15 6l-6 6 6 6" : "M9 6l6 6-6 6"} />
+          </svg>
+        </button>
+      </div>
+      <div className="show-info" key={"i" + p.slug}>
+        <div className="show-brand">{p.brand}</div>
+        <Link href={`/product/${p.slug}`} className="show-name">
+          {pf(p, "name", lang)}
+        </Link>
+        <div className="show-price">
+          {off > 0 && <s>{formatPrice(p.oldPrice, lang)}</s>}
+          <b>{formatPrice(p.price, lang)}</b>
+        </div>
+        <div className="show-btn">
+          <AddToCartButton slug={p.slug} />
+        </div>
+      </div>
+      <div className="show-dots">
+        {products.map((x, k) => (
+          <button key={x.slug} className={k === i ? "on" : ""} onClick={() => go(k - i)} aria-label={x.brand} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

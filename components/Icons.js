@@ -29,63 +29,77 @@ const P = {
       <path d="M19 18.5c0 1.4-1.6 2.5-4.5 2.5H12" />
     </>
   ),
-  // product types
+  // product types (duotone line icons)
   cleanser: (
     <>
-      <path d="M9 9h6l1 2v8.5a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 8 19.5V11l1-2Z" />
-      <path d="M10.5 9V6.5h3V9M13.5 6.5h3" />
-      <circle cx="18.5" cy="4" r="1" />
-      <circle cx="20.5" cy="7" r=".7" />
-      <path d="M8 14h8" />
+      <path d="M9.2 8.5h5.6l.9 2.2v9a1.8 1.8 0 0 1-1.8 1.8H10a1.8 1.8 0 0 1-1.8-1.8v-9l1-2.2Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M10.6 8.5V6.6h2.8v1.9" />
+      <path d="M11.2 6.6V4.3h4.3" />
+      <path d="M15.5 4.3v1.2" />
+      <path d="M8.2 13.2h7.6" />
+      <circle cx="18.6" cy="7.6" r="1.1" />
+      <circle cx="19.9" cy="10.6" r=".7" />
+      <circle cx="17.6" cy="10.2" r=".45" />
     </>
   ),
   toner: (
     <>
-      <path d="M9.5 3.5h5V7h-5z" />
-      <path d="M8 7h8a1 1 0 0 1 1 1v11.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 19.5V8a1 1 0 0 1 1-1Z" />
-      <path d="M12 11.5c1.2 1.4 1.8 2.4 1.8 3.2a1.8 1.8 0 0 1-3.6 0c0-.8.6-1.8 1.8-3.2Z" />
+      <rect x="9.6" y="2.8" width="4.8" height="3.4" rx=".8" />
+      <path d="M8.3 6.2h7.4a1.3 1.3 0 0 1 1.3 1.3v12.2a1.8 1.8 0 0 1-1.8 1.8H8.8A1.8 1.8 0 0 1 7 19.7V7.5a1.3 1.3 0 0 1 1.3-1.3Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M7 10.2h10M7 17.4h10" />
+      <path d="M12 11.9c.95 1.1 1.45 1.95 1.45 2.6a1.45 1.45 0 0 1-2.9 0c0-.65.5-1.5 1.45-2.6Z" />
     </>
   ),
   serum: (
     <>
-      <path d="M10.5 2.5h3v3.5h-3z" />
-      <path d="M9.5 6h5v2h-5z" />
-      <path d="M8.5 8h7a1 1 0 0 1 1 1v10.5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2V9a1 1 0 0 1 1-1Z" />
-      <path d="M7.5 13h9" />
+      <path d="M10.4 2.6c0-.5.4-.8.8-.8h1.6c.4 0 .8.3.8.8v3.2h-3.2V2.6Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M9.6 5.8h4.8v2H9.6z" />
+      <path d="M12 7.8v6.6" />
+      <path d="M8.6 9.4h6.8a1.6 1.6 0 0 1 1.6 1.6v8.4a2.4 2.4 0 0 1-2.4 2.4H9.4A2.4 2.4 0 0 1 7 19.4V11a1.6 1.6 0 0 1 1.6-1.6Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M12 14.4c.7.8 1 1.4 1 1.9a1 1 0 0 1-2 0c0-.5.3-1.1 1-1.9Z" />
     </>
   ),
   cream: (
     <>
-      <path d="M5 10h14v8a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 5 18v-8Z" />
-      <path d="M4 7.5h16V10H4z" />
-      <path d="M9 4.5c1.5-1 4.5-1 6 0" />
-      <path d="M8.5 14.5h7" />
+      <path d="M4.6 11.2h14.8v6.6a3 3 0 0 1-3 3H7.6a3 3 0 0 1-3-3v-6.6Z" fill="currentColor" fillOpacity=".14" />
+      <rect x="3.8" y="8" width="16.4" height="3.2" rx="1.2" />
+      <path d="M7.4 8c.4-2.4 2.3-3.6 4.6-3.6s4.2 1.2 4.6 3.6" />
+      <path d="M10.6 5.3c.6-.8 1.7-.9 2.4-.2" />
+      <path d="M8 15.2h8" />
     </>
   ),
   sunscreen: (
     <>
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" />
-    </>
-  ),
-  hair: (
-    <>
-      <path d="M7 21c0-6 1-9 5-14 4 5 5 8 5 14" />
-      <path d="M12 7V3M9.5 12.5c1 1.2 1.6 2.6 1.9 4.2M14.5 12.5c-1 1.2-1.6 2.6-1.9 4.2" />
-    </>
-  ),
-  body: (
-    <>
-      <path d="M9.5 3.5h5v2.5h-5z" />
-      <path d="M8.5 6h7l1 3v10.5a1.5 1.5 0 0 1-1.5 1.5H9a1.5 1.5 0 0 1-1.5-1.5V9l1-3Z" />
-      <path d="M14 1.8l2 .9M14 3.4l2.4-.3" />
-      <path d="M10 13.5c.8.7 3.2.7 4 0" />
+      <path d="M8.4 3.2h7.2l-.6 13.3a1.6 1.6 0 0 1-1.6 1.5h-2.8a1.6 1.6 0 0 1-1.6-1.5L8.4 3.2Z" fill="currentColor" fillOpacity=".14" />
+      <rect x="9.8" y="18" width="4.4" height="3" rx=".8" />
+      <circle cx="12" cy="9.6" r="2" />
+      <path d="M12 6v.8M12 12.4v.8M8.9 9.6h.8M14.3 9.6h.8" />
+      <path d="M18.4 5.2l1.2-1.2M19.6 9.6h1.6M18.4 14l1.2 1.2" />
     </>
   ),
   mask: (
     <>
-      <path d="M12 3c-4 0-7 3-7 8 0 5.5 3.2 10 7 10s7-4.5 7-10c0-5-3-8-7-8Z" />
-      <path d="M8.5 10.5h2M13.5 10.5h2M10 16c1.2.8 2.8.8 4 0" />
+      <path d="M12 2.8c-4.2 0-7 3.2-7 8 0 5.6 3.4 10.4 7 10.4s7-4.8 7-10.4c0-4.8-2.8-8-7-8Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M8.2 10.4c.6-.5 1.6-.5 2.2 0M13.6 10.4c.6-.5 1.6-.5 2.2 0" />
+      <path d="M12 12v2.2" />
+      <path d="M10 16.6c1.2.8 2.8.8 4 0" />
+    </>
+  ),
+  hair: (
+    <>
+      <path d="M5 21v-6.5C5 9 8 4 12 4s7 5 7 10.5V21" fill="currentColor" fillOpacity=".14" />
+      <path d="M9 21v-7c0-2.4 1.3-4.6 3-5.6 1.7 1 3 3.2 3 5.6v7" />
+      <path d="M12 8.4V21" />
+      <path d="M6.6 7.4C8 5.4 9.8 4.4 12 4.4" />
+    </>
+  ),
+  body: (
+    <>
+      <rect x="9.6" y="2.6" width="4.8" height="2.6" rx=".7" />
+      <path d="M10.4 5.2h3.2v1.6" />
+      <path d="M8.6 6.8h6.8a1.6 1.6 0 0 1 1.6 1.6v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-11a1.6 1.6 0 0 1 1.6-1.6Z" fill="currentColor" fillOpacity=".14" />
+      <path d="M16.6 3.4l2.4-.9M16.8 4.6l2.6.2M16.6 5.8l2.2 1.1" />
+      <path d="M10 13.6c.5-1.3 3.5-1.3 4 0-.5 1.3-3.5 1.3-4 0Z" />
     </>
   ),
 };
@@ -98,7 +112,7 @@ export default function Icon({ name, size = 26 }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.25"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
