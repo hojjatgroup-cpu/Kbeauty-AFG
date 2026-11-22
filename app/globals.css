@@ -726,3 +726,6 @@ html[dir="rtl"] .pbar-track { animation-direction: reverse; }
 @keyframes cue-arrow { 0% { transform: translateY(-6px); opacity: 0; } 40% { opacity: 1; } 100% { transform: translateY(6px); opacity: 0; } }
 @keyframes cue-pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.45); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .scroll-cue-ring, .scroll-cue-ring::after, .scroll-cue-ring svg { animation: none; } }
+.scroll-cue-ring { width: 30px; height: 30px; }
+.scroll-cue { bottom: 14px; }
+@keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
