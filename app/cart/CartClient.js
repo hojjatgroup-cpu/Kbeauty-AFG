@@ -93,8 +93,8 @@ export default function CartClient() {
   const options = [
     ...shipping.zones
       .filter((z) => z.id !== "province")
-      .map((z) => ({ value: z.id, label: z[lang], note: formatPrice(z.fee, lang), fee: z.fee, time: z.time })),
-    ...others.map((p) => ({ value: p.en, label: p[lang], note: formatPrice(provFee, lang), fee: provFee, time: "province" })),
+      .map((z) => ({ value: z.id, label: z[lang] || z.en, note: formatPrice(z.fee, lang), fee: z.fee, time: z.time })),
+    ...others.map((p) => ({ value: p.en, label: p[lang] || p.en, note: formatPrice(provFee, lang), fee: provFee, time: "province" })),
   ];
   const chosen = options.find((o) => o.value === form.province);
   const shipFee = chosen ? chosen.fee : 0;

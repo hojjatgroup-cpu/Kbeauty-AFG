@@ -15,6 +15,7 @@ const modam = localFont({
     { path: "./fonts/Modam-Bold.woff", weight: "700", style: "normal" },
   ],
   display: "swap",
+  fallback: ["Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "system-ui", "sans-serif"],
 });
 
 export const metadata = {

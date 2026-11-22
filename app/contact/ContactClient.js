@@ -23,7 +23,17 @@ const C = {
     hoursV: "[Days and hours]",
     addr: "Address",
     addrV: "[Address or city]",
+  },  ko: {
+    title: "문의하기",
+    intro: "주문, 제품 문의, 무료 피부 상담은 인스타그램 메시지로 연락 주세요.",
+    msg: "메시지 보내기",
+    view: "프로필 보기",
+    hours: "응답 시간",
+    hoursV: "[요일 및 시간]",
+    addr: "주소",
+    addrV: "[주소 또는 도시]",
   },
+
 };
 
 export default function ContactClient() {

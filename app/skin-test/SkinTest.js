@@ -19,7 +19,13 @@ const QUESTIONS = {
     ["How do your pores look?", ["Large and visible on most of my face", "Small and barely visible", "Larger only on forehead and nose", "Normal, but my skin reddens easily"]],
     ["By the end of the day, your face is…", ["Shiny and oily", "Dull or flaky", "Shiny only in the T-zone (forehead, nose, chin)", "Sometimes stinging or itchy"]],
     ["When you try a new product…", ["No problem, I just get oily fast", "I mostly feel dry", "Some areas get oily, others dry", "My skin often gets upset or red"]],
+  ],  ko: [
+    ["세안 후 몇 시간이 지나면 피부가 어떤가요?", ["전체적으로 번들거리고 기름져요", "당기고 건조해요", "이마와 코는 기름지고 볼은 보통이거나 건조해요", "조금 붉거나 불편해요"]],
+    ["모공은 어떤가요?", ["얼굴 대부분에서 크고 잘 보여요", "작아서 거의 안 보여요", "이마와 코에서만 커요", "보통이지만 피부가 쉽게 붉어져요"]],
+    ["하루가 끝날 무렵 얼굴은…", ["번들거리고 기름져요", "칙칙하거나 각질이 일어나요", "T존(이마, 코, 턱)만 번들거려요", "가끔 따갑거나 가려워요"]],
+    ["새 제품을 써 보면…", ["문제없지만 금방 기름져요", "주로 건조함을 느껴요", "어떤 부위는 기름지고 어떤 부위는 건조해요", "피부가 자주 예민해지거나 붉어져요"]],
   ],
+
 };
 const ORDER = ["oily", "dry", "combination", "sensitive"];
 
@@ -35,7 +41,13 @@ const RESULTS = {
     dry: "Your skin is probably dry. Soft cleansers, rich creams and hydrating products help it feel more comfortable.",
     combination: "Your skin is probably combination. The T-zone likes lighter products, while cheeks need more moisture.",
     sensitive: "Your skin is probably sensitive. Gentle products with fewer ingredients are best, and patch test anything new.",
+  },  ko: {
+    oily: "지성 피부일 가능성이 높습니다. 순한 클렌저, 가벼운 오일프리 보습제, 산뜻한 선크림이 잘 맞습니다.",
+    dry: "건성 피부일 가능성이 높습니다. 부드러운 클렌저, 영양감 있는 크림, 수분 제품이 피부를 더 편안하게 해 줍니다.",
+    combination: "복합성 피부일 가능성이 높습니다. T존은 가벼운 제품을, 볼은 더 많은 보습을 필요로 합니다.",
+    sensitive: "민감성 피부일 가능성이 높습니다. 성분이 적은 순한 제품이 좋으며, 새 제품은 먼저 부분 테스트를 해 보세요.",
   },
+
 };
 
 export default function SkinTest() {

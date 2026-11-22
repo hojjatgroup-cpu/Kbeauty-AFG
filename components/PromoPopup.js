@@ -39,7 +39,7 @@ export default function PromoPopup() {
     setTimeout(() => setCopied(false), 1800);
   };
 
-  const until = new Date(`${PROMO.until}T12:00:00`).toLocaleDateString(lang === "fa" ? "fa-AF" : "en-GB", {
+  const until = new Date(`${PROMO.until}T12:00:00`).toLocaleDateString({ fa: "fa-AF", en: "en-GB", ko: "ko-KR" }[lang], {
     day: "numeric",
     month: "long",
   });

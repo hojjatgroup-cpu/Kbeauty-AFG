@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { LANGS, LANG_LABEL, LANG_NAME } from "@/lib/i18n";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useLang } from "./LangProvider";
@@ -28,6 +29,7 @@ function SearchIcon() {
 
 export default function Header() {
   const { t, lang, setLang } = useLang();
+  const [langOpen, setLangOpen] = useState(false);
   const { count } = useCart();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -77,9 +79,27 @@ export default function Header() {
             </svg>
             {count > 0 && <span className="badge">{num(count, lang)}</span>}
           </Link>
-          <button className="lang-btn" onClick={() => setLang(lang === "fa" ? "en" : "fa")} aria-label="Language">
-            {lang === "fa" ? "EN" : "فا"}
-          </button>
+          <div className="lang-wrap">
+            <button className="lang-btn" onClick={() => setLangOpen(!langOpen)} aria-label="Language" aria-expanded={langOpen}>
+              {LANG_LABEL[lang]}
+            </button>
+            {langOpen && (
+              <div className="lang-pop glass">
+                {LANGS.map((l) => (
+                  <button
+                    key={l}
+                    className={l === lang ? "active" : ""}
+                    onClick={() => {
+                      setLang(l);
+                      setLangOpen(false);
+                    }}
+                  >
+                    {LANG_NAME[l]}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
           <button
             className="round-btn menu-btn"
             aria-label={t("nav.menu")}
@@ -118,12 +138,11 @@ export default function Header() {
               ))}
             </div>
             <div className="menu-lang">
-              <button className={lang === "fa" ? "active" : ""} onClick={() => setLang("fa")}>
-                فارسی
-              </button>
-              <button className={lang === "en" ? "active" : ""} onClick={() => setLang("en")}>
-                English
-              </button>
+              {LANGS.map((l) => (
+                <button key={l} className={lang === l ? "active" : ""} onClick={() => setLang(l)}>
+                  {LANG_NAME[l]}
+                </button>
+              ))}
             </div>
           </div>
         </div>

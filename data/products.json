@@ -31,13 +31,17 @@
         "name": "آب دانهٔ برنج",
         "desc": "رطوبت سبک بدون سنگینی",
         "name_en": "Rice Seed Water",
-        "desc_en": "Light hydration without heaviness"
+        "desc_en": "Light hydration without heaviness",
+        "name_ko": "쌀 추출물",
+        "desc_ko": "수분과 맑은 피부결"
       },
       {
         "name": "پانتنول (ویتامین B5)",
         "desc": "حس آرامش و نرمی به پوست می‌دهد",
         "name_en": "Panthenol (Vitamin B5)",
-        "desc_en": "Leaves skin feeling calm and soft"
+        "desc_en": "Leaves skin feeling calm and soft",
+        "name_ko": "판테놀(비타민 B5)",
+        "desc_ko": "진정과 보습"
       }
     ],
     "steps": [
@@ -62,7 +66,20 @@
       "برنج"
     ],
     "about": "ضدآفتاب ریلیف سان آکوا فرش از برند بیوتی آف جوسان، یک ضدآفتاب شیمیایی فوق‌سبک با SPF50+ و PA++++ است که از پوست در برابر اشعهٔ UVA و UVB محافظت می‌کند. آب برنج، پانتنول (B5) و سرامید به پوست رطوبت و حس آرامش می‌دهند. بافتش آبکی است، زود جذب می‌شود و سفیدک و چربی به جا نمی‌گذارد؛ برای پوست چرب، مختلط و حساس انتخاب خوبی است و زیر آرایش هم خوب می‌نشیند. برای پوست خیلی خشک ممکن است کمی سبک باشد و بهتر است قبلش کرم مرطوب‌کننده بزنید.",
-    "about_en": "Beauty of Joseon Relief Sun Aqua-Fresh is an ultra-light chemical sunscreen with SPF50+ and PA++++ that protects against UVA and UVB. Rice water, panthenol (B5) and ceramide add moisture and comfort. The watery texture absorbs fast with no white cast or greasiness — a great pick for oily, combination and sensitive skin, and it sits well under makeup. Very dry skin may want a moisturiser underneath."
+    "about_en": "Beauty of Joseon Relief Sun Aqua-Fresh is an ultra-light chemical sunscreen with SPF50+ and PA++++ that protects against UVA and UVB. Rice water, panthenol (B5) and ceramide add moisture and comfort. The watery texture absorbs fast with no white cast or greasiness — a great pick for oily, combination and sensitive skin, and it sits well under makeup. Very dry skin may want a moisturiser underneath.",
+    "name_ko": "조선미녀 맑은쌀 선크림 아쿠아프레쉬 (쌀+B5) SPF50+",
+    "short_ko": "끈적임 없이 산뜻한 데일리 선크림.",
+    "about_ko": "조선미녀 맑은쌀 선크림 아쿠아프레쉬는 SPF50+ PA++++의 초경량 유기자차 선크림으로 UVA와 UVB로부터 피부를 보호합니다. 쌀 추출물, 판테놀(B5), 세라마이드가 수분과 편안함을 더합니다. 묽은 제형이 빠르게 흡수되고 백탁이나 번들거림이 없어 지성·복합성·민감성 피부에 잘 맞으며 메이크업 전에도 좋습니다. 매우 건조한 피부는 보습제를 먼저 바르세요.",
+    "benefits_ko": [
+      "SPF50+ PA++++로 강력한 자외선 차단.",
+      "가볍고 산뜻하며 백탁이 없습니다.",
+      "쌀과 판테놀이 피부를 촉촉하고 편안하게."
+    ],
+    "steps_ko": [
+      "아침 스킨케어 마지막 단계에 바르세요.",
+      "얼굴과 목에 충분히 펴 바르세요.",
+      "2–3시간마다 덧발라 주세요."
+    ]
   },
   {
     "slug": "dr-althea-345-relief-cream",
@@ -97,19 +114,25 @@
         "name": "نیاسینامید",
         "desc": "به یکدست‌تر دیده شدن پوست کمک می‌کند",
         "name_en": "Niacinamide",
-        "desc_en": "Helps skin look more even"
+        "desc_en": "Helps skin look more even",
+        "name_ko": "나이아신아마이드",
+        "desc_ko": "맑고 고른 피부 톤"
       },
       {
         "name": "سرامید NP و هیالورونیک اسید",
         "desc": "رطوبت را در پوست نگه می‌دارد",
         "name_en": "Ceramide NP & Hyaluronic Acid",
-        "desc_en": "Helps lock in moisture"
+        "desc_en": "Helps lock in moisture",
+        "name_ko": "세라마이드 & 히알루론산",
+        "desc_ko": "장벽 강화와 보습"
       },
       {
         "name": "سنتلا و چای سبز",
         "desc": "حس آرامش به پوست می‌دهد",
         "name_en": "Centella & Green Tea",
-        "desc_en": "Give skin a calm feel"
+        "desc_en": "Give skin a calm feel",
+        "name_ko": "병풀 & 녹차",
+        "desc_ko": "진정 케어"
       }
     ],
     "steps": [
@@ -133,7 +156,20 @@
       "کریم"
     ],
     "about": "کرم ۳۴۵ ریلیف از برند دکتر آلتیا، یک کرم آرام‌بخش و مرطوب‌کننده است که با نیاسینامید، پانتنول و سرامید به تقویت سد دفاعی پوست کمک می‌کند. عصاره‌های گیاهی مثل سنتلا، زردچوبه و هارت‌لیف ظاهر قرمزی و التهاب پوست را آرام‌تر نشان می‌دهند. بافتی کرمی و سبک دارد و برای همهٔ انواع پوست، مخصوصاً پوست حساس، خسته و مستعد جوش مناسب است. اگر پوستتان به اسطوخودوس حساس است، اول تست کنید.",
-    "about_en": "Dr.Althea 345 Relief Cream is a calming moisturiser with niacinamide, panthenol and ceramide that supports the skin barrier. Plant extracts such as centella, turmeric and heartleaf help calm the look of redness. The light cream texture suits all skin types, especially sensitive, stressed and breakout-prone skin. Patch test first if you're sensitive to lavender."
+    "about_en": "Dr.Althea 345 Relief Cream is a calming moisturiser with niacinamide, panthenol and ceramide that supports the skin barrier. Plant extracts such as centella, turmeric and heartleaf help calm the look of redness. The light cream texture suits all skin types, especially sensitive, stressed and breakout-prone skin. Patch test first if you're sensitive to lavender.",
+    "name_ko": "닥터알티아 345 릴리프 크림",
+    "short_ko": "민감하고 지친 피부를 위한 진정 보습 크림.",
+    "about_ko": "닥터알티아 345 릴리프 크림은 나이아신아마이드, 판테놀, 세라마이드로 피부 장벽을 지켜 주는 진정 보습 크림입니다. 병풀, 강황, 어성초 등 식물 추출물이 붉어진 피부를 편안하게 가라앉혀 줍니다. 가벼운 크림 제형으로 모든 피부, 특히 민감하고 트러블이 잦은 피부에 잘 맞습니다. 라벤더에 민감하다면 먼저 테스트해 보세요.",
+    "benefits_ko": [
+      "붉고 예민해진 피부를 진정시킵니다.",
+      "피부 장벽을 튼튼하게 지켜 줍니다.",
+      "가볍지만 촉촉하게 보습합니다."
+    ],
+    "steps_ko": [
+      "토너와 세럼 다음에 사용하세요.",
+      "적당량을 얼굴 전체에 부드럽게 펴 바르세요.",
+      "아침과 저녁 모두 사용 가능합니다."
+    ]
   },
   {
     "slug": "anua-heartleaf-77-soothing-toner",
@@ -168,13 +204,17 @@
         "name": "عصارهٔ هارت‌لیف ۷۷٪",
         "desc": "حس آرامش و تازگی به پوست می‌دهد",
         "name_en": "Heartleaf Extract 77%",
-        "desc_en": "Leaves skin feeling calm and fresh"
+        "desc_en": "Leaves skin feeling calm and fresh",
+        "name_ko": "어성초 추출물 77%",
+        "desc_ko": "진정과 유분 조절"
       },
       {
         "name": "پانتنول و گلیسرین",
         "desc": "رطوبت سبک و ماندگار",
         "name_en": "Panthenol & Glycerin",
-        "desc_en": "Light, lasting hydration"
+        "desc_en": "Light, lasting hydration",
+        "name_ko": "판테놀 & 글리세린",
+        "desc_ko": "보습과 편안함"
       }
     ],
     "steps": [
@@ -197,7 +237,20 @@
       "تونر"
     ],
     "about": "تونر هارت‌لیف ۷۷٪ از برند انوا، یکی از پرفروش‌ترین تونرهای کره‌ای است که ۷۷٪ آن عصارهٔ گیاه هارت‌لیف است. این تونر به آرام کردن پوست تحریک‌شده، کاهش ظاهر قرمزی و تعادل چربی کمک می‌کند و با پانتنول و بتائین رطوبت سبکی به پوست می‌دهد. بافتی آبکی و بی‌بو دارد و برای همهٔ پوست‌ها، مخصوصاً پوست چرب، مستعد جوش و حساس مناسب است. بعد از شستشو، قبل از سرم استفاده کنید.",
-    "about_en": "Anua Heartleaf 77% Soothing Toner is one of Korea's best-selling toners, made with 77% heartleaf extract. It helps calm irritated skin, ease the look of redness and balance oil, while panthenol and betaine add light hydration. Watery and fragrance-free, it suits all skin types — especially oily, breakout-prone and sensitive skin. Use after cleansing, before serum."
+    "about_en": "Anua Heartleaf 77% Soothing Toner is one of Korea's best-selling toners, made with 77% heartleaf extract. It helps calm irritated skin, ease the look of redness and balance oil, while panthenol and betaine add light hydration. Watery and fragrance-free, it suits all skin types — especially oily, breakout-prone and sensitive skin. Use after cleansing, before serum.",
+    "name_ko": "아누아 어성초 77 수딩 토너",
+    "short_ko": "어성초 77%로 피부를 진정시키는 순한 토너.",
+    "about_ko": "아누아 어성초 77 수딩 토너는 어성초 추출물 77%를 담은 한국 베스트셀러 토너입니다. 자극받은 피부를 진정시키고 붉은기와 유분 밸런스를 잡아 주며, 판테놀과 베타인이 가벼운 수분을 더합니다. 묽고 무향이라 모든 피부, 특히 지성·트러블성·민감성 피부에 잘 맞습니다. 세안 후 세럼 전에 사용하세요.",
+    "benefits_ko": [
+      "예민해진 피부를 빠르게 진정.",
+      "유수분 밸런스를 맞춰 줍니다.",
+      "가볍고 산뜻한 수분감."
+    ],
+    "steps_ko": [
+      "세안 후 첫 단계로 사용하세요.",
+      "화장솜이나 손으로 가볍게 두드려 흡수시키세요.",
+      "아침과 저녁 사용 가능합니다."
+    ]
   },
   {
     "slug": "anua-azelaic-acid-10-hyaluron-serum",
@@ -231,19 +284,25 @@
         "name": "آزلائیک اسید ۱۰٪",
         "desc": "به یکدستی ظاهر پوست کمک می‌کند",
         "name_en": "Azelaic Acid 10%",
-        "desc_en": "Helps skin look more even"
+        "desc_en": "Helps skin look more even",
+        "name_ko": "아젤라익산 10%",
+        "desc_ko": "트러블과 붉은기 케어"
       },
       {
         "name": "هیالورونیک اسید",
         "desc": "رطوبت می‌دهد",
         "name_en": "Hyaluronic Acid",
-        "desc_en": "Adds hydration"
+        "desc_en": "Adds hydration",
+        "name_ko": "히알루론산",
+        "desc_ko": "깊은 보습"
       },
       {
         "name": "سنتلا و چای سبز",
         "desc": "حس آرامش می‌دهد",
         "name_en": "Centella & Green Tea",
-        "desc_en": "Give a calming feel"
+        "desc_en": "Give a calming feel",
+        "name_ko": "병풀 & 녹차",
+        "desc_ko": "진정"
       }
     ],
     "steps": [
@@ -269,7 +328,20 @@
       "سیروم"
     ],
     "about": "سرم آزلائیک اسید ۱۰٪ و هیالورون از برند انوا، برای پوست مستعد جوش، قرمزی و التهاب طراحی شده است. آزلائیک اسید به کاهش ظاهر جوش‌ها، قرمزی و لکه‌های بعد از جوش کمک می‌کند و ۳ نوع هیالورونیک اسید پوست را مرطوب نگه می‌دارد. ترکیب آرام‌بخش آلوئه‌ورا و ۷ نوع سنتلا، این سرم را برای پوست حساس هم ملایم می‌کند. برای پوست چرب، مختلط و حساس مناسب است؛ در روز حتماً ضدآفتاب بزنید.",
-    "about_en": "Anua Azelaic Acid 10 Hyaluron Serum is made for blemish-prone skin with redness. 10% azelaic acid helps reduce the look of breakouts, redness and post-blemish marks, while 3 types of hyaluronic acid keep skin hydrated. A calming complex of aloe and 7 types of cica keeps it gentle enough for sensitive skin. Suits oily, combination and sensitive skin; wear sunscreen during the day."
+    "about_en": "Anua Azelaic Acid 10 Hyaluron Serum is made for blemish-prone skin with redness. 10% azelaic acid helps reduce the look of breakouts, redness and post-blemish marks, while 3 types of hyaluronic acid keep skin hydrated. A calming complex of aloe and 7 types of cica keeps it gentle enough for sensitive skin. Suits oily, combination and sensitive skin; wear sunscreen during the day.",
+    "name_ko": "아누아 아젤라익산 10 히알루론 레드니스 수딩 세럼",
+    "short_ko": "트러블과 붉은기가 고민인 피부를 위한 세럼.",
+    "about_ko": "아누아 아젤라익산 10 히알루론 세럼은 트러블과 붉은기가 잦은 피부를 위해 만들어졌습니다. 아젤라익산 10%가 트러블, 붉은기, 트러블 자국을 완화하는 데 도움을 주고, 3가지 히알루론산이 수분을 채워 줍니다. 알로에와 7가지 병풀 성분으로 민감한 피부도 순하게 사용할 수 있습니다. 지성·복합성·민감성 피부에 적합하며 낮에는 꼭 선크림을 바르세요.",
+    "benefits_ko": [
+      "트러블과 붉은기 완화에 도움.",
+      "트러블 자국을 옅게 보이게 합니다.",
+      "히알루론산으로 촉촉하게."
+    ],
+    "steps_ko": [
+      "토너 다음에 사용하세요.",
+      "2–3방울을 얼굴에 펴 바르세요.",
+      "낮에는 반드시 선크림을 바르세요."
+    ]
   },
   {
     "slug": "anua-pdrn-hyaluronic-acid-100-cream",
@@ -303,19 +375,25 @@
         "name": "PDRN",
         "desc": "به شاداب‌تر دیده شدن پوست کمک می‌کند",
         "name_en": "PDRN",
-        "desc_en": "Helps skin look fresher and glowing"
+        "desc_en": "Helps skin look fresher and glowing",
+        "name_ko": "PDRN",
+        "desc_ko": "피부 컨디션 케어"
       },
       {
         "name": "۱۰ نوع هیالورونیک اسید",
         "desc": "رطوبت در لایه‌های مختلف پوست",
         "name_en": "10 Hyaluronic Acids",
-        "desc_en": "Hydration at different layers"
+        "desc_en": "Hydration at different layers",
+        "name_ko": "10가지 히알루론산",
+        "desc_ko": "겹겹이 채우는 수분"
       },
       {
         "name": "کلاژن هیدرولیز شده",
         "desc": "حس نرمی و ارتجاع",
         "name_en": "Hydrolyzed Collagen",
-        "desc_en": "A soft, bouncy feel"
+        "desc_en": "A soft, bouncy feel",
+        "name_ko": "가수분해 콜라겐",
+        "desc_ko": "탄력 있어 보이는 피부"
       }
     ],
     "steps": [
@@ -340,7 +418,20 @@
       "کریم"
     ],
     "about": "کرم PDRN و هیالورونیک اسید ۱۰۰ از برند انوا، یک کرم آبرسان و تقویت‌کننده است که با PDRN (سدیم DNA)، اسکوالان و ۱۰ نوع هیالورونیک اسید، رطوبت عمیق و ماندگار به پوست می‌دهد. نیاسینامید و کلاژن پوست را صاف‌تر و شاداب‌تر نشان می‌دهند. بافتی سبک ولی مغذی دارد و برای پوست خشک، کم‌آب، مختلط و حساس عالی است. برای پوست خیلی چرب، مقدار کمتری استفاده کنید.",
-    "about_en": "Anua PDRN Hyaluronic Acid 100 Cream is a hydrating, strengthening moisturiser with PDRN (sodium DNA), squalane and 10 types of hyaluronic acid for deep, long-lasting moisture. Niacinamide and collagen help skin look smoother and fresher. Light yet nourishing — ideal for dry, dehydrated, combination and sensitive skin. Very oily skin should use a smaller amount."
+    "about_en": "Anua PDRN Hyaluronic Acid 100 Cream is a hydrating, strengthening moisturiser with PDRN (sodium DNA), squalane and 10 types of hyaluronic acid for deep, long-lasting moisture. Niacinamide and collagen help skin look smoother and fresher. Light yet nourishing — ideal for dry, dehydrated, combination and sensitive skin. Very oily skin should use a smaller amount.",
+    "name_ko": "아누아 PDRN 히알루론산 100 수분 크림",
+    "short_ko": "PDRN과 히알루론산으로 깊게 채우는 수분 크림.",
+    "about_ko": "아누아 PDRN 히알루론산 100 크림은 PDRN, 스쿠알란, 10가지 히알루론산으로 깊고 오래가는 수분을 주는 크림입니다. 나이아신아마이드와 콜라겐이 피부를 더 매끄럽고 생기 있게 가꿔 줍니다. 가볍지만 영양감이 있어 건성·수분 부족·복합성·민감성 피부에 좋습니다. 지성 피부는 소량만 사용하세요.",
+    "benefits_ko": [
+      "오래가는 깊은 보습.",
+      "매끄럽고 탄력 있어 보이는 피부.",
+      "가볍게 흡수되는 제형."
+    ],
+    "steps_ko": [
+      "스킨케어 마지막 단계에 사용하세요.",
+      "적당량을 얼굴 전체에 펴 바르세요.",
+      "아침과 저녁 사용 가능합니다."
+    ]
   },
   {
     "slug": "cosrx-low-ph-good-morning-gel-cleanser",
@@ -374,13 +465,17 @@
         "name": "روغن درخت چای",
         "desc": "حس تمیزی و طراوت",
         "name_en": "Tea Tree Oil",
-        "desc_en": "Leaves skin feeling fresh and clean"
+        "desc_en": "Leaves skin feeling fresh and clean",
+        "name_ko": "티트리 오일",
+        "desc_ko": "유분 조절과 청결"
       },
       {
         "name": "BHA ملایم",
         "desc": "به تمیزی منافذ کمک می‌کند",
         "name_en": "Mild BHA (Betaine Salicylate)",
-        "desc_en": "Helps keep pores clean"
+        "desc_en": "Helps keep pores clean",
+        "name_ko": "순한 BHA(베타인 살리실레이트)",
+        "desc_ko": "모공 관리"
       }
     ],
     "steps": [
@@ -404,7 +499,20 @@
       "ژل شستشو"
     ],
     "about": "ژل شستشوی صبح‌بخیر کوزارکس با pH پایین، یک شوینده ملایم روزانه است که پوست را بدون خشکی و حس کشیدگی تمیز می‌کند. بتائین سالیسیلات (BHA ملایم) و روغن درخت چای به تمیز شدن منافذ و کنترل چربی کمک می‌کنند. برای پوست چرب، مختلط و مستعد جوش بسیار مناسب است. اگر پوست خیلی خشک یا حساس دارید، بهتر است فقط یک بار در روز استفاده کنید.",
-    "about_en": "COSRX Low pH Good Morning Gel Cleanser is a gentle daily cleanser that cleans without dryness or tightness. Betaine salicylate (a mild BHA) and tea tree oil help clear pores and control oil. Great for oily, combination and breakout-prone skin. If your skin is very dry or sensitive, use it once a day."
+    "about_en": "COSRX Low pH Good Morning Gel Cleanser is a gentle daily cleanser that cleans without dryness or tightness. Betaine salicylate (a mild BHA) and tea tree oil help clear pores and control oil. Great for oily, combination and breakout-prone skin. If your skin is very dry or sensitive, use it once a day.",
+    "name_ko": "코스알엑스 약산성 굿모닝 젤 클렌저",
+    "short_ko": "당김 없이 깨끗한 약산성 데일리 클렌저.",
+    "about_ko": "코스알엑스 약산성 굿모닝 젤 클렌저는 피부를 당기거나 건조하게 하지 않고 깨끗하게 씻어 주는 순한 데일리 클렌저입니다. 베타인 살리실레이트(순한 BHA)와 티트리 오일이 모공 관리와 유분 조절을 돕습니다. 지성·복합성·트러블성 피부에 특히 좋습니다. 매우 건조하거나 민감하다면 하루 한 번만 사용하세요.",
+    "benefits_ko": [
+      "약산성으로 피부에 순합니다.",
+      "모공과 유분 관리에 도움.",
+      "세안 후에도 당기지 않습니다."
+    ],
+    "steps_ko": [
+      "물에 적신 얼굴에 소량을 덜어 거품을 내세요.",
+      "부드럽게 마사지하세요.",
+      "미온수로 헹구세요."
+    ]
   },
   {
     "slug": "purito-oat-in-calming-gel-cream",
@@ -438,19 +546,25 @@
         "name": "آب دانهٔ جو دوسر ۷۷٪",
         "desc": "رطوبت و حس آرامش",
         "name_en": "Oat Seed Water 77%",
-        "desc_en": "Hydration and a calm feel"
+        "desc_en": "Hydration and a calm feel",
+        "name_ko": "귀리 씨 추출수 77%",
+        "desc_ko": "진정과 보습"
       },
       {
         "name": "اسکوالان",
         "desc": "رطوبت را حفظ می‌کند",
         "name_en": "Squalane",
-        "desc_en": "Helps seal in moisture"
+        "desc_en": "Helps seal in moisture",
+        "name_ko": "스쿠알란",
+        "desc_ko": "수분 유지"
       },
       {
         "name": "پانتنول",
         "desc": "حس نرمی",
         "name_en": "Panthenol",
-        "desc_en": "A soft feel"
+        "desc_en": "A soft feel",
+        "name_ko": "판테놀",
+        "desc_ko": "편안한 피부"
       }
     ],
     "steps": [
@@ -473,7 +587,20 @@
       "مرطوب کننده"
     ],
     "about": "ژل‌کرم آرام‌بخش جو دوسر از برند پوریتو با ۷۷٪ آب دانهٔ جو دوسر ساخته شده و پوست حساس و تحریک‌شده را آرام و مرطوب نگه می‌دارد. اسکوالان و پانتنول به حفظ رطوبت کمک می‌کنند، بدون اینکه پوست را چرب کنند. فرمولی ساده، بدون عطر و بدون روغن دارد و برای پوست چرب، مختلط، حساس و مستعد جوش عالی است. برای پوست خیلی خشک، می‌توانید یک کرم غنی‌تر رویش بزنید.",
-    "about_en": "Purito Oat-in Calming Gel Cream is made with 77% oat seed water to calm and hydrate sensitive, irritated skin. Squalane and panthenol lock in moisture without greasiness. A simple, fragrance-free, oil-free formula that's great for oily, combination, sensitive and breakout-prone skin. Very dry skin can layer a richer cream on top."
+    "about_en": "Purito Oat-in Calming Gel Cream is made with 77% oat seed water to calm and hydrate sensitive, irritated skin. Squalane and panthenol lock in moisture without greasiness. A simple, fragrance-free, oil-free formula that's great for oily, combination, sensitive and breakout-prone skin. Very dry skin can layer a richer cream on top.",
+    "name_ko": "퓨리토 오트인 카밍 젤 크림",
+    "short_ko": "귀리로 진정시키는 가벼운 젤 크림.",
+    "about_ko": "퓨리토 오트인 카밍 젤 크림은 귀리 씨 추출수 77%로 민감하고 자극받은 피부를 진정시키고 촉촉하게 합니다. 스쿠알란과 판테놀이 끈적임 없이 수분을 지켜 줍니다. 향료와 오일이 없는 단순한 포뮬러로 지성·복합성·민감성·트러블성 피부에 좋습니다. 매우 건조한 피부는 그 위에 더 리치한 크림을 덧발라 주세요.",
+    "benefits_ko": [
+      "민감한 피부를 편안하게.",
+      "끈적임 없는 가벼운 보습.",
+      "무향·오일프리."
+    ],
+    "steps_ko": [
+      "토너와 세럼 다음에 사용하세요.",
+      "적당량을 얼굴에 펴 바르세요.",
+      "아침과 저녁 사용 가능합니다."
+    ]
   },
   {
     "slug": "purito-mighty-bamboo-panthenol-cream",
@@ -507,19 +634,25 @@
         "name": "پانتنول ۱۰٪",
         "desc": "حمایت از سد پوستی و رطوبت",
         "name_en": "Panthenol 10%",
-        "desc_en": "Supports the barrier and moisture"
+        "desc_en": "Supports the barrier and moisture",
+        "name_ko": "판테놀 10%",
+        "desc_ko": "장벽 회복과 보습"
       },
       {
         "name": "عصارهٔ بامبو",
         "desc": "رطوبت و طراوت",
         "name_en": "Bamboo Extract",
-        "desc_en": "Moisture and freshness"
+        "desc_en": "Moisture and freshness",
+        "name_ko": "대나무 추출물",
+        "desc_ko": "수분 공급"
       },
       {
         "name": "اسکوالان و نیاسینامید",
         "desc": "نرمی و درخشش",
         "name_en": "Squalane & Niacinamide",
-        "desc_en": "Softness and glow"
+        "desc_en": "Softness and glow",
+        "name_ko": "스쿠알란 & 나이아신아마이드",
+        "desc_ko": "부드럽고 맑은 피부"
       }
     ],
     "steps": [
@@ -542,7 +675,20 @@
       "مرطوب کننده"
     ],
     "about": "کرم بامبو و پانتنول پوریتو با ۱۰٪ پانتنول (B5)، اسکوالان و عصارهٔ بامبو ساخته شده و به ترمیم و تقویت سد دفاعی پوست کمک می‌کند. نیاسینامید، سنتلا و پپتید مس پوست را نرم‌تر و آرام‌تر نشان می‌دهند. بافت کرمی و مغذی دارد و برای پوست خشک، حساس، تحریک‌شده و مختلط مناسب است؛ مخصوصاً در فصل سرد یا بعد از استفاده از فعال‌هایی مثل رتینول.",
-    "about_en": "Purito Mighty Bamboo Panthenol Cream combines 10% panthenol (B5), squalane and bamboo extract to help repair and strengthen the skin barrier. Niacinamide, centella and copper peptide leave skin softer and calmer. A nourishing cream for dry, sensitive, irritated and combination skin — especially in cold weather or alongside actives like retinol."
+    "about_en": "Purito Mighty Bamboo Panthenol Cream combines 10% panthenol (B5), squalane and bamboo extract to help repair and strengthen the skin barrier. Niacinamide, centella and copper peptide leave skin softer and calmer. A nourishing cream for dry, sensitive, irritated and combination skin — especially in cold weather or alongside actives like retinol.",
+    "name_ko": "퓨리토 마이티 뱀부 판테놀 크림",
+    "short_ko": "판테놀 10%로 피부 장벽을 지키는 크림.",
+    "about_ko": "퓨리토 마이티 뱀부 판테놀 크림은 판테놀(B5) 10%, 스쿠알란, 대나무 추출물로 피부 장벽 회복과 강화를 돕습니다. 나이아신아마이드, 병풀, 구리 펩타이드가 피부를 더 부드럽고 편안하게 해 줍니다. 영양감 있는 크림으로 건성·민감성·자극받은 피부와 복합성 피부에 좋으며, 추운 계절이나 레티놀 같은 성분과 함께 쓰기에도 좋습니다.",
+    "benefits_ko": [
+      "피부 장벽 강화.",
+      "건조하고 예민한 피부를 진정.",
+      "오래가는 보습."
+    ],
+    "steps_ko": [
+      "스킨케어 마지막 단계에 사용하세요.",
+      "적당량을 얼굴에 부드럽게 펴 바르세요.",
+      "건조한 부위에는 한 번 더 덧바르세요."
+    ]
   },
   {
     "slug": "purito-txa-6-niacinamide-10-retinal-serum",
@@ -576,19 +722,25 @@
         "name": "ترانگزامیک اسید ۶٪",
         "desc": "به یکدستی رنگ پوست کمک می‌کند",
         "name_en": "Tranexamic Acid 6%",
-        "desc_en": "Helps even out skin tone"
+        "desc_en": "Helps even out skin tone",
+        "name_ko": "트라넥삼산 6%",
+        "desc_ko": "잡티 케어"
       },
       {
         "name": "نیاسینامید ۱۰٪",
         "desc": "درخشش و تعادل چربی",
         "name_en": "Niacinamide 10%",
-        "desc_en": "Glow and oil balance"
+        "desc_en": "Glow and oil balance",
+        "name_ko": "나이아신아마이드 10%",
+        "desc_ko": "톤 개선과 유분 조절"
       },
       {
         "name": "رتینال",
         "desc": "صاف‌تر دیده شدن بافت پوست",
         "name_en": "Retinal",
-        "desc_en": "Smoother-looking texture"
+        "desc_en": "Smoother-looking texture",
+        "name_ko": "레티날",
+        "desc_ko": "매끄러운 피부결"
       }
     ],
     "steps": [
@@ -612,7 +764,20 @@
       "سیروم"
     ],
     "about": "سرم TXA ۶٪، نیاسینامید ۱۰٪ و رتینال از برند پوریتو، برای پوستی با لک، رنگ ناهمگون و منافذ باز طراحی شده است. ترانگزامیک اسید و نیاسینامید به کم‌رنگ‌تر دیده شدن لک‌ها و یکدست‌تر شدن رنگ پوست کمک می‌کنند و رتینال به صاف‌تر شدن بافت پوست کمک می‌کند. برای پوست چرب، مختلط و نرمال مناسب است. چون رتینال دارد، آرام‌آرام شروع کنید، در دوران بارداری و شیردهی استفاده نکنید و روزها حتماً ضدآفتاب بزنید.",
-    "about_en": "Purito TXA 6 Niacinamide 10 Retinal Serum targets dark spots, uneven tone and visible pores. Tranexamic acid and niacinamide help fade the look of spots and even out skin tone, while retinal refines texture. Suits oily, combination and normal skin. Because it contains retinal, start slowly, avoid during pregnancy and breastfeeding, and always wear sunscreen."
+    "about_en": "Purito TXA 6 Niacinamide 10 Retinal Serum targets dark spots, uneven tone and visible pores. Tranexamic acid and niacinamide help fade the look of spots and even out skin tone, while retinal refines texture. Suits oily, combination and normal skin. Because it contains retinal, start slowly, avoid during pregnancy and breastfeeding, and always wear sunscreen.",
+    "name_ko": "퓨리토 TXA 6 나이아신아마이드 10 레티날 세럼",
+    "short_ko": "잡티, 고르지 않은 톤, 모공을 위한 세럼.",
+    "about_ko": "퓨리토 TXA 6 나이아신아마이드 10 레티날 세럼은 잡티, 고르지 않은 피부 톤, 넓은 모공을 위한 세럼입니다. 트라넥삼산과 나이아신아마이드가 잡티를 옅게 하고 톤을 고르게 하는 데 도움을 주며, 레티날이 피부결을 매끄럽게 합니다. 지성·복합성·중성 피부에 적합합니다. 레티날이 들어 있으니 천천히 시작하고, 임신·수유 중에는 사용하지 말며, 낮에는 꼭 선크림을 바르세요.",
+    "benefits_ko": [
+      "잡티와 칙칙함 개선에 도움.",
+      "고른 피부 톤.",
+      "매끄러운 피부결."
+    ],
+    "steps_ko": [
+      "저녁에 토너 다음에 사용하세요.",
+      "처음에는 이틀에 한 번 사용하세요.",
+      "낮에는 반드시 선크림을 바르세요."
+    ]
   },
   {
     "slug": "anua-niacinamide-10-txa-4-serum",
@@ -646,19 +811,25 @@
         "name": "نیاسینامید ۱۰٪",
         "desc": "درخشش و یکدستی",
         "name_en": "Niacinamide 10%",
-        "desc_en": "Glow and evenness"
+        "desc_en": "Glow and evenness",
+        "name_ko": "나이아신아마이드 10%",
+        "desc_ko": "톤 개선"
       },
       {
         "name": "ترانگزامیک اسید ۴٪",
         "desc": "به یکدستی رنگ پوست کمک می‌کند",
         "name_en": "Tranexamic Acid 4%",
-        "desc_en": "Helps even out tone"
+        "desc_en": "Helps even out tone",
+        "name_ko": "트라넥삼산 4%",
+        "desc_ko": "잡티 케어"
       },
       {
         "name": "آربوتین ۲٪",
         "desc": "روشن‌تر دیده شدن پوست",
         "name_en": "Arbutin 2%",
-        "desc_en": "A brighter look"
+        "desc_en": "A brighter look",
+        "name_ko": "알부틴 2%",
+        "desc_ko": "맑은 피부"
       }
     ],
     "steps": [
@@ -683,7 +854,20 @@
       "سیروم"
     ],
     "about": "سرم نیاسینامید ۱۰٪ و TXA ۴٪ از برند انوا، یک سرم روشن‌کننده برای لک‌ها، جای جوش و پوست کدر است. نیاسینامید، ترانگزامیک اسید و آربوتین به یکدست‌تر شدن رنگ پوست و تعادل چربی کمک می‌کنند و هیالورونیک اسید رطوبت می‌دهد. برای پوست چرب، مختلط و نرمال مناسب است. اگر پوستتان خیلی حساس است، اول یک بار در روز استفاده کنید و همیشه ضدآفتاب بزنید.",
-    "about_en": "Anua Niacinamide 10% + TXA 4% Serum is a brightening serum for dark spots, post-blemish marks and dull skin. Niacinamide, tranexamic acid and arbutin help even out skin tone and balance oil, while hyaluronic acid adds moisture. Suits oily, combination and normal skin. If your skin is very sensitive, start once a day and always wear sunscreen."
+    "about_en": "Anua Niacinamide 10% + TXA 4% Serum is a brightening serum for dark spots, post-blemish marks and dull skin. Niacinamide, tranexamic acid and arbutin help even out skin tone and balance oil, while hyaluronic acid adds moisture. Suits oily, combination and normal skin. If your skin is very sensitive, start once a day and always wear sunscreen.",
+    "name_ko": "아누아 나이아신아마이드 10 TXA 4 세럼",
+    "short_ko": "잡티와 칙칙함을 위한 브라이트닝 세럼.",
+    "about_ko": "아누아 나이아신아마이드 10% + TXA 4% 세럼은 잡티, 트러블 자국, 칙칙한 피부를 위한 브라이트닝 세럼입니다. 나이아신아마이드, 트라넥삼산, 알부틴이 피부 톤을 고르게 하고 유분 밸런스를 맞추는 데 도움을 주며, 히알루론산이 수분을 더합니다. 지성·복합성·중성 피부에 적합합니다. 매우 민감하다면 하루 한 번부터 시작하고 항상 선크림을 바르세요.",
+    "benefits_ko": [
+      "잡티와 트러블 자국 케어.",
+      "밝고 고른 피부 톤.",
+      "가볍게 흡수되는 수분감."
+    ],
+    "steps_ko": [
+      "토너 다음에 사용하세요.",
+      "2–3방울을 얼굴에 펴 바르세요.",
+      "낮에는 반드시 선크림을 바르세요."
+    ]
   },
   {
     "slug": "arencia-vitamin-c-booster-shot",
@@ -728,13 +912,17 @@
         "name": "کمپلکس ویتامین C (۵٪)",
         "desc": "برای درخشش و شادابی پوست",
         "name_en": "Vitamin C Complex (5%)",
-        "desc_en": "For radiance and freshness"
+        "desc_en": "For radiance and freshness",
+        "name_ko": "비타민C 복합체(5%)",
+        "desc_ko": "환한 피부"
       },
       {
         "name": "گلوتاتیون",
         "desc": "همراه ویتامین C برای ظاهری روشن‌تر",
         "name_en": "Glutathione",
-        "desc_en": "Works with vitamin C for a brighter look"
+        "desc_en": "Works with vitamin C for a brighter look",
+        "name_ko": "글루타치온",
+        "desc_ko": "맑은 톤"
       }
     ],
     "steps": [
@@ -750,7 +938,20 @@
     "fullIngredients": "Water, Glycerin, Methylpropanediol, 3-O-Ethyl Ascorbic Acid, Butylene Glycol, Caprylic/Capric Triglyceride, 1,2-Hexanediol, Niacinamide, Cetyl Ethylhexanoate, Cetearyl Olivate, Polyglyceryl-3 Methylglucose Distearate, Diisostearyl Malate, Sodium Polyacrylate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sorbitan Olivate, Arginine, Gardenia Florida Fruit Extract, Xanthan Gum, Ethylhexylglycerin, Dextrin, Adenosine, Allantoin, Ascorbic Acid, Glutathione, Panthenol, Pyridoxine, Tocopherol, Ascorbyl Glucoside, Sodium Ascorbyl Phosphate",
     "fullIngredients_en": "Water, Glycerin, Methylpropanediol, 3-O-Ethyl Ascorbic Acid, Butylene Glycol, Caprylic/Capric Triglyceride, 1,2-Hexanediol, Niacinamide, Cetyl Ethylhexanoate, Cetearyl Olivate, Polyglyceryl-3 Methylglucose Distearate, Diisostearyl Malate, Sodium Polyacrylate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sorbitan Olivate, Arginine, Gardenia Florida Fruit Extract, Xanthan Gum, Ethylhexylglycerin, Dextrin, Adenosine, Allantoin, Ascorbic Acid, Glutathione, Panthenol, Pyridoxine, Tocopherol, Ascorbyl Glucoside, Sodium Ascorbyl Phosphate",
     "about": "ویتامین C بوستر شات آرنسیا، کرم مرطوب‌کنندهٔ صورت و دور چشم با ۵٪ ویتامین C پایدار (اتیل اسکوربیک اسید)، نیاسینامید و گلوتاتیون است. این ترکیب به درخشان‌تر، شاداب‌تر و یکدست‌تر دیده شدن پوست کمک می‌کند و برای پوست کدر و خسته عالی است. بافت سبک دارد و هم برای صورت و هم برای دور چشم قابل استفاده است؛ مناسب پوست خشک، مختلط و نرمال. صبح‌ها بعد از آن ضدآفتاب بزنید.",
-    "about_en": "Arencia Vitamin C Booster Shot is a face and eye moisturiser with 5% stable vitamin C (ethyl ascorbic acid), niacinamide and glutathione. It helps skin look brighter, fresher and more even — great for dull, tired skin. Light enough for both face and eye area; suits dry, combination and normal skin. Follow with sunscreen in the morning."
+    "about_en": "Arencia Vitamin C Booster Shot is a face and eye moisturiser with 5% stable vitamin C (ethyl ascorbic acid), niacinamide and glutathione. It helps skin look brighter, fresher and more even — great for dull, tired skin. Light enough for both face and eye area; suits dry, combination and normal skin. Follow with sunscreen in the morning.",
+    "name_ko": "아렌시아 비타민C 부스터 샷 (얼굴·눈가 크림)",
+    "short_ko": "얼굴과 눈가에 쓰는 가벼운 비타민C 크림.",
+    "about_ko": "아렌시아 비타민C 부스터 샷은 안정화 비타민C 5%(에틸아스코빅애씨드), 나이아신아마이드, 글루타치온을 담은 얼굴·눈가 겸용 보습 크림입니다. 피부를 더 환하고 생기 있게, 톤을 고르게 가꿔 주어 칙칙하고 지친 피부에 좋습니다. 가벼운 제형으로 건성·복합성·중성 피부에 적합합니다. 아침에는 꼭 선크림을 바르세요.",
+    "benefits_ko": [
+      "환하고 생기 있는 피부.",
+      "얼굴과 눈가에 모두 사용 가능.",
+      "가볍고 촉촉한 제형."
+    ],
+    "steps_ko": [
+      "토너와 세럼 다음에 사용하세요.",
+      "얼굴에 펴 바르고 눈가는 가볍게 두드리세요.",
+      "아침에는 선크림을 바르세요."
+    ]
   },
   {
     "slug": "beauty-of-joseon-revive-eye-serum-ginseng-retinal",
@@ -795,13 +996,17 @@
         "name": "جینسینگ",
         "desc": "عصارهٔ مشهور کره‌ای برای شادابی پوست",
         "name_en": "Ginseng",
-        "desc_en": "Classic Korean extract for vitality"
+        "desc_en": "Classic Korean extract for vitality",
+        "name_ko": "인삼",
+        "desc_ko": "생기 있는 피부"
       },
       {
         "name": "رتینال",
         "desc": "از خانوادهٔ ویتامین A؛ بیشتر برای شب",
         "name_en": "Retinal",
-        "desc_en": "A vitamin A derivative, best at night"
+        "desc_en": "A vitamin A derivative, best at night",
+        "name_ko": "레티날",
+        "desc_ko": "매끄러운 피부결"
       }
     ],
     "steps": [
@@ -817,7 +1022,20 @@
     "fullIngredients": "Water, Panax Ginseng Root Extract, Glycerin, Dipropylene Glycol, Caprylic/Capric Triglyceride, 1,2-Hexanediol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Butylene Glycol Dicaprylate/Dicaprate, Cetearyl Alcohol, Sorbitan Olivate, Cetearyl Olivate, Butylene Glycol, Hydrogenated Lecithin, Tromethamine, Carbomer, Glyceryl Stearate, Macadamia Ternifolia Seed Oil, Adenosine, Theobroma Cacao Extract, Dextrin, Cholesterol, Polyglyceryl-10 Oleate, Retinal, Brassica Campestris Sterols, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Silica, Sodium Hyaluronate, Tocopherol, Aluminum/Magnesium Hydroxide Stearate, Potassium Cetyl Phosphate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Ceramide NP, Palmitoyl Tripeptide-5, Disodium EDTA, Ethylhexylglycerin",
     "fullIngredients_en": "Water, Panax Ginseng Root Extract, Glycerin, Dipropylene Glycol, Caprylic/Capric Triglyceride, 1,2-Hexanediol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Butylene Glycol Dicaprylate/Dicaprate, Cetearyl Alcohol, Sorbitan Olivate, Cetearyl Olivate, Butylene Glycol, Hydrogenated Lecithin, Tromethamine, Carbomer, Glyceryl Stearate, Macadamia Ternifolia Seed Oil, Adenosine, Theobroma Cacao Extract, Dextrin, Cholesterol, Polyglyceryl-10 Oleate, Retinal, Brassica Campestris Sterols, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Silica, Sodium Hyaluronate, Tocopherol, Aluminum/Magnesium Hydroxide Stearate, Potassium Cetyl Phosphate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Ceramide NP, Palmitoyl Tripeptide-5, Disodium EDTA, Ethylhexylglycerin",
     "about": "سرم دور چشم ریوایو از بیوتی آف جوسان با عصارهٔ جینسینگ و رتینال، برای پوست ظریف دور چشم ساخته شده است. جینسینگ به شادابی پوست کمک می‌کند و رتینال به صاف‌تر دیده شدن خطوط ریز؛ نیاسینامید، پپتید و سرامید هم پوست دور چشم را نرم و مرطوب نگه می‌دارند. بافت کرمی دارد و می‌توانید آن را روی تمام صورت هم بزنید. چون رتینال دارد، بیشتر برای شب است؛ در بارداری و شیردهی استفاده نکنید.",
-    "about_en": "Beauty of Joseon Revive Eye Serum combines ginseng and retinal for the delicate eye area. Ginseng boosts vitality and retinal helps smooth the look of fine lines, while niacinamide, peptides and ceramide keep the area soft and moisturised. The creamy texture can also be used on the whole face. As it contains retinal, it's best at night; avoid during pregnancy and breastfeeding."
+    "about_en": "Beauty of Joseon Revive Eye Serum combines ginseng and retinal for the delicate eye area. Ginseng boosts vitality and retinal helps smooth the look of fine lines, while niacinamide, peptides and ceramide keep the area soft and moisturised. The creamy texture can also be used on the whole face. As it contains retinal, it's best at night; avoid during pregnancy and breastfeeding.",
+    "name_ko": "조선미녀 인삼 아이크림 (인삼+레티날)",
+    "short_ko": "인삼과 레티날을 담은 크림 타입 아이 세럼.",
+    "about_ko": "조선미녀 인삼 아이크림은 인삼과 레티날로 섬세한 눈가 피부를 케어합니다. 인삼은 생기를 더하고 레티날은 잔주름을 매끄러워 보이게 하며, 나이아신아마이드, 펩타이드, 세라마이드가 눈가를 부드럽고 촉촉하게 지켜 줍니다. 크림 제형으로 얼굴 전체에도 사용할 수 있습니다. 레티날이 들어 있어 저녁 사용을 권하며, 임신·수유 중에는 사용하지 마세요.",
+    "benefits_ko": [
+      "섬세한 눈가 전용 케어.",
+      "잔주름을 매끄럽게 보이게.",
+      "촉촉한 크림 제형."
+    ],
+    "steps_ko": [
+      "저녁에 세안과 토너 후 사용하세요.",
+      "소량을 눈가에 가볍게 두드리세요.",
+      "처음에는 이틀에 한 번, 아침에는 선크림을 바르세요."
+    ]
   },
   {
     "slug": "skin1004-hyalu-cica-water-fit-sun-serum",
@@ -864,19 +1082,25 @@
         "name": "عصارهٔ سنتلا آسیاتیکا",
         "desc": "گیاه مشهور آرام‌بخش برای پوست حساس",
         "name_en": "Centella Asiatica Extract",
-        "desc_en": "Famous soothing plant for sensitive skin"
+        "desc_en": "Famous soothing plant for sensitive skin",
+        "name_ko": "병풀 추출물",
+        "desc_ko": "민감한 피부 진정"
       },
       {
         "name": "هیالورونیک اسید",
         "desc": "رطوبت سبک و ماندگار",
         "name_en": "Hyaluronic Acid",
-        "desc_en": "Light, lasting hydration"
+        "desc_en": "Light, lasting hydration",
+        "name_ko": "히알루론산",
+        "desc_ko": "가볍고 오래가는 보습"
       },
       {
         "name": "پانتنول (B5)",
         "desc": "نرمی و آرامش پوست",
         "name_en": "Panthenol (B5)",
-        "desc_en": "Softness and comfort"
+        "desc_en": "Softness and comfort",
+        "name_ko": "판테놀(B5)",
+        "desc_ko": "편안한 피부"
       }
     ],
     "steps": [
@@ -892,6 +1116,19 @@
     "about": "سان سرم هیالو-سیکا اسکین ۱۰۰۴ یک ضدآفتاب سرمی و آبکی با SPF50 است که با سنتلای ماداگاسکار و هیالورونیک اسید، همزمان از پوست محافظت می‌کند و رطوبت می‌دهد. خیلی سریع جذب می‌شود، سفیدک نمی‌گذارد و حس سنگینی ندارد. برای همهٔ انواع پوست، از چرب تا خشک و حساس، مناسب است و زیر آرایش هم خوب می‌نشیند. هر ۲ تا ۳ ساعت تجدید کنید.",
     "about_en": "SKIN1004 Hyalu-Cica Water-Fit Sun Serum is a watery serum sunscreen with SPF 50. Madagascar centella and hyaluronic acid hydrate while it protects. It absorbs fast with no white cast or heaviness, suits every skin type from oily to dry and sensitive, and sits well under makeup. Reapply every 2–3 hours.",
     "fullIngredients": "Active: Avobenzone (Butyl Methoxydibenzoylmethane) 2.7%, Homosalate 13.6%, Octinoxate (Ethylhexyl Methoxycinnamate) 4.5%, Octocrylene 9%. Inactive: Water, Butyloctyl Salicylate, Propanediol, Polymethylsilsesquioxane, C20-22 Alkyl Phosphate, C20-22 Alcohols, Panthenol, 1,2-Hexanediol, Caprylyl Methicone, Pentylene Glycol, Dimethicone/Vinyl Dimethicone Crosspolymer, Cetyl Alcohol, VP/Eicosene Copolymer, Glyceryl Stearate, Tromethamine, Polyacrylate Crosspolymer-6, Ammonium Acryloyldimethyltaurate/VP Copolymer, Silica, Butylene Glycol, Centella Asiatica Extract, Ethylhexylglycerin, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Tocopherol, Glycerin, Portulaca Oleracea Extract, Camellia Sinensis Leaf Extract, Hyaluronic Acid, Oryza Sativa Extract, Avena Sativa Meal Extract, Glycine Max Seed Extract",
-    "fullIngredients_en": "Active: Avobenzone (Butyl Methoxydibenzoylmethane) 2.7%, Homosalate 13.6%, Octinoxate (Ethylhexyl Methoxycinnamate) 4.5%, Octocrylene 9%. Inactive: Water, Butyloctyl Salicylate, Propanediol, Polymethylsilsesquioxane, C20-22 Alkyl Phosphate, C20-22 Alcohols, Panthenol, 1,2-Hexanediol, Caprylyl Methicone, Pentylene Glycol, Dimethicone/Vinyl Dimethicone Crosspolymer, Cetyl Alcohol, VP/Eicosene Copolymer, Glyceryl Stearate, Tromethamine, Polyacrylate Crosspolymer-6, Ammonium Acryloyldimethyltaurate/VP Copolymer, Silica, Butylene Glycol, Centella Asiatica Extract, Ethylhexylglycerin, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Tocopherol, Glycerin, Portulaca Oleracea Extract, Camellia Sinensis Leaf Extract, Hyaluronic Acid, Oryza Sativa Extract, Avena Sativa Meal Extract, Glycine Max Seed Extract"
+    "fullIngredients_en": "Active: Avobenzone (Butyl Methoxydibenzoylmethane) 2.7%, Homosalate 13.6%, Octinoxate (Ethylhexyl Methoxycinnamate) 4.5%, Octocrylene 9%. Inactive: Water, Butyloctyl Salicylate, Propanediol, Polymethylsilsesquioxane, C20-22 Alkyl Phosphate, C20-22 Alcohols, Panthenol, 1,2-Hexanediol, Caprylyl Methicone, Pentylene Glycol, Dimethicone/Vinyl Dimethicone Crosspolymer, Cetyl Alcohol, VP/Eicosene Copolymer, Glyceryl Stearate, Tromethamine, Polyacrylate Crosspolymer-6, Ammonium Acryloyldimethyltaurate/VP Copolymer, Silica, Butylene Glycol, Centella Asiatica Extract, Ethylhexylglycerin, Hydrolyzed Sodium Hyaluronate, Sodium Hyaluronate, Tocopherol, Glycerin, Portulaca Oleracea Extract, Camellia Sinensis Leaf Extract, Hyaluronic Acid, Oryza Sativa Extract, Avena Sativa Meal Extract, Glycine Max Seed Extract",
+    "name_ko": "스킨1004 마다가스카르 센텔라 히알루시카 워터핏 선세럼 SPF50",
+    "short_ko": "센텔라와 히알루론산을 담은 묽은 세럼 선크림.",
+    "about_ko": "스킨1004 히알루시카 워터핏 선세럼은 SPF50의 묽은 세럼 타입 선크림입니다. 마다가스카르 센텔라와 히알루론산이 자외선을 차단하는 동시에 수분을 채워 줍니다. 빠르게 흡수되고 백탁이나 무거움이 없어 지성부터 건성, 민감성까지 모든 피부에 맞으며 메이크업 전에도 좋습니다. 2–3시간마다 덧발라 주세요.",
+    "benefits_ko": [
+      "SPF50 데일리 자외선 차단.",
+      "백탁 없이 빠르게 흡수되는 세럼 제형.",
+      "센텔라와 히알루론산으로 진정과 보습."
+    ],
+    "steps_ko": [
+      "아침 스킨케어 마지막 단계에 바르세요.",
+      "얼굴과 목에 충분히 펴 바르세요.",
+      "2–3시간마다 덧발라 주세요."
+    ]
   }
 ]
