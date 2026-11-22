@@ -79,7 +79,8 @@
       "아침 스킨케어 마지막 단계에 바르세요.",
       "얼굴과 목에 충분히 펴 바르세요.",
       "2–3시간마다 덧발라 주세요."
-    ]
+    ],
+    "cutout": "/products/cut/beauty-of-joseon-relief-sun-aqua-fresh.webp"
   },
   {
     "slug": "dr-althea-345-relief-cream",
@@ -169,7 +170,8 @@
       "토너와 세럼 다음에 사용하세요.",
       "적당량을 얼굴 전체에 부드럽게 펴 바르세요.",
       "아침과 저녁 모두 사용 가능합니다."
-    ]
+    ],
+    "cutout": "/products/cut/dr-althea-345-relief-cream.webp"
   },
   {
     "slug": "anua-heartleaf-77-soothing-toner",
@@ -250,7 +252,8 @@
       "세안 후 첫 단계로 사용하세요.",
       "화장솜이나 손으로 가볍게 두드려 흡수시키세요.",
       "아침과 저녁 사용 가능합니다."
-    ]
+    ],
+    "cutout": "/products/cut/anua-heartleaf-77-soothing-toner.webp"
   },
   {
     "slug": "anua-azelaic-acid-10-hyaluron-serum",
@@ -341,7 +344,8 @@
       "토너 다음에 사용하세요.",
       "2–3방울을 얼굴에 펴 바르세요.",
       "낮에는 반드시 선크림을 바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/anua-azelaic-acid-10-hyaluron-serum.webp"
   },
   {
     "slug": "anua-pdrn-hyaluronic-acid-100-cream",
@@ -431,7 +435,8 @@
       "스킨케어 마지막 단계에 사용하세요.",
       "적당량을 얼굴 전체에 펴 바르세요.",
       "아침과 저녁 사용 가능합니다."
-    ]
+    ],
+    "cutout": "/products/cut/anua-pdrn-hyaluronic-acid-100-cream.webp"
   },
   {
     "slug": "cosrx-low-ph-good-morning-gel-cleanser",
@@ -512,7 +517,8 @@
       "물에 적신 얼굴에 소량을 덜어 거품을 내세요.",
       "부드럽게 마사지하세요.",
       "미온수로 헹구세요."
-    ]
+    ],
+    "cutout": "/products/cut/cosrx-low-ph-good-morning-gel-cleanser.webp"
   },
   {
     "slug": "purito-oat-in-calming-gel-cream",
@@ -600,7 +606,8 @@
       "토너와 세럼 다음에 사용하세요.",
       "적당량을 얼굴에 펴 바르세요.",
       "아침과 저녁 사용 가능합니다."
-    ]
+    ],
+    "cutout": "/products/cut/purito-oat-in-calming-gel-cream.webp"
   },
   {
     "slug": "purito-mighty-bamboo-panthenol-cream",
@@ -688,7 +695,8 @@
       "스킨케어 마지막 단계에 사용하세요.",
       "적당량을 얼굴에 부드럽게 펴 바르세요.",
       "건조한 부위에는 한 번 더 덧바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/purito-mighty-bamboo-panthenol-cream.webp"
   },
   {
     "slug": "purito-txa-6-niacinamide-10-retinal-serum",
@@ -777,7 +785,8 @@
       "저녁에 토너 다음에 사용하세요.",
       "처음에는 이틀에 한 번 사용하세요.",
       "낮에는 반드시 선크림을 바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/purito-txa-6-niacinamide-10-retinal-serum.webp"
   },
   {
     "slug": "anua-niacinamide-10-txa-4-serum",
@@ -867,7 +876,8 @@
       "토너 다음에 사용하세요.",
       "2–3방울을 얼굴에 펴 바르세요.",
       "낮에는 반드시 선크림을 바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/anua-niacinamide-10-txa-4-serum.webp"
   },
   {
     "slug": "arencia-vitamin-c-booster-shot",
@@ -951,7 +961,8 @@
       "토너와 세럼 다음에 사용하세요.",
       "얼굴에 펴 바르고 눈가는 가볍게 두드리세요.",
       "아침에는 선크림을 바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/arencia-vitamin-c-booster-shot.webp"
   },
   {
     "slug": "beauty-of-joseon-revive-eye-serum-ginseng-retinal",
@@ -1035,7 +1046,8 @@
       "저녁에 세안과 토너 후 사용하세요.",
       "소량을 눈가에 가볍게 두드리세요.",
       "처음에는 이틀에 한 번, 아침에는 선크림을 바르세요."
-    ]
+    ],
+    "cutout": "/products/cut/beauty-of-joseon-revive-eye-serum-ginseng-retinal.webp"
   },
   {
     "slug": "skin1004-hyalu-cica-water-fit-sun-serum",
@@ -1129,7 +1141,8 @@
       "아침 스킨케어 마지막 단계에 바르세요.",
       "얼굴과 목에 충분히 펴 바르세요.",
       "2–3시간마다 덧발라 주세요."
-    ]
+    ],
+    "cutout": "/products/cut/skin1004-hyalu-cica-water-fit-sun-serum.webp"
   },
   {
     "slug": "torriden-dive-in-serum",
@@ -1221,7 +1234,8 @@
       }
     ],
     "fullIngredients": "Water, Butylene Glycol, Glycerin, Dipropylene Glycol, 1,2-Hexanediol, Panthenol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Acetylated Hyaluronate, Sodium Hyaluronate Crosspolymer, Hydrolyzed Sodium Hyaluronate, Allantoin, Trehalose, Betaine, Propanediol, Portulaca Oleracea Extract, Hamamelis Virginiana Extract, Madecassoside, Madecassic Acid, Ceramide NP, Beta-Glucan, Malachite Extract, Cholesterol, Pentylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, PVM/MA Copolymer, Polyglyceryl-10 Laurate, Xanthan Gum, Tromethamine, Carbomer, Ethylhexylglycerin, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract",
-    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Dipropylene Glycol, 1,2-Hexanediol, Panthenol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Acetylated Hyaluronate, Sodium Hyaluronate Crosspolymer, Hydrolyzed Sodium Hyaluronate, Allantoin, Trehalose, Betaine, Propanediol, Portulaca Oleracea Extract, Hamamelis Virginiana Extract, Madecassoside, Madecassic Acid, Ceramide NP, Beta-Glucan, Malachite Extract, Cholesterol, Pentylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, PVM/MA Copolymer, Polyglyceryl-10 Laurate, Xanthan Gum, Tromethamine, Carbomer, Ethylhexylglycerin, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract"
+    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Dipropylene Glycol, 1,2-Hexanediol, Panthenol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Acetylated Hyaluronate, Sodium Hyaluronate Crosspolymer, Hydrolyzed Sodium Hyaluronate, Allantoin, Trehalose, Betaine, Propanediol, Portulaca Oleracea Extract, Hamamelis Virginiana Extract, Madecassoside, Madecassic Acid, Ceramide NP, Beta-Glucan, Malachite Extract, Cholesterol, Pentylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, PVM/MA Copolymer, Polyglyceryl-10 Laurate, Xanthan Gum, Tromethamine, Carbomer, Ethylhexylglycerin, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract",
+    "cutout": "/products/cut/torriden-dive-in-serum.webp"
   },
   {
     "slug": "anua-collagen-retinol-gua-sha-cream",
@@ -1313,7 +1327,8 @@
       }
     ],
     "fullIngredients": "Water, Butylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Isononyl Isononanoate, 1,2-Hexanediol, Castor Oil/IPDI Copolymer, Helianthus Annuus Seed Oil, Hexyldecyl Myristoyl Methylaminopropionate, Squalane, Arginine, Carbomer, Lithospermum Erythrorhizon Root Extract, Lactobacillus Ferment Lysate, Chamomilla Recutita Flower Oil, Macadamia Ternifolia Seed Oil, Retinol, Hydrogenated Lecithin, Brassica Campestris Sterols, Cholesterol, Polyglyceryl-10 Laurate, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Aluminum/Magnesium Hydroxide Stearate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Cetyl Phosphate, Chitosan, Tris(Tetramethylhydroxypiperidinol) Citrate, Behenyl Alcohol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Diphenylsiloxy Phenyl Trimethicone, Hydrogenated Poly(C6-14 Olefin), Tocopherol, Bis-Diglyceryl Polyacyladipate-2, Vinyldimethicone, Pentylene Glycol, Panthenol, Hydrolyzed Collagen, Polyglyceryl-6 Stearate, Polyglyceryl-6 Behenate, C12-16 Alcohols, Palmitic Acid, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sorbitan Oleate, Caprylyl/Capryl Glucoside, Ammonium Acryloyldimethyltaurate/VP Copolymer, Copernicia Cerifera Wax, Coptis Japonica Root Extract, Polyacrylate Crosspolymer-6, Sodium Stearoyl Glutamate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Adenosine, Tromethamine, Sodium Phytate, Theobroma Cacao Extract, Dextrin, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Anemarrhena Asphodeloides Root Extract, Pullulan, Oligopeptide-2, Collagen",
-    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Isononyl Isononanoate, 1,2-Hexanediol, Castor Oil/IPDI Copolymer, Helianthus Annuus Seed Oil, Hexyldecyl Myristoyl Methylaminopropionate, Squalane, Arginine, Carbomer, Lithospermum Erythrorhizon Root Extract, Lactobacillus Ferment Lysate, Chamomilla Recutita Flower Oil, Macadamia Ternifolia Seed Oil, Retinol, Hydrogenated Lecithin, Brassica Campestris Sterols, Cholesterol, Polyglyceryl-10 Laurate, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Aluminum/Magnesium Hydroxide Stearate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Cetyl Phosphate, Chitosan, Tris(Tetramethylhydroxypiperidinol) Citrate, Behenyl Alcohol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Diphenylsiloxy Phenyl Trimethicone, Hydrogenated Poly(C6-14 Olefin), Tocopherol, Bis-Diglyceryl Polyacyladipate-2, Vinyldimethicone, Pentylene Glycol, Panthenol, Hydrolyzed Collagen, Polyglyceryl-6 Stearate, Polyglyceryl-6 Behenate, C12-16 Alcohols, Palmitic Acid, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sorbitan Oleate, Caprylyl/Capryl Glucoside, Ammonium Acryloyldimethyltaurate/VP Copolymer, Copernicia Cerifera Wax, Coptis Japonica Root Extract, Polyacrylate Crosspolymer-6, Sodium Stearoyl Glutamate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Adenosine, Tromethamine, Sodium Phytate, Theobroma Cacao Extract, Dextrin, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Anemarrhena Asphodeloides Root Extract, Pullulan, Oligopeptide-2, Collagen"
+    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Isononyl Isononanoate, 1,2-Hexanediol, Castor Oil/IPDI Copolymer, Helianthus Annuus Seed Oil, Hexyldecyl Myristoyl Methylaminopropionate, Squalane, Arginine, Carbomer, Lithospermum Erythrorhizon Root Extract, Lactobacillus Ferment Lysate, Chamomilla Recutita Flower Oil, Macadamia Ternifolia Seed Oil, Retinol, Hydrogenated Lecithin, Brassica Campestris Sterols, Cholesterol, Polyglyceryl-10 Laurate, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Aluminum/Magnesium Hydroxide Stearate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Cetyl Phosphate, Chitosan, Tris(Tetramethylhydroxypiperidinol) Citrate, Behenyl Alcohol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Diphenylsiloxy Phenyl Trimethicone, Hydrogenated Poly(C6-14 Olefin), Tocopherol, Bis-Diglyceryl Polyacyladipate-2, Vinyldimethicone, Pentylene Glycol, Panthenol, Hydrolyzed Collagen, Polyglyceryl-6 Stearate, Polyglyceryl-6 Behenate, C12-16 Alcohols, Palmitic Acid, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sorbitan Oleate, Caprylyl/Capryl Glucoside, Ammonium Acryloyldimethyltaurate/VP Copolymer, Copernicia Cerifera Wax, Coptis Japonica Root Extract, Polyacrylate Crosspolymer-6, Sodium Stearoyl Glutamate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Adenosine, Tromethamine, Sodium Phytate, Theobroma Cacao Extract, Dextrin, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Anemarrhena Asphodeloides Root Extract, Pullulan, Oligopeptide-2, Collagen",
+    "cutout": "/products/cut/anua-collagen-retinol-gua-sha-cream.webp"
   },
   {
     "slug": "lilyeve-grow-turn-exosome-ampoule",
@@ -1407,7 +1422,8 @@
       }
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "cutout": "/products/cut/lilyeve-grow-turn-exosome-ampoule.webp"
   },
   {
     "slug": "medicube-glow-vanilla-mist",
@@ -1500,7 +1516,8 @@
       }
     ],
     "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
-    "fullIngredients_en": "[Full ingredient list from the packaging]"
+    "fullIngredients_en": "[Full ingredient list from the packaging]",
+    "cutout": "/products/cut/medicube-glow-vanilla-mist.webp"
   },
   {
     "slug": "medicube-fresh-that-lasts-deodorant",
@@ -1593,6 +1610,7 @@
       }
     ],
     "fullIngredients": "Dimethicone, Ethylhexyl Palmitate, Paraffin, Magnesium Hydroxide, Parfum, Ozokerite, Synthetic Wax, Stearyl Alcohol, Sorbitan Stearate, Tapioca Starch, Dimethicone/Vinyl Dimethicone Crosspolymer, Tocopherol, Silica, Butyrospermum Parkii (Shea) Butter, Kojic Acid, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Tetraisopalmitate, Niacinamide, Panthenol, Ceramide NP, Vanilla Planifolia Fruit Oil, Pistacia Vera Seed Oil, Centella Asiatica Extract, Portulaca Oleracea Extract, Hexyl Cinnamal, Coumarin, Vanillin, Citral, Terpineol",
-    "fullIngredients_en": "Dimethicone, Ethylhexyl Palmitate, Paraffin, Magnesium Hydroxide, Parfum, Ozokerite, Synthetic Wax, Stearyl Alcohol, Sorbitan Stearate, Tapioca Starch, Dimethicone/Vinyl Dimethicone Crosspolymer, Tocopherol, Silica, Butyrospermum Parkii (Shea) Butter, Kojic Acid, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Tetraisopalmitate, Niacinamide, Panthenol, Ceramide NP, Vanilla Planifolia Fruit Oil, Pistacia Vera Seed Oil, Centella Asiatica Extract, Portulaca Oleracea Extract, Hexyl Cinnamal, Coumarin, Vanillin, Citral, Terpineol"
+    "fullIngredients_en": "Dimethicone, Ethylhexyl Palmitate, Paraffin, Magnesium Hydroxide, Parfum, Ozokerite, Synthetic Wax, Stearyl Alcohol, Sorbitan Stearate, Tapioca Starch, Dimethicone/Vinyl Dimethicone Crosspolymer, Tocopherol, Silica, Butyrospermum Parkii (Shea) Butter, Kojic Acid, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Tetraisopalmitate, Niacinamide, Panthenol, Ceramide NP, Vanilla Planifolia Fruit Oil, Pistacia Vera Seed Oil, Centella Asiatica Extract, Portulaca Oleracea Extract, Hexyl Cinnamal, Coumarin, Vanillin, Citral, Terpineol",
+    "cutout": "/products/cut/medicube-fresh-that-lasts-deodorant.webp"
   }
 ]
