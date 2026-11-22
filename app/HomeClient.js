@@ -61,11 +61,25 @@ export default function HomeClient() {
             </Link>
           </div>
         </div>
-        <span className="scroll-hint" aria-hidden="true" />
+        <button
+          className="scroll-cue"
+          onClick={() => document.getElementById("after-hero")?.scrollIntoView({ behavior: "smooth" })}
+          aria-label={t("home.scroll")}
+        >
+          <span className="scroll-cue-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <svg className="second" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </span>
+          <span className="scroll-cue-text">{t("home.scroll")}</span>
+        </button>
       </section>
 
 
-      <section className="section">
+      <section className="section" id="after-hero">
         <div className="container">
           <div className="trust">
             {[1, 2, 3, 4].map((n) => (
