@@ -97,7 +97,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-show">
         <div className="container">
           <BestSlider products={bestsellers} dir={dir} title={t("home.best")} />
           <div className="center-row">
