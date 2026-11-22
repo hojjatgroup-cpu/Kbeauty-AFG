@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartProvider";
 import Splash from "@/components/Splash";
 import PromoPopup from "@/components/PromoPopup";
+import PromoBar from "@/components/PromoBar";
 import site from "@/data/site.json";
 
 const modam = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <div className="bg-blobs" aria-hidden="true" />
         <LangProvider>
           <CartProvider>
+            <PromoBar />
             <Header />
             <main>{children}</main>
             <Footer />
