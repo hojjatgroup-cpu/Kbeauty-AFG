@@ -82,7 +82,7 @@ export default function SkinTest() {
   const scores = { oily: 0, dry: 0, combination: 0, sensitive: 0 };
   answers.forEach((a) => (scores[a] += 1));
   const result = ORDER.reduce((best, k) => (scores[k] > scores[best] ? k : best), "oily");
-  const recommended = getAllProducts().filter((p) => p.skin.includes(result));
+  const recommended = getAllProducts().filter((p) => p.skin.includes(result) && p.type !== "hair" && p.type !== "body");
 
   return (
     <div>

@@ -39,8 +39,8 @@ export default function BrandCarousel() {
           const far = a > 2;
           const sign = Math.sign(off);
           const pos = {
-            "--x": `${sign * [0, 86, 150, 190][a]}px`,
-            "--y": `${[0, -24, -56, -70][a]}px`,
+            "--x": `${sign * [0, 92, 160, 205][a]}px`,
+            "--y": "0px",
             "--s": [1, 0.66, 0.5, 0.4][a],
             "--b": `${[0, 1.4, 3, 4][a]}px`,
             "--op": [1, 0.85, 0.55, 0][a],

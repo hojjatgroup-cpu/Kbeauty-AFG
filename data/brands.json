@@ -61,5 +61,32 @@
     "match": [
       "SKIN1004"
     ]
+  },
+  {
+    "slug": "medicube",
+    "name": "medicube",
+    "name_fa": "مدیکیوب",
+    "logo": "/brands/medicube.jpg",
+    "match": [
+      "medicube"
+    ]
+  },
+  {
+    "slug": "torriden",
+    "name": "Torriden",
+    "name_fa": "توریدن",
+    "logo": "/brands/torriden.jpg",
+    "match": [
+      "Torriden"
+    ]
+  },
+  {
+    "slug": "lilyeve",
+    "name": "Lilyeve",
+    "name_fa": "لیلی‌ایو",
+    "logo": "/brands/lilyeve.jpg",
+    "match": [
+      "Lilyeve"
+    ]
   }
 ]

@@ -5,16 +5,16 @@ import { useEffect, useRef, useState } from "react";
 // A different video on each visit (never the same one twice in a row)
 const VIDEOS = ["hero", "hero2", "hero3", "hero4"];
 function pickVideo() {
-  let last = -1;
+  // play the videos in turn: 1 → 2 → 3 → 4 → 1 …
+  let i;
   try {
-    last = Number(localStorage.getItem("kbeauty-hero") ?? -1);
-  } catch {}
-  let i = Math.floor(Math.random() * VIDEOS.length);
-  if (VIDEOS.length > 1 && i === last) i = (i + 1) % VIDEOS.length;
-  try {
+    const last = localStorage.getItem("kbeauty-hero");
+    i = last == null ? Math.floor(Math.random() * VIDEOS.length) : (Number(last) + 1) % VIDEOS.length;
     localStorage.setItem("kbeauty-hero", String(i));
-  } catch {}
-  return VIDEOS[i];
+  } catch {
+    i = Math.floor(Date.now() / 1000) % VIDEOS.length;
+  }
+  return VIDEOS[i] || VIDEOS[0];
 }
 
 // Muted, looping background video for the home hero. Small file that starts loading immediately.

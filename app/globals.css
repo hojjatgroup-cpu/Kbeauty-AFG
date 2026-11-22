@@ -654,9 +654,9 @@ main { min-height: 60vh; position: relative; z-index: 1; }
 
 /* Brand wheel: circles on an arc, centre sharp, sides blurred, loops forever */
 .arc { position: relative; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
-.arc-stage { position: relative; height: 190px; overflow: hidden; }
+.arc-stage { position: relative; height: 150px; overflow: hidden; }
 .arc-item {
-  position: absolute; left: 50%; top: 66px; width: 116px; height: 116px; margin-left: -58px;
+  position: absolute; left: 50%; top: 17px; width: 116px; height: 116px; margin-left: -58px;
   display: grid; place-items: center; padding: 8px; border-radius: 999px; background: #fff; overflow: hidden;
   border: 1px solid var(--line); box-shadow: 0 10px 26px -16px rgba(31,58,63,.4);
   transform: translate(var(--x), var(--y)) scale(var(--s));

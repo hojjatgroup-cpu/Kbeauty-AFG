@@ -1130,5 +1130,469 @@
       "얼굴과 목에 충분히 펴 바르세요.",
       "2–3시간마다 덧발라 주세요."
     ]
+  },
+  {
+    "slug": "torriden-dive-in-serum",
+    "name": "سرم آبرسان دایو-این هیالورونیک اسید با وزن مولکولی پایین توریدن",
+    "name_en": "Torriden DIVE-IN Low Molecular Hyaluronic Acid Serum",
+    "name_ko": "토리든 다이브인 저분자 히알루론산 세럼",
+    "brand": "Torriden",
+    "brand_fa": "توریدن",
+    "keywords": [
+      "توریدن",
+      "توردن",
+      "دایو این",
+      "هیالورونیک",
+      "آبرسان",
+      "سرم آبرسان"
+    ],
+    "type": "serum",
+    "skin": [
+      "oily",
+      "dry",
+      "combination",
+      "sensitive"
+    ],
+    "price": 1390,
+    "oldPrice": 1590,
+    "size": "50 ml",
+    "image": "/products/torriden-dive-in-serum.jpg",
+    "bestseller": true,
+    "short": "سرم آبرسان سبک با ۵ نوع هیالورونیک اسید، برای همهٔ پوست‌ها.",
+    "short_en": "Light hydrating serum with 5 types of hyaluronic acid, for all skin types.",
+    "short_ko": "5가지 히알루론산을 담은 가벼운 수분 세럼, 모든 피부용.",
+    "about": "سرم دایو-این توریدن یکی از محبوب‌ترین سرم‌های آبرسان کره‌ای است که با ۵ نوع هیالورونیک اسید با وزن مولکولی پایین، رطوبت را به لایه‌های مختلف پوست می‌رساند. پانتنول، سرامید و آلانتوئین به آرامش و تقویت سد دفاعی پوست کمک می‌کنند. بافتی آبکی و بسیار سبک دارد، چسبناک نیست و برای همهٔ انواع پوست، از چرب تا خشک و حساس، مناسب است. زیر کرم مرطوب‌کننده بیشترین نتیجه را می‌دهد.",
+    "about_en": "Torriden DIVE-IN is one of Korea's best-loved hydrating serums. Five types of low-molecular hyaluronic acid deliver moisture to different layers of the skin, while panthenol, ceramide and allantoin calm and support the skin barrier. Watery, very light and non-sticky, it suits every skin type from oily to dry and sensitive. Works best under a moisturiser.",
+    "about_ko": "토리든 다이브인 세럼은 한국에서 가장 사랑받는 수분 세럼 중 하나로, 5가지 저분자 히알루론산이 피부 여러 층에 수분을 전달합니다. 판테놀, 세라마이드, 알란토인이 피부를 진정시키고 장벽을 지켜 줍니다. 묽고 가벼우며 끈적임이 없어 지성부터 건성, 민감성까지 모든 피부에 맞습니다. 보습제 전에 사용하면 가장 좋습니다.",
+    "benefits": [
+      "آبرسانی عمیق با ۵ نوع هیالورونیک اسید.",
+      "سبک و بدون چسبندگی؛ زود جذب می‌شود.",
+      "مناسب همهٔ انواع پوست، حتی پوست حساس."
+    ],
+    "benefits_en": [
+      "Deep hydration with 5 types of hyaluronic acid.",
+      "Light and non-sticky; absorbs fast.",
+      "Suits all skin types, even sensitive."
+    ],
+    "benefits_ko": [
+      "5가지 히알루론산으로 깊은 보습.",
+      "가볍고 끈적임 없이 빠르게 흡수.",
+      "민감성 피부를 포함한 모든 피부에 적합."
+    ],
+    "steps": [
+      "بعد از شستشو و تونر استفاده کنید.",
+      "۳–۴ قطره را روی صورت بزنید و آرام ضربه بزنید تا جذب شود.",
+      "بعد از آن کرم مرطوب‌کننده بزنید؛ صبح و شب."
+    ],
+    "steps_en": [
+      "Use after cleansing and toner.",
+      "Pat 3–4 drops onto the face until absorbed.",
+      "Follow with moisturiser, morning and night."
+    ],
+    "steps_ko": [
+      "세안과 토너 후 사용하세요.",
+      "3–4방울을 얼굴에 두드려 흡수시키세요.",
+      "아침저녁으로 보습제를 덧바르세요."
+    ],
+    "keyIngredients": [
+      {
+        "name": "۵ نوع هیالورونیک اسید",
+        "desc": "آبرسانی در چند لایهٔ پوست",
+        "name_en": "5 types of Hyaluronic Acid",
+        "desc_en": "Hydration at several depths",
+        "name_ko": "5가지 히알루론산",
+        "desc_ko": "여러 층의 수분 공급"
+      },
+      {
+        "name": "پانتنول (B5)",
+        "desc": "آرامش و نرمی پوست",
+        "name_en": "Panthenol (B5)",
+        "desc_en": "Calm, soft skin",
+        "name_ko": "판테놀(B5)",
+        "desc_ko": "진정과 부드러움"
+      },
+      {
+        "name": "سرامید NP",
+        "desc": "تقویت سد دفاعی پوست",
+        "name_en": "Ceramide NP",
+        "desc_en": "Supports the skin barrier",
+        "name_ko": "세라마이드 NP",
+        "desc_ko": "피부 장벽 강화"
+      }
+    ],
+    "fullIngredients": "Water, Butylene Glycol, Glycerin, Dipropylene Glycol, 1,2-Hexanediol, Panthenol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Acetylated Hyaluronate, Sodium Hyaluronate Crosspolymer, Hydrolyzed Sodium Hyaluronate, Allantoin, Trehalose, Betaine, Propanediol, Portulaca Oleracea Extract, Hamamelis Virginiana Extract, Madecassoside, Madecassic Acid, Ceramide NP, Beta-Glucan, Malachite Extract, Cholesterol, Pentylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, PVM/MA Copolymer, Polyglyceryl-10 Laurate, Xanthan Gum, Tromethamine, Carbomer, Ethylhexylglycerin, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract",
+    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Dipropylene Glycol, 1,2-Hexanediol, Panthenol, Sodium Hyaluronate, Hydrolyzed Hyaluronic Acid, Sodium Acetylated Hyaluronate, Sodium Hyaluronate Crosspolymer, Hydrolyzed Sodium Hyaluronate, Allantoin, Trehalose, Betaine, Propanediol, Portulaca Oleracea Extract, Hamamelis Virginiana Extract, Madecassoside, Madecassic Acid, Ceramide NP, Beta-Glucan, Malachite Extract, Cholesterol, Pentylene Glycol, Glyceryl Acrylate/Acrylic Acid Copolymer, PVM/MA Copolymer, Polyglyceryl-10 Laurate, Xanthan Gum, Tromethamine, Carbomer, Ethylhexylglycerin, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract"
+  },
+  {
+    "slug": "anua-collagen-retinol-gua-sha-cream",
+    "name": "کرم سفت‌کنندهٔ کلاژن و رتینول با سر گواشا انوا",
+    "name_en": "Anua Collagen Retinol Refining Gua Sha Cream",
+    "name_ko": "아누아 콜라겐 레티놀 리파이닝 괄사 크림",
+    "brand": "Anua",
+    "brand_fa": "انوا",
+    "keywords": [
+      "انوا",
+      "آنوا",
+      "گواشا",
+      "گوا شا",
+      "رتینول",
+      "کلاژن",
+      "لیفتینگ",
+      "سفت کننده"
+    ],
+    "type": "cream",
+    "skin": [
+      "dry",
+      "combination",
+      "oily"
+    ],
+    "price": 1580,
+    "size": "80 ml",
+    "image": "/products/anua-collagen-retinol-gua-sha-cream.jpg",
+    "bestseller": false,
+    "short": "کرم رتینول و کلاژن با سر گواشا برای ماساژ و پوستی سفت‌تر.",
+    "short_en": "Retinol & collagen cream with a built-in gua sha head for massage.",
+    "short_ko": "괄사 헤드가 달린 레티놀·콜라겐 크림.",
+    "about": "کرم کلاژن و رتینول انوا یک کرم ضدچروک و سفت‌کننده است که سر گواشای آن همزمان با زدن کرم، صورت و گردن را ماساژ می‌دهد. رتینول به نرم‌تر دیده شدن چین‌وچروک و صاف‌تر شدن بافت پوست کمک می‌کند و کلاژن، پپتید، نیاسینامید و اسکوالان پوست را مرطوب و پرتر نشان می‌دهند. برای پوست خشک، مختلط و نرمال مناسب است. چون رتینول دارد، بیشتر برای شب است؛ در بارداری و شیردهی استفاده نکنید و روزها ضدآفتاب بزنید.",
+    "about_en": "Anua Collagen Retinol Gua Sha Cream is a firming, anti-wrinkle cream whose gua sha head massages the face and neck as you apply it. Retinol helps soften the look of wrinkles and refine texture, while collagen, peptides, niacinamide and squalane keep skin moisturised and plump-looking. Suits dry, combination and normal skin. As it contains retinol, it's best at night; avoid during pregnancy and breastfeeding and wear sunscreen by day.",
+    "about_ko": "아누아 콜라겐 레티놀 괄사 크림은 바르는 동시에 괄사 헤드로 얼굴과 목을 마사지하는 탄력·주름 개선 크림입니다. 레티놀이 주름을 완화하고 피부결을 매끄럽게 하며, 콜라겐, 펩타이드, 나이아신아마이드, 스쿠알란이 피부를 촉촉하고 탄탄하게 가꿔 줍니다. 건성·복합성·중성 피부에 적합합니다. 레티놀이 들어 있어 저녁 사용을 권하며, 임신·수유 중에는 사용하지 말고 낮에는 선크림을 바르세요.",
+    "benefits": [
+      "رتینول برای کمتر دیده شدن چین‌وچروک.",
+      "سر گواشا برای ماساژ و پوستی سفت‌تر.",
+      "کلاژن و پپتید برای پوستی پرتر و مرطوب."
+    ],
+    "benefits_en": [
+      "Retinol to soften the look of wrinkles.",
+      "Gua sha head for a firming massage.",
+      "Collagen and peptides for plump, moisturised skin."
+    ],
+    "benefits_ko": [
+      "레티놀로 주름 완화.",
+      "괄사 헤드로 탄력 마사지.",
+      "콜라겐과 펩타이드로 촉촉하고 탄탄하게."
+    ],
+    "steps": [
+      "شب‌ها بعد از سرم، مقدار کمی کرم را از تیوب خارج کنید.",
+      "با سر گواشا از وسط صورت به سمت بیرون و از گردن به بالا ماساژ دهید.",
+      "در شروع یک شب در میان استفاده کنید؛ صبح ضدآفتاب بزنید."
+    ],
+    "steps_en": [
+      "At night after serum, squeeze out a small amount.",
+      "Massage with the gua sha head from the centre of the face outwards and up the neck.",
+      "Start every other night; wear sunscreen in the morning."
+    ],
+    "steps_ko": [
+      "저녁에 세럼 후 소량을 짜내세요.",
+      "괄사 헤드로 얼굴 중앙에서 바깥쪽, 목은 아래에서 위로 마사지하세요.",
+      "처음에는 이틀에 한 번, 아침에는 선크림을 바르세요."
+    ],
+    "keyIngredients": [
+      {
+        "name": "رتینول",
+        "desc": "صاف‌تر شدن بافت و چین‌وچروک",
+        "name_en": "Retinol",
+        "desc_en": "Smoother texture and fine lines",
+        "name_ko": "레티놀",
+        "desc_ko": "매끄러운 피부결과 주름"
+      },
+      {
+        "name": "کلاژن",
+        "desc": "پوستی پرتر و مرطوب",
+        "name_en": "Collagen",
+        "desc_en": "Plump, moisturised look",
+        "name_ko": "콜라겐",
+        "desc_ko": "탄탄하고 촉촉한 피부"
+      },
+      {
+        "name": "پپتید و نیاسینامید",
+        "desc": "سفتی و یکدستی پوست",
+        "name_en": "Peptides & Niacinamide",
+        "desc_en": "Firmness and even tone",
+        "name_ko": "펩타이드 & 나이아신아마이드",
+        "desc_ko": "탄력과 고른 톤"
+      }
+    ],
+    "fullIngredients": "Water, Butylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Isononyl Isononanoate, 1,2-Hexanediol, Castor Oil/IPDI Copolymer, Helianthus Annuus Seed Oil, Hexyldecyl Myristoyl Methylaminopropionate, Squalane, Arginine, Carbomer, Lithospermum Erythrorhizon Root Extract, Lactobacillus Ferment Lysate, Chamomilla Recutita Flower Oil, Macadamia Ternifolia Seed Oil, Retinol, Hydrogenated Lecithin, Brassica Campestris Sterols, Cholesterol, Polyglyceryl-10 Laurate, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Aluminum/Magnesium Hydroxide Stearate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Cetyl Phosphate, Chitosan, Tris(Tetramethylhydroxypiperidinol) Citrate, Behenyl Alcohol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Diphenylsiloxy Phenyl Trimethicone, Hydrogenated Poly(C6-14 Olefin), Tocopherol, Bis-Diglyceryl Polyacyladipate-2, Vinyldimethicone, Pentylene Glycol, Panthenol, Hydrolyzed Collagen, Polyglyceryl-6 Stearate, Polyglyceryl-6 Behenate, C12-16 Alcohols, Palmitic Acid, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sorbitan Oleate, Caprylyl/Capryl Glucoside, Ammonium Acryloyldimethyltaurate/VP Copolymer, Copernicia Cerifera Wax, Coptis Japonica Root Extract, Polyacrylate Crosspolymer-6, Sodium Stearoyl Glutamate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Adenosine, Tromethamine, Sodium Phytate, Theobroma Cacao Extract, Dextrin, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Anemarrhena Asphodeloides Root Extract, Pullulan, Oligopeptide-2, Collagen",
+    "fullIngredients_en": "Water, Butylene Glycol, Glycerin, Caprylic/Capric Triglyceride, Isononyl Isononanoate, 1,2-Hexanediol, Castor Oil/IPDI Copolymer, Helianthus Annuus Seed Oil, Hexyldecyl Myristoyl Methylaminopropionate, Squalane, Arginine, Carbomer, Lithospermum Erythrorhizon Root Extract, Lactobacillus Ferment Lysate, Chamomilla Recutita Flower Oil, Macadamia Ternifolia Seed Oil, Retinol, Hydrogenated Lecithin, Brassica Campestris Sterols, Cholesterol, Polyglyceryl-10 Laurate, Phytosteryl/Behenyl/Octyldodecyl Lauroyl Glutamate, Aluminum/Magnesium Hydroxide Stearate, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Potassium Cetyl Phosphate, Chitosan, Tris(Tetramethylhydroxypiperidinol) Citrate, Behenyl Alcohol, Pentaerythrityl Tetraethylhexanoate, Niacinamide, Diphenylsiloxy Phenyl Trimethicone, Hydrogenated Poly(C6-14 Olefin), Tocopherol, Bis-Diglyceryl Polyacyladipate-2, Vinyldimethicone, Pentylene Glycol, Panthenol, Hydrolyzed Collagen, Polyglyceryl-6 Stearate, Polyglyceryl-6 Behenate, C12-16 Alcohols, Palmitic Acid, Glyceryl Stearate, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyisobutene, Sorbitan Oleate, Caprylyl/Capryl Glucoside, Ammonium Acryloyldimethyltaurate/VP Copolymer, Copernicia Cerifera Wax, Coptis Japonica Root Extract, Polyacrylate Crosspolymer-6, Sodium Stearoyl Glutamate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Ethylhexylglycerin, Adenosine, Tromethamine, Sodium Phytate, Theobroma Cacao Extract, Dextrin, Dipeptide Diaminobutyroyl Benzylamide Diacetate, Anemarrhena Asphodeloides Root Extract, Pullulan, Oligopeptide-2, Collagen"
+  },
+  {
+    "slug": "lilyeve-grow-turn-exosome-ampoule",
+    "name": "آمپول برس‌دار تقویت موی گرو:ترن اگزوزوم لیلی‌ایو",
+    "name_en": "Lilyeve GROW:TURN Exosome Brush Ampoule",
+    "name_ko": "릴리이브 그로우턴 엑소좀 브러쉬 앰플",
+    "brand": "Lilyeve",
+    "brand_fa": "لیلی‌ایو",
+    "keywords": [
+      "لیلی ایو",
+      "لیلیو",
+      "لیلی‌ایو",
+      "ریزش مو",
+      "مو",
+      "پوست سر",
+      "اگزوزوم",
+      "آمپول مو",
+      "تقویت مو"
+    ],
+    "type": "hair",
+    "skin": [
+      "oily",
+      "dry",
+      "combination",
+      "sensitive"
+    ],
+    "price": 1490,
+    "size": "100 ml",
+    "image": "/products/lilyeve-grow-turn-exosome-ampoule.jpg",
+    "bestseller": false,
+    "short": "آمپول پوست سر با برس ماساژ، برای موهای نازک و پوست سر خسته.",
+    "short_en": "Scalp ampoule with a massage brush, for thin-looking hair and a tired scalp.",
+    "short_ko": "마사지 브러쉬가 달린 두피 앰플.",
+    "about": "آمپول گرو:ترن لیلی‌ایو یک محصول مراقبت از پوست سر است که با ۳ نوع اگزوزوم گیاهی، کافئین، بیوتین و پپتید مس، به بهتر شدن محیط پوست سر و پرتر دیده شدن موها کمک می‌کند. سر برس‌دار آن با ۳۸ برس نرم، آمپول را مستقیم به پوست سر می‌رساند و همزمان ماساژ می‌دهد. بافت سبک و بدون چربی دارد و شستن لازم ندارد. اگر ریزش موی شدید یا ناگهانی دارید، با پزشک مشورت کنید.",
+    "about_en": "Lilyeve GROW:TURN is a scalp-care ampoule with three plant exosomes, caffeine, biotin and copper peptide to help improve the scalp environment and make hair look fuller. Its 38 soft brush tips deliver the ampoule straight to the scalp while massaging. Light, non-greasy and leave-in. If you have severe or sudden hair loss, please see a doctor.",
+    "about_ko": "릴리이브 그로우턴은 3가지 식물 엑소좀, 카페인, 비오틴, 구리 펩타이드로 두피 환경을 개선하고 모발을 더 풍성해 보이게 돕는 두피 앰플입니다. 38개의 부드러운 브러쉬가 앰플을 두피에 직접 전달하며 마사지해 줍니다. 가볍고 끈적임 없으며 씻어낼 필요가 없습니다. 심하거나 갑작스러운 탈모가 있다면 의사와 상담하세요.",
+    "benefits": [
+      "مراقبت از پوست سر و موهای نازک.",
+      "برس ماساژ برای جذب بهتر.",
+      "سبک، بدون چربی و بدون نیاز به شستن."
+    ],
+    "benefits_en": [
+      "Care for the scalp and thin-looking hair.",
+      "Massage brush for better absorption.",
+      "Light, non-greasy and leave-in."
+    ],
+    "benefits_ko": [
+      "두피와 가는 모발 케어.",
+      "마사지 브러쉬로 흡수력 향상.",
+      "가볍고 끈적임 없으며 씻어낼 필요 없음."
+    ],
+    "steps": [
+      "روی موی خشک یا بعد از شستشو و خشک کردن با حوله استفاده کنید.",
+      "سر برس را بچرخانید تا باز شود، مقداری آمپول روی پوست سر بزنید و دوباره ببندید.",
+      "با برس یا نوک انگشت ماساژ دهید تا جذب شود؛ صبح و شب."
+    ],
+    "steps_en": [
+      "Use on dry hair or after washing and towel-drying.",
+      "Twist the brush head open, apply onto the scalp, then twist closed.",
+      "Massage with the brush or fingertips until absorbed; morning and night."
+    ],
+    "steps_ko": [
+      "마른 모발 또는 샴푸 후 타월 드라이한 모발에 사용하세요.",
+      "브러쉬 헤드를 돌려 열고 두피에 바른 뒤 다시 잠그세요.",
+      "브러쉬나 손끝으로 흡수될 때까지 마사지하세요. 아침저녁 사용."
+    ],
+    "keyIngredients": [
+      {
+        "name": "۳ نوع اگزوزوم گیاهی",
+        "desc": "رساندن مواد مؤثر به پوست سر",
+        "name_en": "3 plant exosomes",
+        "desc_en": "Deliver actives to the scalp",
+        "name_ko": "3가지 식물 엑소좀",
+        "desc_ko": "두피에 유효 성분 전달"
+      },
+      {
+        "name": "کافئین و بیوتین",
+        "desc": "تقویت ظاهر موها",
+        "name_en": "Caffeine & Biotin",
+        "desc_en": "Stronger-looking hair",
+        "name_ko": "카페인 & 비오틴",
+        "desc_ko": "튼튼해 보이는 모발"
+      },
+      {
+        "name": "پپتید مس",
+        "desc": "آرامش و مراقبت از پوست سر",
+        "name_en": "Copper Tripeptide-1",
+        "desc_en": "Soothing scalp care",
+        "name_ko": "구리 트라이펩타이드-1",
+        "desc_ko": "두피 진정"
+      }
+    ],
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
+  },
+  {
+    "slug": "medicube-glow-vanilla-mist",
+    "name": "اسپری خوشبوکنندهٔ مو و بدن گلو وانیلا مدیکیوب",
+    "name_en": "medicube Glow Vanilla Hair & Body Fragrance Mist",
+    "name_ko": "메디큐브 글로우 바닐라 헤어 바디 프래그런스 미스트",
+    "brand": "medicube",
+    "brand_fa": "مدیکیوب",
+    "keywords": [
+      "مدیکیوب",
+      "مدی کیوب",
+      "وانیل",
+      "وانیلا",
+      "بادی میست",
+      "اسپری بدن",
+      "عطر",
+      "مو"
+    ],
+    "type": "body",
+    "skin": [
+      "oily",
+      "dry",
+      "combination",
+      "sensitive"
+    ],
+    "price": 1280,
+    "size": "250 ml",
+    "image": "/products/medicube-glow-vanilla-mist.jpg",
+    "bestseller": false,
+    "short": "بادی‌میست با رایحهٔ گرم وانیل برای مو و بدن.",
+    "short_en": "Warm vanilla fragrance mist for hair and body.",
+    "short_ko": "헤어와 바디를 위한 따뜻한 바닐라 미스트.",
+    "about": "اسپری گلو وانیلا مدیکیوب یک بادی‌میست دوکاره برای مو و بدن است با رایحهٔ گرم و کرمی وانیل، همراه با نارگیل، پسته، کهربا، کارامل و چوب صندل. کوجیک اسید، نیاسینامید و ۷ نوع هیالورونیک اسید به پوست و مو رطوبت و درخشش می‌دهند. ذرات اسپری بسیار ریز است و حس چسبندگی و چربی نمی‌گذارد. برای همه مناسب است؛ روی پوست زخمی یا تحریک‌شده نزنید.",
+    "about_en": "medicube Glow Vanilla is a two-in-one fragrance mist for hair and body with a warm, creamy vanilla scent layered with coconut, pistachio, amber, caramel and sandalwood. Kojic acid, niacinamide and 7 types of hyaluronic acid add moisture and glow to skin and hair. The ultra-fine mist leaves no sticky or greasy feel. Suitable for everyone; avoid broken or irritated skin.",
+    "about_ko": "메디큐브 글로우 바닐라는 코코넛, 피스타치오, 앰버, 캐러멜, 샌달우드가 어우러진 따뜻하고 크리미한 바닐라 향의 헤어·바디 겸용 미스트입니다. 코직산, 나이아신아마이드, 7가지 히알루론산이 피부와 모발에 수분과 윤기를 더합니다. 초미세 분사로 끈적임이나 번들거림이 없습니다. 누구나 사용할 수 있으며 상처나 자극이 있는 피부에는 피하세요.",
+    "benefits": [
+      "رایحهٔ ماندگار و گرم وانیل.",
+      "هم برای مو و هم برای بدن.",
+      "کوجیک اسید و هیالورونیک اسید برای رطوبت و درخشش."
+    ],
+    "benefits_en": [
+      "Warm, long-lasting vanilla scent.",
+      "For both hair and body.",
+      "Kojic and hyaluronic acid for moisture and glow."
+    ],
+    "benefits_ko": [
+      "오래가는 따뜻한 바닐라 향.",
+      "헤어와 바디 모두 사용.",
+      "코직산과 히알루론산으로 수분과 윤기."
+    ],
+    "steps": [
+      "بطری را تکان دهید.",
+      "از فاصلهٔ ۱۵–۲۰ سانتی‌متری روی مو و بدن (گردن، دست‌ها) بزنید.",
+      "هر وقت خواستید دوباره بزنید."
+    ],
+    "steps_en": [
+      "Shake the bottle.",
+      "Spray from 15–20 cm onto hair and body (neck, arms).",
+      "Reapply whenever you like."
+    ],
+    "steps_ko": [
+      "병을 흔들어 주세요.",
+      "15–20cm 거리에서 모발과 몸(목, 팔)에 뿌리세요.",
+      "원할 때마다 덧뿌리세요."
+    ],
+    "keyIngredients": [
+      {
+        "name": "کوجیک اسید",
+        "desc": "درخشش و یکدستی پوست",
+        "name_en": "Kojic Acid",
+        "desc_en": "Glow and even tone",
+        "name_ko": "코직산",
+        "desc_ko": "윤기와 고른 톤"
+      },
+      {
+        "name": "۷ نوع هیالورونیک اسید",
+        "desc": "رطوبت مو و پوست",
+        "name_en": "7 Hyaluronic Acids",
+        "desc_en": "Hydrates skin and hair",
+        "name_ko": "7가지 히알루론산",
+        "desc_ko": "피부와 모발 보습"
+      },
+      {
+        "name": "نیاسینامید",
+        "desc": "پوستی شاداب‌تر",
+        "name_en": "Niacinamide",
+        "desc_en": "Fresher-looking skin",
+        "name_ko": "나이아신아마이드",
+        "desc_ko": "생기 있는 피부"
+      }
+    ],
+    "fullIngredients": "[فهرست کامل ترکیبات از روی بسته‌بندی]",
+    "fullIngredients_en": "[Full ingredient list from the packaging]"
+  },
+  {
+    "slug": "medicube-fresh-that-lasts-deodorant",
+    "name": "دئودورانت استیکی وانیل و پسته فرش دت لستس مدیکیوب",
+    "name_en": "medicube Fresh That Lasts Deodorant — Vanilla & Pistachio",
+    "name_ko": "메디큐브 프레쉬 댓 라스트 데오드란트 바닐라&피스타치오",
+    "brand": "medicube",
+    "brand_fa": "مدیکیوب",
+    "keywords": [
+      "مدیکیوب",
+      "مدی کیوب",
+      "دئودورانت",
+      "دیودرانت",
+      "ضد بو",
+      "زیر بغل",
+      "وانیل",
+      "پسته"
+    ],
+    "type": "body",
+    "skin": [
+      "oily",
+      "dry",
+      "combination",
+      "sensitive"
+    ],
+    "price": 345,
+    "size": "83 g",
+    "image": "/products/medicube-fresh-that-lasts-deodorant.jpg",
+    "bestseller": false,
+    "short": "دئودورانت بدون آلومینیوم با رایحهٔ وانیل و پسته.",
+    "short_en": "Aluminum-free deodorant with a vanilla & pistachio scent.",
+    "short_ko": "바닐라 & 피스타치오 향의 무알루미늄 데오드란트.",
+    "about": "دئودورانت فرش دت لستس مدیکیوب یک استیک بدون آلومینیوم است که بوی بد زیر بغل را تا ۲۴ ساعت کنترل می‌کند و رایحهٔ شیرین وانیل و پسته دارد. کوجیک اسید، زردچوبه، نیاسینامید و ویتامین C به یکدست‌تر دیده شدن رنگ پوست زیر بغل کمک می‌کنند و سرامید و پانتنول پوست را نرم نگه می‌دارند. شفاف است و لکهٔ سفید یا زرد روی لباس نمی‌گذارد. برای خانم‌ها و آقایان؛ بعد از اصلاح یا اپیلاسیون کمی صبر کنید.",
+    "about_en": "medicube Fresh That Lasts is an aluminum-free deodorant stick that controls underarm odour for up to 24 hours with a sweet vanilla and pistachio scent. Kojic acid, turmeric, niacinamide and vitamin C help even out the look of underarm tone, while ceramide and panthenol keep skin soft. Goes on clear with no white marks or yellow stains. Unisex; wait a while after shaving or waxing.",
+    "about_ko": "메디큐브 프레쉬 댓 라스트는 달콤한 바닐라와 피스타치오 향으로 최대 24시간 겨드랑이 냄새를 잡아 주는 무알루미늄 스틱 데오드란트입니다. 코직산, 강황, 나이아신아마이드, 비타민C가 겨드랑이 톤을 고르게 보이도록 돕고, 세라마이드와 판테놀이 피부를 부드럽게 지켜 줍니다. 투명하게 발려 흰 자국이나 노란 얼룩이 남지 않습니다. 남녀 공용이며 제모 후에는 잠시 기다렸다 사용하세요.",
+    "benefits": [
+      "کنترل بو تا ۲۴ ساعت.",
+      "بدون آلومینیوم؛ لکه روی لباس نمی‌گذارد.",
+      "کوجیک اسید و ویتامین C برای پوست زیر بغل یکدست‌تر."
+    ],
+    "benefits_en": [
+      "Up to 24-hour odour control.",
+      "Aluminum-free; no marks on clothes.",
+      "Kojic acid and vitamin C for a more even underarm tone."
+    ],
+    "benefits_ko": [
+      "최대 24시간 냄새 케어.",
+      "무알루미늄, 옷에 자국 없음.",
+      "코직산과 비타민C로 고른 겨드랑이 톤."
+    ],
+    "steps": [
+      "روی پوست تمیز و خشک زیر بغل بکشید.",
+      "۲–۳ بار کافی است.",
+      "تا ۱ روز بعد از اصلاح و ۲–۳ روز بعد از اپیلاسیون استفاده نکنید."
+    ],
+    "steps_en": [
+      "Glide onto clean, dry underarms.",
+      "2–3 swipes are enough.",
+      "Wait 1 day after shaving and 2–3 days after waxing."
+    ],
+    "steps_ko": [
+      "깨끗하고 마른 겨드랑이에 발라 주세요.",
+      "2–3번이면 충분합니다.",
+      "제모 후 1일, 왁싱 후 2–3일은 사용을 피하세요."
+    ],
+    "keyIngredients": [
+      {
+        "name": "کوجیک اسید و زردچوبه",
+        "desc": "یکدستی رنگ پوست",
+        "name_en": "Kojic Acid & Turmeric",
+        "desc_en": "More even tone",
+        "name_ko": "코직산 & 강황",
+        "desc_ko": "고른 피부 톤"
+      },
+      {
+        "name": "نیاسینامید و ویتامین C",
+        "desc": "روشنی و شادابی",
+        "name_en": "Niacinamide & Vitamin C",
+        "desc_en": "Brightness",
+        "name_ko": "나이아신아마이드 & 비타민C",
+        "desc_ko": "환한 피부"
+      },
+      {
+        "name": "سرامید و پانتنول",
+        "desc": "نرمی پوست",
+        "name_en": "Ceramide & Panthenol",
+        "desc_en": "Soft skin",
+        "name_ko": "세라마이드 & 판테놀",
+        "desc_ko": "부드러운 피부"
+      }
+    ],
+    "fullIngredients": "Dimethicone, Ethylhexyl Palmitate, Paraffin, Magnesium Hydroxide, Parfum, Ozokerite, Synthetic Wax, Stearyl Alcohol, Sorbitan Stearate, Tapioca Starch, Dimethicone/Vinyl Dimethicone Crosspolymer, Tocopherol, Silica, Butyrospermum Parkii (Shea) Butter, Kojic Acid, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Tetraisopalmitate, Niacinamide, Panthenol, Ceramide NP, Vanilla Planifolia Fruit Oil, Pistacia Vera Seed Oil, Centella Asiatica Extract, Portulaca Oleracea Extract, Hexyl Cinnamal, Coumarin, Vanillin, Citral, Terpineol",
+    "fullIngredients_en": "Dimethicone, Ethylhexyl Palmitate, Paraffin, Magnesium Hydroxide, Parfum, Ozokerite, Synthetic Wax, Stearyl Alcohol, Sorbitan Stearate, Tapioca Starch, Dimethicone/Vinyl Dimethicone Crosspolymer, Tocopherol, Silica, Butyrospermum Parkii (Shea) Butter, Kojic Acid, Curcuma Longa (Turmeric) Root Extract, Ascorbyl Tetraisopalmitate, Niacinamide, Panthenol, Ceramide NP, Vanilla Planifolia Fruit Oil, Pistacia Vera Seed Oil, Centella Asiatica Extract, Portulaca Oleracea Extract, Hexyl Cinnamal, Coumarin, Vanillin, Citral, Terpineol"
   }
 ]
