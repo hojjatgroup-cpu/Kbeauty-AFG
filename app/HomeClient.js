@@ -16,6 +16,18 @@ import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
 
+// one real product photo per category (from public/products/thumb)
+const CAT_PHOTO = {
+  cleanser: "cosrx-low-ph-good-morning-gel-cleanser",
+  toner: "anua-heartleaf-77-soothing-toner",
+  serum: "torriden-dive-in-serum",
+  cream: "dr-althea-345-relief-cream",
+  sunscreen: "beauty-of-joseon-relief-sun-aqua-fresh",
+  mask: "",
+  hair: "lilyeve-grow-turn-exosome-ampoule",
+  body: "medicube-glow-vanilla-mist",
+};
+
 export default function HomeClient() {
   const [go, setGo] = useState(false);
   const mounted = useRef(Date.now());
@@ -131,9 +143,15 @@ export default function HomeClient() {
               href: `/shop?type=${key}`,
               label,
               node: (
-                <span className="wheel-ico">
-                  <Icon name={key} size={40} />
-                </span>
+                <img
+                  className="wheel-photo"
+                  src={`/products/thumb/${CAT_PHOTO[key] || ""}.jpg`}
+                  alt={label}
+                  width="420"
+                  height="420"
+                  loading="lazy"
+                  draggable="false"
+                />
               ),
             }))}
           />
