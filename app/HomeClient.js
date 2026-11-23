@@ -130,14 +130,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <SectionTitle center kicker={t("home.revKicker")}>
-            {t("home.rev")}
-          </SectionTitle>
-          <Reviews />
-        </div>
-      </section>
+      <Reviews kicker={t("home.revKicker")} title={t("home.rev")} />
       <section className="section">
         <div className="container">
           <SectionTitle center kicker={t("home.catKicker")}>
