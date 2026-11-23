@@ -9,6 +9,9 @@ import Icon from "@/components/Icons";
 import BrandCarousel from "@/components/BrandCarousel";
 import BestSlider from "@/components/BestSlider";
 import Wheel from "@/components/Wheel";
+import Reviews from "@/components/Reviews";
+import PostCard from "@/components/PostCard";
+import { getPosts } from "@/lib/blog";
 import { useLang } from "@/components/LangProvider";
 import { getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
@@ -110,6 +113,14 @@ export default function HomeClient() {
 
       <section className="section">
         <div className="container">
+          <SectionTitle center kicker={t("home.revKicker")}>
+            {t("home.rev")}
+          </SectionTitle>
+          <Reviews />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
           <SectionTitle center kicker={t("home.catKicker")}>
             {t("home.cat")}
           </SectionTitle>
@@ -151,6 +162,20 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <SectionTitle center kicker={t("home.blogKicker")}>
+            {t("home.blog")}
+          </SectionTitle>
+          <div className="post-list">
+            {getPosts()
+              .slice(0, 2)
+              .map((p) => (
+                <PostCard key={p.slug} post={p} />
+              ))}
+          </div>
+        </div>
+      </section>
       <section className="section">
         <div className="container" style={{ textAlign: "center" }}>
           <SectionTitle center kicker={t("home.instaKicker")}>

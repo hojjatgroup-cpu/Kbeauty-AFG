@@ -13,6 +13,7 @@ const links = [
   { href: "/", key: "nav.home" },
   { href: "/shop", key: "nav.shop" },
   { href: "/authenticity", key: "nav.auth" },
+  { href: "/blog", key: "nav.blog" },
   { href: "/faq", key: "nav.faq" },
   { href: "/about", key: "nav.about" },
   { href: "/contact", key: "nav.contact" },

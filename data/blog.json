@@ -1,0 +1,140 @@
+[
+  {
+    "slug": "how-much-sunscreen",
+    "date": "2026-11-23",
+    "cover": "/products/skin1004-hyalu-cica-water-fit-sun-serum.jpg",
+    "readMin": 4,
+    "cta": {
+      "href": "/shop?type=sunscreen",
+      "label": {
+        "fa": "دیدن ضدآفتاب‌ها",
+        "en": "Shop sunscreens",
+        "ko": "선크림 보러 가기"
+      }
+    },
+    "title": {
+      "fa": "ضدآفتاب چقدر بزنیم و کی تجدید کنیم؟",
+      "en": "How much sunscreen should you use, and when should you reapply?",
+      "ko": "선크림, 얼마나 바르고 언제 덧발라야 할까?"
+    },
+    "excerpt": {
+      "fa": "بیشتر ما ضدآفتاب را کمتر از اندازه می‌زنیم. با قانون «دو انگشت» و چند نکتهٔ ساده، از ضدآفتاب‌تان بیشترین محافظت را بگیرید.",
+      "en": "Most of us use too little sunscreen. With the two-finger rule and a few simple tips, get the full protection from your SPF.",
+      "ko": "대부분 선크림을 너무 적게 바릅니다. '두 손가락 법칙'과 간단한 팁으로 제대로 보호받으세요."
+    },
+    "body": {
+      "fa": [
+        {
+          "p": "عددی که روی ضدآفتاب نوشته شده (مثلاً SPF50) فقط وقتی به دست می‌آید که به اندازهٔ کافی زده شود. بیشتر ما ضدآفتاب را کمتر از اندازه می‌زنیم؛ به همین دلیل گاهی با وجود ضدآفتاب، پوست باز هم آفتاب‌سوخته یا تیره می‌شود."
+        },
+        {
+          "h": "چقدر ضدآفتاب بزنیم؟"
+        },
+        {
+          "p": "متخصصان پوست برای رسیدن به SPF نوشته‌شده روی بسته، حدود ۲ میلی‌گرم ضدآفتاب برای هر سانتی‌متر مربع پوست را پیشنهاد می‌کنند. در عمل یعنی برای صورت و گردن تقریباً نصف قاشق چای‌خوری."
+        },
+        {
+          "h": "قانون ساده: دو انگشت"
+        },
+        {
+          "ul": [
+            "دو انگشت اشاره و میانی را کنار هم بگیرید.",
+            "روی هر انگشت، از ته تا نوک، یک خط ضدآفتاب بکشید.",
+            "این مقدار برای صورت و گردن کافی است.",
+            "اول چند نقطه روی پیشانی، گونه‌ها، بینی و چانه بگذارید، بعد پخش کنید تا جایی جا نماند."
+          ]
+        },
+        {
+          "p": "اندازهٔ دست و صورت همه یکی نیست؛ پس قانون دو انگشت یک راهنمای ساده است. مهم این است که همهٔ صورت، گوش‌ها و گردن را بپوشانید."
+        },
+        {
+          "h": "کی تجدید کنیم؟"
+        },
+        {
+          "ul": [
+            "اگر بیرون هستید: هر ۲ ساعت یک بار.",
+            "فوراً بعد از عرق کردن، شنا یا خشک کردن صورت با حوله.",
+            "اگر بیشتر روز داخل خانه یا دفتر هستید و زیر نور مستقیم آفتاب نیستید، معمولاً یک بار صبح کافی است؛ ولی اگر کنار پنجره یا بیرون می‌روید، دوباره بزنید."
+          ]
+        },
+        {
+          "h": "اگر آرایش دارم چه کنم؟"
+        },
+        {
+          "p": "روی آرایش می‌توانید از ضدآفتاب‌های سبک و سرمی با ضربه‌های آرام استفاده کنید، یا یک پد یا اسفنج تمیز را آغشته کنید و آرام روی پوست بزنید تا آرایش خراب نشود."
+        },
+        {
+          "h": "چند نکتهٔ مهم"
+        },
+        {
+          "ul": [
+            "ضدآفتاب آخرین مرحلهٔ روتین صبح است؛ بعد از کرم مرطوب‌کننده.",
+            "زمستان و روزهای ابری هم اشعهٔ UV هست؛ ضدآفتاب را هر روز بزنید.",
+            "اگر رتینول، رتینال یا اسیدها استفاده می‌کنید، ضدآفتاب از همیشه مهم‌تر است.",
+            "ضدآفتاب تاریخ‌گذشته را استفاده نکنید.",
+            "کنار ضدآفتاب، کلاه، عینک آفتابی و سایه هم کمک بزرگی است."
+          ]
+        },
+        {
+          "p": "اگر نمی‌دانید کدام ضدآفتاب برای پوست شما مناسب است، در اینستاگرام از ما بپرسید؛ مشاوره رایگان است."
+        }
+      ],
+      "en": [
+        {
+          "p": "The SPF number on your sunscreen (e.g. SPF50) is only reached when you apply enough of it. Most of us use too little — which is why skin can still burn or tan even with sunscreen on."
+        },
+        {
+          "h": "How much should you use?"
+        },
+        {
+          "p": "Dermatologists recommend about 2 mg of sunscreen per square centimetre of skin to get the SPF on the label. In practice, that's roughly half a teaspoon for the face and neck."
+        },
+        {
+          "h": "The easy way: the two-finger rule"
+        },
+        {
+          "ul": [
+            "Hold your index and middle fingers together.",
+            "Squeeze a line of sunscreen along each finger, from base to tip.",
+            "That's enough for your face and neck.",
+            "Dot it on your forehead, cheeks, nose and chin first, then spread so you don't miss a spot."
+          ]
+        },
+        {
+          "p": "Hands and faces come in different sizes, so the two-finger rule is a guide. What matters is covering your whole face, ears and neck."
+        },
+        {
+          "h": "When should you reapply?"
+        },
+        {
+          "ul": [
+            "When you're outdoors: every 2 hours.",
+            "Right after sweating, swimming or towel-drying.",
+            "If you're indoors most of the day away from direct sun, one morning application is usually enough — but reapply if you sit by a window or go out."
+          ]
+        },
+        {
+          "h": "What if I'm wearing makeup?"
+        },
+        {
+          "p": "Pat a light serum-type sunscreen over makeup, or dab it on with a clean sponge so your makeup stays in place."
+        },
+        {
+          "h": "Good to know"
+        },
+        {
+          "ul": [
+            "Sunscreen is the last step of your morning routine, after moisturiser.",
+            "UV is there in winter and on cloudy days too — wear it every day.",
+            "If you use retinol, retinal or acids, sunscreen matters even more.",
+            "Don't use expired sunscreen.",
+            "Hats, sunglasses and shade help a lot too."
+          ]
+        },
+        {
+          "p": "Not sure which sunscreen suits your skin? Ask us on Instagram — advice is free."
+        }
+      ]
+    }
+  }
+]

@@ -18,6 +18,7 @@ export default function Footer() {
           <Link href="/shop">{t("nav.shop")}</Link>
           <Link href="/skin-test">{t("nav.skinTest")}</Link>
           <Link href="/authenticity">{t("nav.auth")}</Link>
+          <Link href="/blog">{t("nav.blog")}</Link>
           <Link href="/faq">{t("nav.faq")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/contact">{t("nav.contact")}</Link>
