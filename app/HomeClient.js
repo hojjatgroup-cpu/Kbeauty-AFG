@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { getAllProducts, useCallback, useEffect, useRef, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
@@ -13,7 +13,7 @@ import Reviews from "@/components/Reviews";
 import PostCard from "@/components/PostCard";
 import { getPosts } from "@/lib/blog";
 import { useLang } from "@/components/LangProvider";
-import { getBestsellers, usedTypes } from "@/lib/products";
+import { getAllProducts, getBestsellers, usedTypes } from "@/lib/products";
 import site from "@/data/site.json";
 
 // one real product photo per category (from public/products/thumb)
@@ -27,6 +27,13 @@ const CAT_PHOTO = {
   hair: "lilyeve-grow-turn-exosome-ampoule",
   body: "medicube-glow-vanilla-mist",
 };
+
+// thumbnail of the chosen product, or of the first product in that category
+function catPhoto(type) {
+  const all = getAllProducts();
+  const p = all.find((x) => x.image.includes(CAT_PHOTO[type] || "@")) || all.find((x) => x.type === type);
+  return p ? p.image.replace("/products/", "/products/thumb/") : "/logo.png";
+}
 
 export default function HomeClient() {
   const [go, setGo] = useState(false);
@@ -145,7 +152,7 @@ export default function HomeClient() {
               node: (
                 <img
                   className="wheel-photo"
-                  src={`/products/thumb/${CAT_PHOTO[key] || ""}.jpg`}
+                  src={catPhoto(key)}
                   alt={label}
                   width="420"
                   height="420"
