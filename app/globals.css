@@ -885,3 +885,12 @@ html[dir="rtl"] .crumb::before { content: "› "; }
 .rev-card blockquote { margin: 0; font-size: 13.5px; line-height: 2; color: var(--ink); }
 .rev-card figcaption { margin-top: auto; font-size: 11.5px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
 .rev-dot { font-size: 26px; line-height: 0; color: var(--accent); font-family: Georgia, serif; }
+/* reviews: smaller cards with the original screenshots */
+.rev-row { align-items: flex-start; }
+.rev-card { flex: 0 0 58% !important; max-width: 240px !important; padding: 8px !important; gap: 6px !important; border-radius: 18px !important; }
+.rev-card img { width: 100%; height: auto !important; max-height: 300px; object-fit: contain !important; object-position: top; border-radius: 12px; background: #fff; }
+.rev-card figcaption { font-size: 10.5px !important; padding: 0 4px 2px; }
+/* blog photos are real photos: show them full, not in a circle */
+.post-cover img { object-fit: cover !important; }
+.post-hero { width: 100% !important; max-width: 420px; aspect-ratio: 4 / 5 !important; border-radius: 24px !important; padding: 0 !important; }
+.post-hero img { object-fit: cover !important; }

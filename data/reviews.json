@@ -2,7 +2,7 @@
   {
     "id": "r1",
     "source": "instagram",
-    "photo": "",
+    "photo": "/reviews/r1.jpg",
     "fa": "یک سال است دنبال اصل این محصولات هستم و پیدا نتوانستم. ان‌شاءالله مشتری شما می‌شوم. سپاس از صداقت شما.",
     "en": "I've been looking for the authentic versions of these products for a year and couldn't find them. I hope to become your customer. Thank you for your honesty.",
     "ko": "1년 동안 이 제품들의 정품을 찾았지만 구하지 못했어요. 꼭 단골이 되고 싶어요. 정직함에 감사드려요."
@@ -10,7 +10,7 @@
   {
     "id": "r2",
     "source": "whatsapp",
-    "photo": "/reviews/review-2.jpg",
+    "photo": "/reviews/r2.jpg",
     "fa": "خیلی ممنون به‌خاطر محصولات عالی‌تان، واقعاً اورجینال هستند 🥰",
     "en": "Thank you so much for your great products — they're truly authentic 🥰",
     "ko": "훌륭한 제품 정말 감사해요. 진짜 정품이에요 🥰"
@@ -18,7 +18,7 @@
   {
     "id": "r3",
     "source": "whatsapp",
-    "photo": "/reviews/review-3.jpg",
+    "photo": "/reviews/r3.jpg",
     "fa": "ممنون به‌خاطر تحفهٔ قشنگ‌تان، خیلی شیرین بود 💗 اولین بار بود که این‌قدر از خرید کردن خوش شدم. من تمام این کمپنی‌ها را می‌شناسم، اما فکر نمی‌کردم اصلی‌شان را در افغانستان پیدا کنم.",
     "en": "Thanks for the lovely gift, it was so sweet 💗 It's the first time I've enjoyed shopping this much. I know all these brands, but I never thought I'd find the originals in Afghanistan.",
     "ko": "예쁜 선물 감사해요, 너무 귀여웠어요 💗 쇼핑이 이렇게 즐거웠던 건 처음이에요. 이 브랜드들을 다 알지만 아프가니스탄에서 정품을 찾을 줄은 몰랐어요."
@@ -26,7 +26,7 @@
   {
     "id": "r4",
     "source": "instagram",
-    "photo": "",
+    "photo": "/reviews/r4.jpg",
     "fa": "سلام، بسیار تشکر، محصولاتم رسید 🙏 به‌خاطر تحفهٔ زیبایتان هم تشکر ✨ عطر خوشبویی است 😍",
     "en": "Hello, thank you so much — my products arrived 🙏 Thanks for the beautiful gift too ✨ It smells lovely 😍",
     "ko": "안녕하세요, 정말 감사해요. 제품 잘 받았어요 🙏 예쁜 선물도 감사해요 ✨ 향이 너무 좋아요 😍"
