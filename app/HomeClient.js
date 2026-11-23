@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { getAllProducts, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import HeroVideo from "@/components/HeroVideo";
