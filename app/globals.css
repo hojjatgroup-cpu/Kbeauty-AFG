@@ -943,3 +943,26 @@ html[dir="rtl"] .crumb::before { content: "› "; }
 .revv-card img { background: rgba(255,255,255,.9) !important; }
 .revv-card figcaption { color: #fff !important; text-shadow: 0 1px 6px rgba(20,60,66,.5); }
 .revv-card .rev-dot { color: #fff; }
+
+/* reviews, compact: same soft glow as the bestsellers, no band, small glass card */
+.revv { padding: 26px 0 22px !important; overflow: visible; }
+.revv::before {
+  content: ""; position: absolute; left: 50%; top: 55%; width: 140%; max-width: 560px; aspect-ratio: 1; transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgba(169,215,222,.5), rgba(207,233,237,.25) 55%, rgba(247,251,251,0) 100%);
+  pointer-events: none;
+}
+.revv .kicker { color: var(--accent-dark) !important; text-shadow: none !important; }
+.revv-title { color: var(--accent-dark) !important; text-shadow: none !important; font-size: 19px !important; margin: 2px 0 14px !important; }
+.revv-stage { height: 270px !important; max-width: 220px !important; }
+.revv-card {
+  background: linear-gradient(160deg, rgba(255,255,255,.6), rgba(255,255,255,.25)) !important;
+  border: 1px solid rgba(255,255,255,.95) !important;
+  box-shadow: 0 18px 40px -22px rgba(31,58,63,.45), inset 0 1px 0 #fff !important;
+  padding: 7px !important; border-radius: 18px !important;
+}
+.revv-card img { max-height: 230px !important; border-radius: 12px !important; }
+.revv-card figcaption { color: var(--muted) !important; text-shadow: none !important; font-size: 10.5px !important; }
+.revv-card .rev-dot { color: var(--accent) !important; }
+.revv .show-dots { margin-top: 10px; }
+.revv .show-dots button { background: rgba(31,58,63,.22) !important; }
+.revv .show-dots button.on { background: var(--accent-dark) !important; }
