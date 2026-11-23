@@ -922,3 +922,24 @@ html[dir="rtl"] .crumb::before { content: "› "; }
 .revv-card figcaption { font-size: 11px; color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 6px; }
 .revv .show-dots button { background: rgba(255,255,255,.6); }
 .revv .show-dots button.on { background: #fff; }
+
+/* reviews background: animated teal gradient + light ray + white sparkles (no video) */
+.revv-bg {
+  background: linear-gradient(135deg, #2f8794 0%, #5CB4C0 40%, #8fd0d9 70%, #5CB4C0 100%) !important;
+  background-size: 220% 220% !important; animation: revv-flow 14s ease-in-out infinite;
+}
+.revv-ray { position: absolute; inset: -20% -40%; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.28) 48%, transparent 60%); animation: revv-ray 9s ease-in-out infinite; }
+.revv-snow { position: absolute; inset: 0; width: 100%; height: 100%; }
+@keyframes revv-flow { 50% { background-position: 100% 100%; } }
+@keyframes revv-ray { 0%, 100% { transform: translateX(-18%); } 50% { transform: translateX(18%); } }
+/* very glassy cards */
+.revv-card {
+  background: linear-gradient(160deg, rgba(255,255,255,.32), rgba(255,255,255,.12)) !important;
+  border: 1px solid rgba(255,255,255,.65) !important;
+  backdrop-filter: blur(22px) saturate(1.6) !important; -webkit-backdrop-filter: blur(22px) saturate(1.6) !important;
+  box-shadow: 0 24px 60px -28px rgba(20,60,66,.7), inset 0 1px 0 rgba(255,255,255,.75), inset 0 -1px 0 rgba(255,255,255,.2) !important;
+  padding: 10px !important;
+}
+.revv-card img { background: rgba(255,255,255,.9) !important; }
+.revv-card figcaption { color: #fff !important; text-shadow: 0 1px 6px rgba(20,60,66,.5); }
+.revv-card .rev-dot { color: #fff; }
