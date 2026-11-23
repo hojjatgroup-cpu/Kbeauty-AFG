@@ -966,3 +966,8 @@ html[dir="rtl"] .crumb::before { content: "› "; }
 .revv .show-dots { margin-top: 10px; }
 .revv .show-dots button { background: rgba(31,58,63,.22) !important; }
 .revv .show-dots button.on { background: var(--accent-dark) !important; }
+/* never let anything make the page wider than the phone screen */
+html, body { max-width: 100%; overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+.revv, .section-show, .arc, .show { overflow-x: clip; }
+.revv::before, .show::before { max-width: min(560px, 100vw); width: 100vw !important; }
