@@ -18,11 +18,11 @@ import site from "@/data/site.json";
 
 // one real product photo per category (from public/products/thumb)
 const CAT_PHOTO = {
-  cleanser: "cosrx-low-ph-good-morning-gel-cleanser",
-  toner: "anua-heartleaf-77-soothing-toner",
+  cleanser: "cosrx-low-ph-cleanser",
+  toner: "anua-heartleaf-77-toner",
   serum: "torriden-dive-in-serum",
   cream: "dr-althea-345-relief-cream",
-  sunscreen: "beauty-of-joseon-relief-sun-aqua-fresh",
+  sunscreen: "boj-relief-sun-aqua-fresh",
   mask: "",
   hair: "lilyeve-grow-turn-exosome-ampoule",
   body: "medicube-glow-vanilla-mist",
