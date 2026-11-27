@@ -6,7 +6,10 @@ import site from "@/data/site.json";
 const C = {
   fa: {
     title: "تماس با ما",
-    intro: "برای سفارش، سوال دربارهٔ محصولات یا مشورهٔ رایگان پوست، در اینستاگرام به ما پیام بدهید.",
+    intro: "برای سفارش، سوال دربارهٔ محصولات یا مشورهٔ رایگان پوست، در اینستاگرام پیام بدهید یا به ما ایمیل بزنید.",
+    ig: "اینستاگرام",
+    mail: "ایمیل",
+    send: "ارسال ایمیل",
     msg: "ارسال پیام",
     view: "مشاهدهٔ صفحه",
     hours: "ساعات پاسخگویی",
@@ -16,7 +19,10 @@ const C = {
   },
   en: {
     title: "Contact us",
-    intro: "For orders, product questions or free skin advice, message us on Instagram.",
+    intro: "For orders, product questions or free skin advice, message us on Instagram or send us an email.",
+    ig: "Instagram",
+    mail: "Email",
+    send: "Send an email",
     msg: "Send a message",
     view: "View profile",
     hours: "Response hours",
@@ -25,7 +31,10 @@ const C = {
     addrV: "[Address or city]",
   },  ko: {
     title: "문의하기",
-    intro: "주문, 제품 문의, 무료 피부 상담은 인스타그램 메시지로 연락 주세요.",
+    intro: "주문, 제품 문의, 무료 피부 상담은 인스타그램 메시지나 이메일로 연락 주세요.",
+    ig: "인스타그램",
+    mail: "이메일",
+    send: "이메일 보내기",
     msg: "메시지 보내기",
     view: "프로필 보기",
     hours: "응답 시간",
@@ -44,6 +53,7 @@ export default function ContactClient() {
       <h1 className="page-title">{c.title}</h1>
       <p>{c.intro}</p>
       <div className="p-box" style={{ textAlign: "center" }}>
+        <h3>{c.ig}</h3>
         <p dir="ltr" style={{ marginBottom: 12 }}>
           @{site.instagram}
         </p>
@@ -53,6 +63,15 @@ export default function ContactClient() {
           </a>
           <a className="btn btn-line" href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener">
             {c.view}
+          </a>
+        </div>
+      </div>
+      <div className="p-box" style={{ textAlign: "center" }}>
+        <h3>{c.mail}</h3>
+        <p dir="ltr" style={{ marginBottom: 12 }}>{site.email}</p>
+        <div className="hero-actions">
+          <a className="btn btn-ink" href={`mailto:${site.email}`}>
+            {c.send}
           </a>
         </div>
       </div>
