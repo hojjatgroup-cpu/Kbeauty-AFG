@@ -4,6 +4,8 @@
 // Every order is also kept in the COUPONS KV store as a backup, when that binding exists.
 import site from "../../data/site.json";
 
+const FROM = "K Beauty AFG <order@kbeautyaf.com>";
+
 const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { "content-type": "application/json" } });
 
@@ -72,11 +74,10 @@ export async function onRequestPost({ request, env }) {
     reply_to: p.email || undefined,
   };
   try {
-    await send(env, { from: env.MAIL_FROM || "K Beauty AFG <onboarding@resend.dev>", ...owner });
+    await send(env, { from: FROM, ...owner });
   } catch (e) {
     // if the custom sender fails, still deliver the order with Resend's test sender
     try {
-      if (!env.MAIL_FROM) throw e;
       await send(env, { from: "K Beauty AFG <onboarding@resend.dev>", ...owner });
     } catch (e2) {
       return json({ success: "false", message: String(e.message || e) + " | " + String(e2.message || e2) }, 502);
@@ -84,10 +85,10 @@ export async function onRequestPost({ request, env }) {
   }
 
   // confirmation to the customer (only possible with a verified domain sender)
-  if (env.MAIL_FROM && p.email && p._autoresponse) {
+  if (p.email && p._autoresponse) {
     try {
       await send(env, {
-        from: env.MAIL_FROM,
+        from: FROM,
         to: [p.email],
         subject: `سفارش شما دریافت شد — ${p.order_id || "K Beauty AFG"}`,
         text: p._autoresponse,
