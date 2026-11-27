@@ -219,8 +219,11 @@ export default function CartClient() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || String(data.success) !== "true") throw new Error(data.message || String(res.status));
+      const raw = await res.text().catch(() => "");
+      let data = {};
+      try { data = JSON.parse(raw); } catch {}
+      if (!res.ok || String(data.success) !== "true")
+        throw new Error(res.status + " " + (data.message || raw.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)));
       clear();
       if (coupon) {
         markOrderDone();

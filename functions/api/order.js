@@ -65,16 +65,22 @@ export async function onRequestPost({ request, env }) {
 
   if (!env.RESEND_API_KEY) return json({ success: "false", message: "RESEND_API_KEY is not set" }, 500);
 
+  const owner = {
+    to: [site.orderEmail],
+    subject: p._subject || `سفارش جدید ${p.order_id || ""}`,
+    html: table(p),
+    reply_to: p.email || undefined,
+  };
   try {
-    await send(env, {
-      from: env.MAIL_FROM || "K Beauty AFG <onboarding@resend.dev>",
-      to: [site.orderEmail],
-      subject: p._subject || `سفارش جدید ${p.order_id || ""}`,
-      html: table(p),
-      reply_to: p.email || undefined,
-    });
+    await send(env, { from: env.MAIL_FROM || "K Beauty AFG <onboarding@resend.dev>", ...owner });
   } catch (e) {
-    return json({ success: "false", message: String(e.message || e) }, 502);
+    // if the custom sender fails, still deliver the order with Resend's test sender
+    try {
+      if (!env.MAIL_FROM) throw e;
+      await send(env, { from: "K Beauty AFG <onboarding@resend.dev>", ...owner });
+    } catch (e2) {
+      return json({ success: "false", message: String(e.message || e) + " | " + String(e2.message || e2) }, 502);
+    }
   }
 
   // confirmation to the customer (only possible with a verified domain sender)
