@@ -28,6 +28,7 @@ export default function CartClient() {
   const { t, lang } = useLang();
   const [step, setStep] = useState("bag"); // bag -> checkout -> done
   const [form, setForm] = useState({ name: "", phone: "", province: "", address: "", email: "" });
+  const toLatin = (v) => String(v).replace(/[۰-۹]/g, (c) => "۰۱۲۳۴۵۶۷۸۹".indexOf(c)).replace(/[٠-٩]/g, (c) => "٠١٢٣٤٥٦٧٨٩".indexOf(c));
   const [tried, setTried] = useState(false);
   const [sending, setSending] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -123,7 +124,7 @@ export default function CartClient() {
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
   const missing = {
     name: !form.name.trim(),
-    phone: form.phone.replace(/\D/g, "").length < 7,
+    phone: toLatin(form.phone).replace(/\D/g, "").length < 7,
     province: !chosen,
     address: !form.address.trim(),
   };
@@ -319,7 +320,7 @@ export default function CartClient() {
             <span>{t("cart.phone")} *</span>
             <input
               value={form.phone}
-              onChange={set("phone")}
+              onChange={(e) => setForm({ ...form, phone: toLatin(e.target.value) })}
               inputMode="tel"
               dir="ltr"
               autoComplete="tel"

@@ -13,9 +13,7 @@ const C = {
     msg: "ارسال پیام",
     view: "مشاهدهٔ صفحه",
     hours: "ساعات پاسخگویی",
-    hoursV: "[روزها و ساعت‌های پاسخگویی]",
-    addr: "آدرس",
-    addrV: "[آدرس یا شهر]",
+    hoursV: "همه‌روزه از ساعت ۸ صبح تا ۷ شب",
   },
   en: {
     title: "Contact us",
@@ -26,9 +24,7 @@ const C = {
     msg: "Send a message",
     view: "View profile",
     hours: "Response hours",
-    hoursV: "[Days and hours]",
-    addr: "Address",
-    addrV: "[Address or city]",
+    hoursV: "Every day, 8 am – 7 pm",
   },  ko: {
     title: "문의하기",
     intro: "주문, 제품 문의, 무료 피부 상담은 인스타그램 메시지나 이메일로 연락 주세요.",
@@ -38,9 +34,7 @@ const C = {
     msg: "메시지 보내기",
     view: "프로필 보기",
     hours: "응답 시간",
-    hoursV: "[요일 및 시간]",
-    addr: "주소",
-    addrV: "[주소 또는 도시]",
+    hoursV: "매일 오전 8시 – 오후 7시",
   },
 
 };
@@ -78,10 +72,6 @@ export default function ContactClient() {
       <div className="p-box">
         <h3>{c.hours}</h3>
         <p className="muted">{c.hoursV}</p>
-      </div>
-      <div className="p-box">
-        <h3>{c.addr}</h3>
-        <p className="muted">{c.addrV}</p>
       </div>
     </div>
   );

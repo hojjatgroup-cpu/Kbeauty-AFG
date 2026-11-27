@@ -194,16 +194,6 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="container" style={{ textAlign: "center" }}>
-          <SectionTitle center kicker={t("home.instaKicker")}>
-            {t("home.insta")}
-          </SectionTitle>
-          <a className="link-line" href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener" dir="ltr">
-            @{site.instagram}
-          </a>
-        </div>
-      </section>
     </>
   );
 }
