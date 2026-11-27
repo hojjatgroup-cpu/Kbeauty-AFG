@@ -1,7 +1,7 @@
 import posts from "@/data/blog.json";
 import PostClient from "./PostClient";
 
-const SITE = "https://kbeauty-afg.pages.dev";
+const SITE = "https://kbeautyaf.com";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

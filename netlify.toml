@@ -8,6 +8,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "https://kbeauty-afg.pages.dev/:splat"
+  to = "https://kbeautyaf.com/:splat"
   status = 301
   force = true

@@ -2,7 +2,7 @@ import products from "@/data/products.json";
 import posts from "@/data/blog.json";
 
 export const dynamic = "force-static";
-const SITE = "https://kbeauty-afg.pages.dev";
+const SITE = "https://kbeautyaf.com";
 
 export default function sitemap() {
   const pages = ["", "shop", "blog", "skin-test", "faq", "about", "contact", "authenticity"].map((p) => ({
