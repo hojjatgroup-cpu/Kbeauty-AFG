@@ -1,6 +1,6 @@
 // Cloudflare Pages Function: emails each order to the shop owner with Resend (resend.com, free).
 // Needs the secret RESEND_API_KEY (Pages → Settings → Variables and Secrets).
-// Customer confirmation emails also need MAIL_FROM on a verified domain, e.g. "K Beauty AFG <support@kbeauty.af>".
+// Customer confirmation emails also need MAIL_FROM on a verified domain, e.g. "K Beauty AFG <order@kbeautyaf.com>".
 // Every order is also kept in the COUPONS KV store as a backup, when that binding exists.
 import site from "../../data/site.json";
 
