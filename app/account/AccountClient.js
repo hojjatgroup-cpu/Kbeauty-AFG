@@ -11,7 +11,7 @@ const T = {
     sentTo: "کد به این ایمیل فرستاده شد:", change: "تغییر ایمیل", hi: "سلام", profile: "اطلاعات ارسال", name: "نام و تخلص", phone: "شمارهٔ تماس",
     address: "آدرس منزل", save: "ذخیره", saved: "ذخیره شد ✓", orders: "سفارش‌های من", noOrders: "هنوز سفارشی ثبت نکرده‌اید.", shop: "دیدن محصولات",
     logout: "خروج از حساب", wish: "علاقه‌مندی‌های من", edit: "ویرایش پروفایل", cancel: "انصراف", empty: "—",
-    err: { email: "ایمیل درست نیست.", wait: "لطفاً یک دقیقه صبر کنید و دوباره بزنید.", send: "ارسال کد انجام نشد. دوباره امتحان کنید.", code: "کد اشتباه است.", expired: "کد منقضی شده؛ دوباره کد بگیرید.", storage: "سیستم حساب کاربری هنوز کامل فعال نشده است.", google: "ورود با گوگل هنوز فعال نیست. فعلاً با ایمیل وارد شوید." },
+    err: { email: "ایمیل درست نیست.", wait: "لطفاً یک دقیقه صبر کنید و دوباره بزنید.", send: "ارسال کد انجام نشد. دوباره امتحان کنید.", code: "کد اشتباه است.", expired: "کد منقضی شده؛ دوباره کد بگیرید.", storage: "سیستم حساب کاربری هنوز کامل فعال نشده است.", google: "ورود با گوگل هنوز فعال نیست. فعلاً با ایمیل وارد شوید.", googleFail: "ورود با گوگل انجام نشد. دوباره امتحان کنید" },
   },
   en: {
     title: "My account", login: "Sign in or create an account", loginSub: "Use Google or your email. Your orders and address will be saved.",
@@ -19,7 +19,7 @@ const T = {
     sentTo: "Code sent to:", change: "Change email", hi: "Hi", profile: "Delivery details", name: "Full name", phone: "Phone",
     address: "Address", save: "Save", saved: "Saved ✓", orders: "My orders", noOrders: "No orders yet.", shop: "Browse products",
     logout: "Sign out", wish: "My wishlist", edit: "Edit profile", cancel: "Cancel", empty: "—",
-    err: { email: "Please enter a valid email.", wait: "Please wait a minute and try again.", send: "Couldn't send the code. Try again.", code: "Wrong code.", expired: "Code expired; request a new one.", storage: "Accounts are not fully set up yet.", google: "Google sign-in isn't ready yet. Please use email for now." },
+    err: { email: "Please enter a valid email.", wait: "Please wait a minute and try again.", send: "Couldn't send the code. Try again.", code: "Wrong code.", expired: "Code expired; request a new one.", storage: "Accounts are not fully set up yet.", google: "Google sign-in isn't ready yet. Please use email for now.", googleFail: "Google sign-in failed. Please try again" },
   },
   ko: {
     title: "마이페이지", login: "로그인 또는 회원가입", loginSub: "구글 또는 이메일로 로그인하세요. 주문과 주소가 저장됩니다.",
@@ -27,7 +27,7 @@ const T = {
     sentTo: "코드를 보낸 이메일:", change: "이메일 변경", hi: "안녕하세요", profile: "배송 정보", name: "이름", phone: "전화번호",
     address: "주소", save: "저장", saved: "저장됨 ✓", orders: "주문 내역", noOrders: "아직 주문이 없습니다.", shop: "상품 보기",
     logout: "로그아웃", wish: "위시리스트", edit: "프로필 수정", cancel: "취소", empty: "—",
-    err: { email: "올바른 이메일을 입력하세요.", wait: "잠시 후 다시 시도하세요.", send: "코드를 보내지 못했습니다.", code: "코드가 틀렸습니다.", expired: "코드가 만료되었습니다.", storage: "계정 기능이 아직 준비되지 않았습니다.", google: "구글 로그인이 아직 준비되지 않았습니다. 이메일을 이용하세요." },
+    err: { email: "올바른 이메일을 입력하세요.", wait: "잠시 후 다시 시도하세요.", send: "코드를 보내지 못했습니다.", code: "코드가 틀렸습니다.", expired: "코드가 만료되었습니다.", storage: "계정 기능이 아직 준비되지 않았습니다.", google: "구글 로그인이 아직 준비되지 않았습니다. 이메일을 이용하세요.", googleFail: "구글 로그인에 실패했습니다" },
   },
 };
 
@@ -64,8 +64,12 @@ export default function AccountClient() {
 
   useEffect(() => {
     load();
-    const q = new URLSearchParams(window.location.search).get("err");
-    if (q === "google") setErr(l.err.google);
+    const sp = new URLSearchParams(window.location.search);
+    if (sp.get("err") === "google") {
+      const why = sp.get("why") || "";
+      setErr(why === "noid" ? l.err.google : `${l.err.googleFail} (${why})`);
+      window.history.replaceState(null, "", "/account/");
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -3,10 +3,11 @@ import { token } from "../_auth.js";
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
-  if (!env.GOOGLE_CLIENT_ID) return Response.redirect(`${url.origin}/account/?err=google`, 302);
+  const cid = (env.GOOGLE_CLIENT_ID || "").trim();
+  if (!cid) return Response.redirect(`${url.origin}/account/?err=google&why=noid`, 302);
   const state = token(16);
   const q = new URLSearchParams({
-    client_id: env.GOOGLE_CLIENT_ID,
+    client_id: cid,
     redirect_uri: `${url.origin}/api/auth/google-callback`,
     response_type: "code",
     scope: "openid email profile",
