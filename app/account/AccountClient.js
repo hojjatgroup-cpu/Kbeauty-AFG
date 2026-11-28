@@ -10,7 +10,7 @@ const T = {
     google: "ورود با گوگل", or: "یا با ایمیل", email: "ایمیل", send: "ارسال کد", code: "کد ۶ رقمی که به ایمیل‌تان فرستادیم", verify: "ورود",
     sentTo: "کد به این ایمیل فرستاده شد:", change: "تغییر ایمیل", hi: "سلام", profile: "اطلاعات ارسال", name: "نام و تخلص", phone: "شمارهٔ تماس",
     address: "آدرس منزل", save: "ذخیره", saved: "ذخیره شد ✓", orders: "سفارش‌های من", noOrders: "هنوز سفارشی ثبت نکرده‌اید.", shop: "دیدن محصولات",
-    logout: "خروج از حساب", wish: "علاقه‌مندی‌های من",
+    logout: "خروج از حساب", wish: "علاقه‌مندی‌های من", edit: "ویرایش پروفایل", cancel: "انصراف", empty: "—",
     err: { email: "ایمیل درست نیست.", wait: "لطفاً یک دقیقه صبر کنید و دوباره بزنید.", send: "ارسال کد انجام نشد. دوباره امتحان کنید.", code: "کد اشتباه است.", expired: "کد منقضی شده؛ دوباره کد بگیرید.", storage: "سیستم حساب کاربری هنوز کامل فعال نشده است.", google: "ورود با گوگل هنوز فعال نیست. فعلاً با ایمیل وارد شوید." },
   },
   en: {
@@ -18,7 +18,7 @@ const T = {
     google: "Continue with Google", or: "or with email", email: "Email", send: "Send code", code: "6-digit code we emailed you", verify: "Sign in",
     sentTo: "Code sent to:", change: "Change email", hi: "Hi", profile: "Delivery details", name: "Full name", phone: "Phone",
     address: "Address", save: "Save", saved: "Saved ✓", orders: "My orders", noOrders: "No orders yet.", shop: "Browse products",
-    logout: "Sign out", wish: "My wishlist",
+    logout: "Sign out", wish: "My wishlist", edit: "Edit profile", cancel: "Cancel", empty: "—",
     err: { email: "Please enter a valid email.", wait: "Please wait a minute and try again.", send: "Couldn't send the code. Try again.", code: "Wrong code.", expired: "Code expired; request a new one.", storage: "Accounts are not fully set up yet.", google: "Google sign-in isn't ready yet. Please use email for now." },
   },
   ko: {
@@ -26,7 +26,7 @@ const T = {
     google: "구글로 계속하기", or: "또는 이메일로", email: "이메일", send: "코드 보내기", code: "이메일로 받은 6자리 코드", verify: "로그인",
     sentTo: "코드를 보낸 이메일:", change: "이메일 변경", hi: "안녕하세요", profile: "배송 정보", name: "이름", phone: "전화번호",
     address: "주소", save: "저장", saved: "저장됨 ✓", orders: "주문 내역", noOrders: "아직 주문이 없습니다.", shop: "상품 보기",
-    logout: "로그아웃", wish: "위시리스트",
+    logout: "로그아웃", wish: "위시리스트", edit: "프로필 수정", cancel: "취소", empty: "—",
     err: { email: "올바른 이메일을 입력하세요.", wait: "잠시 후 다시 시도하세요.", send: "코드를 보내지 못했습니다.", code: "코드가 틀렸습니다.", expired: "코드가 만료되었습니다.", storage: "계정 기능이 아직 준비되지 않았습니다.", google: "구글 로그인이 아직 준비되지 않았습니다. 이메일을 이용하세요." },
   },
 };
@@ -51,6 +51,7 @@ export default function AccountClient() {
   const [err, setErr] = useState("");
   const [form, setForm] = useState({ name: "", phone: "", address: "" });
   const [saved, setSaved] = useState(false);
+  const [editing, setEditing] = useState(false);
 
   const load = () =>
     fetch("/api/me")
@@ -97,6 +98,7 @@ export default function AccountClient() {
     const d = await post("/api/me", form);
     if (d) {
       setUser(d.user);
+      setEditing(false);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
     }
@@ -155,13 +157,33 @@ export default function AccountClient() {
             </div>
           </div>
 
-          <form onSubmit={save}>
-            <p style={{ fontWeight: "bold", marginBottom: 2 }}>{l.profile}</p>
-            <input placeholder={l.name} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
-            <input dir="ltr" inputMode="tel" placeholder={l.phone} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
-            <input placeholder={l.address} value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
-            <button className="btn btn-line" disabled={busy}>{saved ? l.saved : l.save}</button>
-          </form>
+          {editing || !(user.name || user.phone || user.address) ? (
+            <form onSubmit={save}>
+              <p style={{ fontWeight: "bold", marginBottom: 2 }}>{l.profile}</p>
+              <input placeholder={l.name} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+              <input dir="ltr" inputMode="tel" placeholder={l.phone} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+              <input placeholder={l.address} value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} />
+              <button className="btn btn-ink" disabled={busy}>{l.save}</button>
+              {editing && (
+                <button type="button" className="btn btn-line" style={{ marginTop: 8 }} onClick={() => { setEditing(false); setForm({ name: user.name || "", phone: user.phone || "", address: user.address || "" }); }}>
+                  {l.cancel}
+                </button>
+              )}
+            </form>
+          ) : (
+            <div className="acc-info">
+              <div className="acc-info-head">
+                <p style={{ fontWeight: "bold" }}>{l.profile}</p>
+                {saved && <span className="acc-saved">{l.saved}</span>}
+              </div>
+              <div className="acc-row"><span>{l.name}</span><b>{user.name || l.empty}</b></div>
+              <div className="acc-row"><span>{l.phone}</span><b dir="ltr">{user.phone || l.empty}</b></div>
+              <div className="acc-row"><span>{l.address}</span><b>{user.address || l.empty}</b></div>
+              <button className="btn btn-line" style={{ marginTop: 12 }} onClick={() => setEditing(true)}>
+                ✎ {l.edit}
+              </button>
+            </div>
+          )}
 
           <div className="acc-orders">
             <p style={{ fontWeight: "bold" }}>{l.orders}</p>
