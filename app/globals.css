@@ -1059,3 +1059,26 @@ body { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
   background: var(--lilac); color: var(--accent-dark); border: 1px solid rgba(92,180,192,.35);
 }
 .acc-edit:active { transform: scale(.98); }
+/* ---- admin ---- */
+.adm { max-width: 640px; }
+.adm-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.adm-stats div { text-align: center; padding: 14px; border-radius: 18px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; box-shadow: 0 6px 18px rgba(47,135,148,.25); }
+.adm-stats b { display: block; font-size: 1.6rem; line-height: 1.3; }
+.adm-stats span { font-size: 12.5px; opacity: .9; }
+.adm-tabs { display: flex; gap: 8px; margin-bottom: 10px; }
+.adm-tabs button { flex: 1; padding: 10px; border-radius: 14px; border: 1px solid var(--line); background: var(--glass); font: inherit; font-size: 13.5px; cursor: pointer; color: var(--ink); }
+.adm-tabs button:last-child { flex: 0 0 48px; }
+.adm-tabs button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.adm-search { width: 100%; padding: 11px 14px; border-radius: 14px; border: 1px solid var(--line); background: #fff; font: inherit; margin-bottom: 12px; }
+.adm-card { padding: 14px 16px; margin-bottom: 10px; border-radius: 18px; background: var(--glass); border: 1px solid var(--glass-border); box-shadow: var(--shadow); font-size: 13.5px; }
+.adm-top { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; color: var(--muted); }
+.adm-top b { color: var(--accent-dark); }
+.adm-name { font-weight: bold; font-size: 14.5px; margin-top: 4px; }
+.adm-line { display: flex; gap: 14px; margin: 2px 0; }
+.adm-line a { color: var(--accent-dark); }
+.adm-muted { color: var(--muted); font-size: 12.5px; display: block; }
+.adm-items { white-space: pre-line; margin: 8px 0; padding: 8px 10px; border-radius: 12px; background: rgba(255,255,255,.7); font-size: 12.5px; }
+.adm-total { display: flex; justify-content: space-between; align-items: center; }
+.adm-total b { color: var(--accent-dark); font-size: 15px; margin-inline-start: auto; }
+.adm-tag { font-size: 11px; padding: 2px 8px; border-radius: 8px; background: var(--lilac); color: var(--accent-dark); }
+.adm-user { display: flex; gap: 12px; align-items: flex-start; }
