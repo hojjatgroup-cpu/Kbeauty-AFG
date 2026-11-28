@@ -21,14 +21,14 @@ const modam = localFont({
 
 const SITE = "https://kbeautyaf.com";
 const DESC =
-  "فروشگاه آنلاین محصولات اورجینال کره‌ای مراقبت پوست در افغانستان: ضدآفتاب، سرم، کرم، تونر و ماسک از برندهای Anua، COSRX، Beauty of Joseon، SKIN1004 و Torriden. ارسال به همهٔ ولایات و پرداخت هنگام تحویل.";
+  "کی بیوتی افغانستان (K Beauty AFG)، فروشگاه آنلاین محصولات اورجینال کره‌ای در افغانستان: ضدآفتاب، سرم، کرم، تونر و ماسک از برندهای Anua، COSRX، Beauty of Joseon، SKIN1004 و Torriden. ارسال به همهٔ ولایات و پرداخت هنگام تحویل.";
 
 export const metadata = {
   metadataBase: new URL(SITE),
-  title: { default: `${site.name} | محصولات اورجینال کره‌ای مراقبت پوست در افغانستان`, template: `%s | ${site.name}` },
+  title: { default: `کی بیوتی افغانستان | محصولات اورجینال کره‌ای در افغانستان | ${site.name}`, template: `%s | ${site.name}` },
   description: DESC,
   keywords: [
-    "محصولات کره‌ای", "کرم کره‌ای", "ضدآفتاب کره‌ای", "سرم کره‌ای", "مراقبت پوست", "اسکین کر کره‌ای",
+    "کی بیوتی افغانستان", "ک بیوتی", "K Beauty Afghanistan", "محصولات کره‌ای در افغانستان", "محصولات اورجینال کره‌ای در افغانستان", "محصولات کره‌ای", "کرم کره‌ای", "ضدآفتاب کره‌ای", "سرم کره‌ای", "مراقبت پوست", "اسکین کر کره‌ای",
     "محصولات اورجینال کره‌ای در افغانستان", "خرید آنلاین آرایشی کابل", "K-beauty Afghanistan", "Korean skincare Kabul",
   ],
   alternates: { canonical: "/" },
@@ -52,6 +52,7 @@ const ORG_LD = {
       "@type": "OnlineStore",
       "@id": `${SITE}/#store`,
       name: site.name,
+      alternateName: ["کی بیوتی افغانستان", "K Beauty Afghanistan", "ک بیوتی"],
       url: SITE,
       logo: `${SITE}/email-logo.png`,
       image: `${SITE}/og.jpg`,

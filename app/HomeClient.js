@@ -35,6 +35,33 @@ function catPhoto(type) {
   return p ? p.image.replace("/products/", "/products/thumb/") : "/logo.png";
 }
 
+const ABOUT = {
+  fa: {
+    h: "کی بیوتی افغانستان؛ محصولات اورجینال کره‌ای در افغانستان",
+    p: [
+      "K Beauty AFG (کی بیوتی افغانستان) فروشگاه آنلاین محصولات اورجینال کره‌ای مراقبت پوست در افغانستان است. همهٔ محصولات مستقیم از کره جنوبی تهیه می‌شوند و اصل بودن‌شان قابل بررسی است.",
+      "از ضدآفتاب و سرم تا کرم، تونر، شوینده و ماسک، از برندهای معتبر کره‌ای مثل Anua، COSRX، Beauty of Joseon، SKIN1004، Torriden و medicube. سفارش به همهٔ ولایات افغانستان ارسال می‌شود و پرداخت هنگام تحویل است.",
+    ],
+    more: "بررسی اورجینال بودن محصولات",
+  },
+  en: {
+    h: "K Beauty Afghanistan: authentic Korean skincare in Afghanistan",
+    p: [
+      "K Beauty AFG is an online shop for authentic Korean skincare in Afghanistan. Every product comes directly from South Korea and can be checked for authenticity.",
+      "Sunscreens, serums, creams, toners, cleansers and masks from trusted Korean brands like Anua, COSRX, Beauty of Joseon, SKIN1004, Torriden and medicube. We deliver to every province of Afghanistan, with cash on delivery.",
+    ],
+    more: "How to check authenticity",
+  },
+  ko: {
+    h: "K Beauty 아프가니스탄: 아프가니스탄의 정품 한국 스킨케어",
+    p: [
+      "K Beauty AFG는 아프가니스탄의 정품 한국 스킨케어 온라인 스토어입니다. 모든 제품은 대한민국에서 직접 공급되며 정품 여부를 확인할 수 있습니다.",
+      "Anua, COSRX, Beauty of Joseon, SKIN1004, Torriden, medicube 등 믿을 수 있는 한국 브랜드의 선크림, 세럼, 크림, 토너, 클렌저, 마스크를 판매합니다. 아프가니스탄 전 지역 배송, 배송 시 현금 결제.",
+    ],
+    more: "정품 확인 방법",
+  },
+};
+
 export default function HomeClient() {
   const [go, setGo] = useState(false);
   const mounted = useRef(Date.now());
@@ -192,6 +219,17 @@ export default function HomeClient() {
                 <PostCard key={p.slug} post={p} />
               ))}
           </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container prose" style={{ maxWidth: 760, textAlign: "center" }}>
+          <h2 style={{ fontSize: "1.25rem", marginBottom: 12 }}>{(ABOUT[lang] || ABOUT.fa).h}</h2>
+          {(ABOUT[lang] || ABOUT.fa).p.map((x, i) => (
+            <p key={i} className="muted">{x}</p>
+          ))}
+          <Link href="/authenticity" className="link-line">
+            {(ABOUT[lang] || ABOUT.fa).more}
+          </Link>
         </div>
       </section>
     </>
