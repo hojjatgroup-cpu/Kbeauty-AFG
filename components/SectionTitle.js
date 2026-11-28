@@ -1,8 +1,8 @@
-export default function SectionTitle({ children, center = false, sub, kicker }) {
+export default function SectionTitle({ children, center = false, sub, kicker, as: Tag = "h2" }) {
   return (
     <div className={`stitle ${center ? "stitle-center" : ""}`}>
       {kicker && <span className="kicker">{kicker}</span>}
-      <h2>{children}</h2>
+      <Tag>{children}</Tag>
       {sub && <p>{sub}</p>}
     </div>
   );

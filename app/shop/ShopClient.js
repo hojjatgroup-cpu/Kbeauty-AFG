@@ -54,7 +54,7 @@ export default function ShopClient() {
 
   return (
     <>
-      <SectionTitle center sub={t("shop.sub")}>
+      <SectionTitle as="h1" center sub={t("shop.sub")}>
         {t("shop.title")}
       </SectionTitle>
 

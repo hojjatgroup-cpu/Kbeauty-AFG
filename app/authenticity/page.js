@@ -1,6 +1,11 @@
 import InfoPage from "@/components/InfoPage";
 
-export const metadata = { title: "بررسی اورجینال بودن | Authenticity" };
+export const metadata = {
+  title: "بررسی اورجینال بودن | Authenticity",
+  description: "چطور اورجینال بودن محصولات کره‌ای را بررسی کنیم؟ راهنمای ساده برای شناخت محصول اصل از تقلبی: بسته‌بندی، بارکد، برچسب و تاریخ.",
+  alternates: { canonical: "/authenticity/" },
+  openGraph: { title: "بررسی اورجینال بودن", description: "چطور اورجینال بودن محصولات کره‌ای را بررسی کنیم؟ راهنمای ساده برای شناخت محصول اصل از تقلبی: بسته‌بندی، بارکد، برچسب و تاریخ.", url: "/authenticity/" },
+};
 
 const content = {
   fa: {

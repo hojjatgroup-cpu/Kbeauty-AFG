@@ -1,6 +1,11 @@
 import InfoPage from "@/components/InfoPage";
 
-export const metadata = { title: "دربارهٔ ما | About" };
+export const metadata = {
+  title: "دربارهٔ ما | About",
+  description: "K Beauty AFG فروشگاه آنلاین محصولات اورجینال کره‌ای مراقبت پوست در افغانستان؛ تهیهٔ مستقیم از کره جنوبی، مشورهٔ رایگان و ارسال به همهٔ ولایات.",
+  alternates: { canonical: "/about/" },
+  openGraph: { title: "دربارهٔ ما", description: "K Beauty AFG فروشگاه آنلاین محصولات اورجینال کره‌ای مراقبت پوست در افغانستان؛ تهیهٔ مستقیم از کره جنوبی، مشورهٔ رایگان و ارسال به همهٔ ولایات.", url: "/about/" },
+};
 
 const content = {
   fa: {
