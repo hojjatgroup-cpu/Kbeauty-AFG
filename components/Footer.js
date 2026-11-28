@@ -5,7 +5,7 @@ import { useLang } from "./LangProvider";
 import site from "@/data/site.json";
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   return (
     <footer className="footer">
       <div className="container footer-inner">
@@ -22,6 +22,8 @@ export default function Footer() {
           <Link href="/faq">{t("nav.faq")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/contact">{t("nav.contact")}</Link>
+          <Link href="/privacy">{lang === "fa" ? "حریم خصوصی" : "Privacy"}</Link>
+          <Link href="/terms">{lang === "fa" ? "شرایط استفاده" : "Terms"}</Link>
         </div>
         <div style={{ display: "flex", gap: 10, justifyContent: "center", alignItems: "center" }}>
         <a className="round-btn insta" href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener" aria-label="Instagram">
