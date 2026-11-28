@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const KEY = "kb-admin";
 const fmt = (d) => (d ? new Date(d).toLocaleString("fa-AF", { dateStyle: "medium", timeStyle: "short" }) : "—");
-const ERR = { wrong: "رمز اشتباه است.", nopass: "رمز مدیریت هنوز در Cloudflare تنظیم نشده است.", storage: "حافظه وصل نیست." };
+const ERR = { wrong: "رمز اشتباه است.", nopass: "رمز مدیریت هنوز در Cloudflare تنظیم نشده است.", storage: "حافظه وصل نیست.", locked: "به خاطر چند رمز اشتباه، ورود تا ۳۰ دقیقه قفل شد." };
 
 export default function AdminClient() {
   const [pw, setPw] = useState("");
@@ -64,6 +64,7 @@ export default function AdminClient() {
         <button className={tab === "orders" ? "on" : ""} onClick={() => setTab("orders")}>سفارش‌ها</button>
         <button className={tab === "users" ? "on" : ""} onClick={() => setTab("users")}>مشتری‌ها</button>
         <button onClick={() => load(pw)} disabled={busy} aria-label="تازه کردن">{busy ? "…" : "↻"}</button>
+        <button onClick={() => { try { sessionStorage.removeItem(KEY); } catch {} setData(null); setPw(""); }} aria-label="خروج">⎋</button>
       </div>
       <input className="adm-search" placeholder="جستجو: نام، شماره، کد سفارش…" value={q} onChange={(e) => setQ(e.target.value)} />
 
