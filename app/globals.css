@@ -1043,3 +1043,19 @@ body { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
 .acc-row { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
 .acc-row span { color: var(--muted); white-space: nowrap; }
 .acc-row b { font-weight: 400; text-align: end; }
+.acc-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.acc-act {
+  display: flex; align-items: center; justify-content: center; gap: 7px; white-space: nowrap;
+  padding: 12px 10px; border-radius: 16px; font: inherit; font-size: 13.5px; cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; border: 0;
+  box-shadow: 0 6px 18px rgba(47,135,148,.28), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .15s, box-shadow .2s;
+}
+.acc-act:active { transform: scale(.97); }
+.acc-act.out { background: rgba(255,255,255,.75); color: #b9476a; border: 1px solid rgba(185,71,106,.25); box-shadow: 0 4px 14px rgba(185,71,106,.08); }
+.acc-edit {
+  display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; margin-top: 14px;
+  padding: 11px; border-radius: 16px; font: inherit; font-size: 13.5px; cursor: pointer;
+  background: var(--lilac); color: var(--accent-dark); border: 1px solid rgba(92,180,192,.35);
+}
+.acc-edit:active { transform: scale(.98); }
