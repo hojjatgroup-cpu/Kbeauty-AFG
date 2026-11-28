@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProductCard from "@/components/ProductCard";
 import AddToCartButton from "@/components/AddToCartButton";
+import WishButton from "@/components/WishButton";
 import site from "@/data/site.json";
 import SectionTitle from "@/components/SectionTitle";
 import { useLang } from "@/components/LangProvider";
@@ -53,7 +54,12 @@ export default function ProductClient({ slug }) {
                 <strong>{formatPrice(product.price, lang)}</strong>
               </span>
             </div>
-            <AddToCartButton slug={product.slug} />
+            <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+              <div style={{ flex: 1 }}>
+                <AddToCartButton slug={product.slug} />
+              </div>
+              <WishButton slug={product.slug} big />
+            </div>
             <Link href="/cart" className="btn btn-line btn-block">
               {t("cart.title")}
             </Link>

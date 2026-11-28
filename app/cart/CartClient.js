@@ -28,6 +28,22 @@ export default function CartClient() {
   const { t, lang } = useLang();
   const [step, setStep] = useState("bag"); // bag -> checkout -> done
   const [form, setForm] = useState({ name: "", phone: "", province: "", address: "", email: "" });
+  useEffect(() => {
+    fetch("/api/me")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!d || !d.user) return;
+        const u = d.user;
+        setForm((f) => ({
+          name: f.name || u.name || "",
+          phone: f.phone || u.phone || "",
+          province: f.province || u.province || "",
+          address: f.address || u.address || "",
+          email: f.email || u.email || "",
+        }));
+      })
+      .catch(() => {});
+  }, []);
   const toLatin = (v) => String(v).replace(/[۰-۹]/g, (c) => "۰۱۲۳۴۵۶۷۸۹".indexOf(c)).replace(/[٠-٩]/g, (c) => "٠١٢٣٤٥٦٧٨٩".indexOf(c));
   const [tried, setTried] = useState(false);
   const [sending, setSending] = useState(false);
@@ -193,6 +209,7 @@ export default function CartClient() {
         name: form.name,
         phone: form.phone,
         province: chosen.label,
+        province_key: form.province,
         address: form.address,
         items: itemLines.join("\n"),
         subtotal: formatPrice(subtotal, lang),

@@ -3,6 +3,7 @@
 // Customer confirmation emails also need MAIL_FROM on a verified domain, e.g. "K Beauty AFG <order@kbeautyaf.com>".
 // Every order is also kept in the COUPONS KV store as a backup, when that binding exists.
 import site from "../../data/site.json";
+import { sessionUser, saveUser } from "./_auth.js";
 
 const FROM = "K Beauty AFG <order@kbeautyaf.com>";
 
@@ -147,5 +148,17 @@ export async function onRequestPost({ request, env }) {
       });
     } catch {}
   }
+  // remember the order (and the delivery details) in the signed-in customer's account
+  try {
+    const u = await sessionUser(env, request);
+    if (u) {
+      u.orders = [{ id: p.order_id, date: new Date().toISOString(), items: p.items, total: p.total }, ...(u.orders || [])].slice(0, 50);
+      if (p.name) u.name = p.name;
+      if (p.phone) u.phone = p.phone;
+      if (p.province_key) u.province = p.province_key;
+      if (p.address) u.address = p.address;
+      await saveUser(env, u);
+    }
+  } catch {}
   return json({ success: "true" });
 }

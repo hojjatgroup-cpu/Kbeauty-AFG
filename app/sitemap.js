@@ -6,7 +6,7 @@ const SITE = "https://kbeautyaf.com";
 const NOW = new Date().toISOString();
 
 export default function sitemap() {
-  const pages = ["", "shop", "blog", "skin-test", "faq", "about", "contact", "authenticity"].map((p) => ({
+  const pages = ["", "shop", "blog", "skin-test", "faq", "about", "contact", "authenticity", "categories", "brands"].map((p) => ({
     url: `${SITE}/${p ? p + "/" : ""}`,
     lastModified: NOW,
     changeFrequency: "weekly",

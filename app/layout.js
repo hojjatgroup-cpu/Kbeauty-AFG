@@ -7,6 +7,7 @@ import { CartProvider } from "@/components/CartProvider";
 import Splash from "@/components/Splash";
 import PromoPopup from "@/components/PromoPopup";
 import PromoBar from "@/components/PromoBar";
+import BottomNav from "@/components/BottomNav";
 import site from "@/data/site.json";
 
 const modam = localFont({
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
             <main>{children}</main>
             <Footer />
             <PromoPopup />
+            <BottomNav />
           </CartProvider>
         </LangProvider>
       </body>

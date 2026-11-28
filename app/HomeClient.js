@@ -13,27 +13,9 @@ import Reviews from "@/components/Reviews";
 import PostCard from "@/components/PostCard";
 import { getPosts } from "@/lib/blog";
 import { useLang } from "@/components/LangProvider";
-import { getAllProducts, getBestsellers, usedTypes } from "@/lib/products";
+import { getAllProducts, getBestsellers, usedTypes, catPhoto } from "@/lib/products";
 import site from "@/data/site.json";
 
-// one real product photo per category (from public/products/thumb)
-const CAT_PHOTO = {
-  cleanser: "cosrx-low-ph-cleanser",
-  toner: "anua-heartleaf-77-toner",
-  serum: "torriden-dive-in-serum",
-  cream: "dr-althea-345-relief-cream",
-  sunscreen: "boj-relief-sun-aqua-fresh",
-  mask: "",
-  hair: "lilyeve-grow-turn-exosome-ampoule",
-  body: "medicube-glow-vanilla-mist",
-};
-
-// thumbnail of the chosen product, or of the first product in that category
-function catPhoto(type) {
-  const all = getAllProducts();
-  const p = all.find((x) => x.image.includes(CAT_PHOTO[type] || "@")) || all.find((x) => x.type === type);
-  return p ? p.image.replace("/products/", "/products/thumb/") : "/logo.png";
-}
 
 const ABOUT = {
   fa: {
